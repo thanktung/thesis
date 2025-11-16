@@ -1,0 +1,45 @@
+\documentclass[fontsize=13pt,oneside,a4paper,openany]{kltn}
+
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{array}
+
+% Tài liệu tham khảo
+\addbibresource{refs.bib}
+
+\begin{document} 
+
+\include{tex/00bia}  	
+
+\VKnumRoman     % đánh số bằng chữ cái i, ii...
+
+\include{tex/01camon}		
+\include{tex/02camdoan}	
+\include{tex/03tomtat}
+
+\VKmucLuc				
+\VKdanhMucHinhVe		
+\VKdanhMucBangBieu		
+\input{tex/04kyhieu}
+
+\VKbatDaudanhSo     % bắt đầu đánh số từ 1,2,3...
+
+\include{tex/chuong0_modau}		
+\include{tex/chuong1}
+\include{tex/chuong2}
+\include{tex/chuong3}
+\include{tex/chuong4}
+
+\include{tex/05ketluan}		
+\include{tex/06congbo}	
+
+\VKngatTrang
+\VKtaiLieuThamKhao
+
+\VKngatTrang
+\VKdanhSoPhuLuc			
+\include{tex/07phuluc}
+\end{document}
+
+
+

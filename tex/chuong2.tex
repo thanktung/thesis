@@ -1,0 +1,347 @@
+\chapter{Cơ sở lý thuyết}
+
+\section{PLC Mitsubishi và HMI PFXGP4501TAA}
+\subsection{PLC Mitsubishi}
+ 
+Bộ điều khiển logic khả trình (PLC) Mitsubishi Q13UDVCPU (Hình \ref{fig:plc_q13udvcpu}) thuộc dòng MELSEC-Q Series, là loại CPU đa năng (Universal CPU) có hiệu suất xử lý cao và khả năng mở rộng linh hoạt. Với tốc độ thực thi lệnh cơ bản chỉ 1,9 ns, bộ nhớ chương trình 130K steps và khả năng quản lý tới 8.192 điểm I/O, Q13UDVCPU đáp ứng tốt các hệ thống sản xuất yêu cầu xử lý nhanh và ổn định. CPU này tích hợp sẵn cổng Ethernet, USB và khe cắm thẻ SD, giúp kết nối dễ dàng với các thiết bị ngoại vi, mạng công nghiệp cũng như hệ thống SCADA. Nhờ đó, PLC Mitsubishi Q13UDVCPU thường được sử dụng trong các dây chuyền tự động hóa, kết hợp cùng màn hình HMI để giám sát và vận hành thuận tiện.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth]{figures/Chapter01/plc-cpu.png}
+    \caption{PLC Mitsubishi Q13UDVCPU}
+    \label{fig:plc_q13udvcpu}
+\end{figure}
+
+
+Một hệ thống PLC Mitsubishi Q Series cơ bản như Hình \ref{fig:plc-structure} bao gồm các thành phần: module nguồn (Power Supply), 
+base unit, CPU Q13UDVCPU, và các module mở rộng I/O hoặc truyền thông. 
+Module nguồn thường được lắp ở vị trí ngoài cùng bên trái để cung cấp điện cho toàn bộ rack. 
+CPU Q13UDVCPU được lắp trực tiếp lên base unit, bên cạnh module nguồn. Các module I/O số, I/O tương tự, 
+truyền thông (ví dụ CC-Link) hoặc điều khiển chuyển động (motion) sẽ được lắp nối tiếp sang bên phải CPU. 
+Việc lắp đặt cần đảm bảo các connector tiếp xúc chắc chắn, không để bụi bẩn hoặc rung động mạnh. 
+
+Sau khi hoàn tất lắp đặt, hệ thống cần được cấu hình phần cứng trên phần mềm GX Works2 hoặc GX Developer. 
+Quá trình này bao gồm việc khai báo CPU, module nguồn, các module I/O theo đúng vị trí trên base unit. 
+Nếu có sử dụng module mở rộng ở remote rack, cần khai báo địa chỉ truyền thông tương ứng. 
+Việc cấu hình chính xác giúp hệ thống vận hành ổn định và tránh lỗi khi chạy chương trình điều khiển.
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/Chapter01/plc-structure.png}
+    \caption{Hệ thống PLC Q Series}
+    \label{fig:plc-structure}
+\end{figure}
+
+\begin{table}
+\centering
+\caption{Thông số kỹ thuật của PLC Mitsubishi Q13UDVCPU}
+\label{tab:q13udvcpu_specs}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Thông số} & \textbf{Giá trị} \\ \hline
+Tốc độ xử lý lệnh (LD) & 1,9 ns \\ \hline
+Dung lượng chương trình & 130K steps (520 kB) \\ \hline
+Bộ nhớ RAM tích hợp & 1.024 kB \\ \hline
+Thẻ nhớ hỗ trợ & SD/SDHC tối đa 32 GB \\ \hline
+I/O tối đa (cục bộ) & 4.096 điểm \\ \hline
+I/O tối đa (toàn hệ thống) & 8.192 điểm \\ \hline
+Giao tiếp tích hợp & Ethernet 10/100 Mbps, USB \\ \hline
+Nguồn tiêu thụ nội bộ & 0,58 A \\ \hline
+Kích thước & 98 × 27,4 × 115 mm \\ \hline
+Khối lượng & 0,20 kg \\ \hline
+Nhiệt độ làm việc & 0 … 55 °C \\ \hline
+Độ ẩm làm việc & 5 … 95 \% RH (không ngưng tụ) \\ \hline
+Chuẩn chống rung/sốc & JIS B 3502, IEC 61131-2 \\ \hline
+\end{tabular}
+\end{table}
+
+
+Để lập trình và cấu hình PLC Mitsubishi Q13UDVCPU, phần mềm được sử dụng phổ biến là GX Works2. Đây là môi trường phát triển tích hợp (IDE) của Mitsubishi Electric, cho phép thiết kế, viết chương trình, cấu hình phần cứng, giám sát trạng thái và chẩn đoán lỗi. GX Works2 hỗ trợ nhiều ngôn ngữ lập trình chuẩn IEC 61131-3 như Ladder Diagram (LD), Structured Text (ST), và Function Block Diagram (FBD), giúp kỹ sư có thể lựa chọn phong cách lập trình phù hợp với ứng dụng thực tế. 
+
+Trong quá trình cấu hình, người dùng khai báo loại CPU, module nguồn, vị trí các module I/O, module truyền thông hoặc motion tương ứng trên base unit. Ngoài ra, GX Works2 cũng cho phép thiết lập tham số mạng (Ethernet, CC-Link, v.v.), quản lý bộ nhớ và tải chương trình xuống CPU thông qua cổng USB hoặc Ethernet. Phần mềm còn cung cấp chức năng monitoring online, giúp quan sát trạng thái hoạt động của các bit, thanh ghi, timer/counter theo thời gian thực, từ đó hỗ trợ quá trình kiểm tra và gỡ lỗi nhanh chóng. 
+
+\subsection{Giao diện người máy HMI}
+Giao diện Người – Máy (Human-Machine Interface, HMI) là thiết bị cho phép người vận hành tương tác trực tiếp với hệ thống điều khiển thông qua màn hình trực quan. Trong hệ thống này, HMI được sử dụng để giám sát trạng thái hoạt động, hiển thị dữ liệu sản xuất, theo dõi cảnh báo và cho phép người dùng nhập các lệnh điều khiển. Thiết bị HMI giúp đơn giản hóa việc vận hành, giảm sai sót và tăng tính trực quan khi quản lý dây chuyền tự động hóa.  
+
+Màn hình HMI PFXGP4501TAA thuộc dòng GP4000 Series của hãng Pro-face (Schneider Electric), là một trong những thiết bị giao diện phổ biến, được thiết kế nhỏ gọn nhưng mạnh mẽ, thích hợp kết nối với PLC Mitsubishi Q Series (Hình \ref{fig:hmi_pfxgp4501taa}). 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/Chapter01/pfxgp4501taa.jpg}
+    \caption{HMI Mitsubishi PFXGP4501TAA}
+    \label{fig:hmi_pfxgp4501taa}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Thông số kỹ thuật của HMI PFXGP4501TAA}
+\label{tab:hmi_specs}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Thông số} & \textbf{Giá trị} \\ \hline
+Kích thước màn hình & 10,4 inch TFT LCD \\ \hline
+Độ phân giải & 640 × 480 (VGA) \\ \hline
+Màu hiển thị & 65.536 màu \\ \hline
+Độ sáng & 300 cd/m\textsuperscript{2} \\ \hline
+Cổng giao tiếp & Ethernet, USB (Host/Device), Serial (RS-232C/422/485) \\ \hline
+Bộ nhớ ứng dụng & 16 MB (Flash) \\ \hline
+Nguồn cấp & 24 VDC \\ \hline
+Nhiệt độ hoạt động & 0 … 50 °C \\ \hline
+Kích thước ngoài & 271 × 213 × 56 mm \\ \hline
+Trọng lượng & Khoảng 2,2 kg \\ \hline
+Chuẩn bảo vệ & IP65 (mặt trước) \\ \hline
+\end{tabular}
+\end{table}
+
+Nhờ tích hợp nhiều cổng giao tiếp và hỗ trợ cấu hình qua phần mềm Pro-face GP-Pro EX, PFXGP4501TAA có khả năng kết nối linh hoạt với PLC, biến nó thành công cụ trực quan hóa dữ liệu và điều khiển sản xuất hiệu quả trên dây chuyền.
+
+
+\section{Mạng CC-Link và Module CC-Link QJ16BT11N}
+
+\subsection{CC-Link}
+CC-Link (Control \& Communication Link) là một mạng truyền thông công nghiệp do Mitsubishi Electric phát triển, được sử dụng rộng rãi để kết nối các thiết bị điều khiển trong hệ thống tự động hóa. CC-Link cho phép truyền tải cả tín hiệu ON/OFF và dữ liệu số giữa PLC và các module phân tán thông qua cáp chuyên dụng, đảm bảo tốc độ cao và độ tin cậy trong vận hành.
+Ưu điểm chính của CC-Link: 
+\begin{itemize}
+    \item Tăng hiệu quả đi dây nhờ khả năng phân tán module tới các thiết bị tại chỗ (ví dụ: băng chuyền, máy công cụ).
+    \item Hỗ trợ truyền nhận thông tin I/O và dữ liệu số với tốc độ cao, giảm độ trễ trong điều khiển.
+    \item Cho phép kết nối nhiều CPU PLC để xây dựng hệ thống phân tán đơn giản.
+    \item Có khả năng tích hợp với nhiều thiết bị từ các nhà sản xuất đối tác của Mitsubishi, mang lại giải pháp linh hoạt.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Chapter01/cc-link2.png}
+    \caption{Mạng CC-Link}
+    \label{fig:cclink-structure}
+\end{figure}
+
+
+
+\subsection{Master/Local Modules}
+Bằng cách sử dụng Master/Local Modules, các PLC thuộc dòng MELSEC-Q có thể kết nối với nhau qua hệ thống CC-Link. Các trạm PLC ở xa trong hệ thống CC-Link có thẻ được điều khiển như khi ở cùng base unit. 
+Module hoạt động như một trạm Master hoặc một trạm Local trong hệ thống CC-Link.
+Các đặc điểm/tính năng chính của hệ thống CC-Link:
+
+\begin{enumerate}
+  \item Truyền thông dữ liệu: Master/Local Modules có thể trao đổi dữ liệu liên tục theo chu kỳ quét (Hình \ref{fig:cclink-cyclic transmission}) hoặc có thể chỉ truyền dữ liệu khi có yêu cầu (Hình \ref{fig:cclink-transient transmission}).
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/Chapter01/cclink3.png}
+    \caption{Cyclic Transmission}
+    \label{fig:cclink-cyclic transmission}
+    \end{figure}
+   \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/Chapter01/cclink4.png}
+    \caption{Transient Transmission}
+    \label{fig:cclink-transient transmission}
+    \end{figure} 
+
+  \item Thiết lập tham số và chuẩn đoán sử dụng công cụ lập trình: Các tham số của Master/Local Modules có thể được thiết lập bằng công cụ lập trình hoặc chương trình của PLC. Khi các tham số được thiết lập bằng chương trình của PLC, có thể thay đổi tham số của module Master mà không cần reset module CPU (Hình \ref{fig:cclink-config}).
+  Trạng thái của hệ thống CC-Link có thể được kiểm tra bằng công cụ lập trình. Vị trí lỗi và nguyên nhân lỗi sẽ được hiển thị trên công cụ lập trình, giúp người dùng nhanh chóng xử lý sự cố (Hình \ref{fig:cclink-diagnostics}).
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/Chapter01/cclink5.png}
+    \caption{CC-Link Module Configuration}
+    \label{fig:cclink-config}
+    \end{figure} 
+
+   \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/Chapter01/cclink6.png}
+    \caption{CC-Link Diagnostics }
+    \label{fig:cclink-diagnostics}
+    \end{figure} 
+  
+
+  
+  \item Module tương thích với CC-Link Ver.2: Vì master/local module là module tương thích CC-Link Ver.2, nên số điểm (points) trong mỗi hệ thống có thể tăng lên đến 8192 cho RX/RY và số word có thể tăng lên đến 2048 cho RWr/RWw. Trên cơ sở từng trạm, số điểm có thể tăng lên đến 896 cho RX/RY và số word là 128 cho RWr/RWw. Một hệ thống tương thích CC-Link Ver.2 có thể lớn hơn hệ thống tương thích CC-Link Ver.1 (Hình \ref{fig:cclink-ver2}).
+   \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/Chapter01/cclink7.png}
+    \caption{CC-Link Ver.2 vs CC-Link Ver.1}
+    \label{fig:cclink-ver2}
+    \end{figure} 
+
+  \item Phòng ngừa sự cố hệ thống: Vì sử dụng tôplogy dạng bus nên việc truyền thông giữa các module bình thường vẫn được tiếp tục ngay cả khi có một module gặp sự cố. Sau khi thay thế/sửa chữa module gặp sự cố, hệ thống sẽ hoạt động bình thường trở lại mà không cần phải thiết lập lại (Hình \ref{fig:cclink-prevention}).
+   \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/Chapter01/cclink8.png}
+    \caption{Prevention of a system failure}
+    \label{fig:cclink-prevention}
+    \end{figure} 
+\end{enumerate}
+
+\subsection{Module QJ61BT11N}
+QJ61BT11N là module Master/Local CC-Link dùng cho dòng PLC MELSEC-Q của Mitsubishi.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures//Chapter01/qj61bt11n.png}
+    \caption{QJ61BT11N Master/Local Module}
+    \label{fig:qj61bt11n}
+\end{figure}
+
+Giao diện mặt trước của module gồm các phần: Led thông báo/hiển thị trạng thái (1); thiết lập thứ tự trạm (2); thiết lập tốc độ truyền thông (3); giao diện kết nối cáp CC-Link (4); Serial Number (5).
+
+
+\section{Servo motor và Module QD77MS16}
+\subsection{Servo và Servo Amplifier}
+Servo (servo motor và bộ khuếch đại điều khiển) là thiết bị truyền động được sử dụng rộng rãi trong tự động hóa công nghiệp để điều khiển vị trí, tốc độ và mô-men xoắn một cách chính xác. Khác với động cơ thường, servo được trang bị encoder hoặc cảm biến hồi tiếp, giúp hệ thống biết chính xác trạng thái của trục motor và thực hiện điều khiển vòng kín (closed-loop control). Nhờ vậy, servo có khả năng đáp ứng nhanh, sai số nhỏ, ổn định cao và phù hợp cho các ứng dụng yêu cầu độ chính xác như máy CNC, robot công nghiệp, dây chuyền sản xuất điện tử, đóng gói và in ấn. Một hệ thống servo thường bao gồm servo motor (động cơ), servo amplifier/driver (bộ khuếch đại) và bộ điều khiển (PLC, motion controller), trong đó bộ khuếch đại đóng vai trò nhận lệnh từ bộ điều khiển, điều chỉnh dòng điện cấp cho motor theo tín hiệu phản hồi từ encoder. Nhờ ưu điểm gọn nhẹ, hiệu suất cao và khả năng đồng bộ nhiều trục, servo ngày nay đã trở thành thành phần không thể thiếu trong các giải pháp tự động hóa hiện đại.
+
+Servo được sử dụng là HG-KR32 (Hình \ref{fig:hgkr32}) kết hợp cùng với Servo Amplifier MR-J4-20B (Hình \ref{fig:mrj4}). Ngoài ra Mitsubishi cũng có rất nhiều loại động cơ servo và bộ khuếch đại khác.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\linewidth]{figures/Chapter01/servo.jpg}
+    \caption{Động cơ servo HG-KR32}
+    \label{fig:hgkr32}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\linewidth]{figures/Chapter01/mrj420b.png}
+    \caption{Bộ khuếch đại servo MR-J4-20B}
+    \label{fig:mrj4}
+\end{figure}
+
+\subsection{Module QD77MS16}
+QD77MS16 (Hình \ref{fig:qd77ms})là module điều khiển chuyển động (Simple Motion Module) thuộc dòng MELSEC-Q series của Mitsubishi Electric. Module này được thiết kế để thực hiện các bài toán điều khiển vị trí, tốc độ và mô-men xoắn với độ chính xác cao, đồng bộ nhiều trục trong hệ thống tự động hóa.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\linewidth]{figures/Chapter01/qd77ms16.png}
+    \caption{Bộ điều khiển QD77MS16}
+    \label{fig:qd77ms}
+\end{figure}
+
+Đặc điểm chính của QD77MS16:
+\begin{itemize}
+  \item \textbf{Thời gian khởi động nhanh:} 
+  Đạt 0.88 ms (với QD77MS4) trong chế độ định vị.
+  
+  \item \textbf{Nhiều chức năng điều khiển định vị:} 
+  Hỗ trợ điều khiển HPR, điều khiển vị trí, điều khiển tốc độ, 
+  chuyển đổi vị trí--tốc độ, và điều khiển bằng tay.
+  \begin{itemize}
+    \item 6 phương pháp HPR khác nhau, kèm chức năng HPR retry.  
+    \item Điều khiển độc lập từng trục hoặc nội suy nhiều trục (2--4 trục).  
+    \item Điều khiển tốc độ--mô-men không qua vòng vị trí.  
+    \item Tối đa 600 bộ dữ liệu định vị cho mỗi trục.  
+    \item Xử lý liên tục nhiều khối dữ liệu định vị.  
+    \item Hai dạng gia tốc/giảm tốc: tuyến tính (trapezoidal) và cong S.  
+  \end{itemize}
+
+  \item \textbf{Điều khiển đồng bộ và cam điện tử (E-Cam).}
+
+  \item \textbf{Chức năng phát hiện mark:} 
+  Có thể latch dữ liệu theo tín hiệu ngoài DI1--DI4.
+
+  \item \textbf{Khả năng bảo trì cao:} 
+  Lưu dữ liệu trong flash ROM (không cần pin); thông tin lỗi được lưu và truy xuất từ PLC CPU.
+
+  \item \textbf{Hỗ trợ lệnh chuyên dụng:} 
+  Như \texttt{Positioning Start}, \texttt{Teaching}, tương thích với LD77MH/QD75MH.
+
+  \item \textbf{Thiết lập và giám sát qua GX Works2:} 
+  Dễ dàng cấu hình tham số, kiểm tra wiring, chạy thử, giám sát và debug.  
+  Có thể kết hợp với MR Configurator2 để thiết lập tham số servo.
+
+  \item \textbf{Tương thích với LD77MH/QD75MH:} 
+  Cho phép tái sử dụng chương trình cũ.
+
+  \item \textbf{Chức năng dừng cưỡng bức (Forced stop):} 
+  Có thể dừng toàn bộ trục qua tín hiệu stop.
+
+  \item \textbf{Kết nối tốc độ cao với servo amplifier qua SSCNET III/H:}  
+  Hỗ trợ MR-J5-B, MR-J4-B, MR-J3-B, MR-JE-B(F); truyền quang giảm nhiễu;  
+  cho phép đọc/ghi tham số servo trực tiếp từ QD77MS.
+
+  \item \textbf{Hệ thống vị trí tuyệt đối (Absolute Position System):}  
+  Dùng với servo MR-J5/J4/J3; chỉ cần gắn pin absolute vào amplifier,  
+  không cần proximity dog; khi bật nguồn lại không cần HPR.
+\end{itemize}
+
+
+\section{Robot công nghiệp}
+\subsection{Hệ thống Robot Yaskawa}
+
+\subsection{Hệ thống robot Hyundai}
+
+\section{Thị giác máy tính và mô hình YOLO}
+\subsection{Thị giác máy tính}
+Thị giác máy tính (\textit{Computer Vision – CV}) là lĩnh vực nghiên cứu cách máy tính hiểu và diễn giải hình ảnh hoặc video, tương tự như cách con người nhận thức thị giác. Trong công nghiệp, thị giác máy đóng vai trò quan trọng trong tự động hóa các tác vụ kiểm tra, giám sát và điều khiển chất lượng.
+
+Một trong những ứng dụng phổ biến nhất của thị giác máy tính là kiểm tra sản phẩm trên dây chuyền sản xuất. Hệ thống camera thu thập hình ảnh sản phẩm, sau đó sử dụng thuật toán xử lý ảnh để phát hiện lỗi như thiếu linh kiện, lắp sai hướng, sai vị trí hoặc khuyết tật bề mặt. So với kiểm tra thủ công, thị giác máy có ưu thế vượt trội về tốc độ, độ chính xác và khả năng hoạt động liên tục.
+
+Ngoài kiểm tra chất lượng, thị giác máy còn được ứng dụng trong các nhiệm vụ như:
+\begin{itemize}
+  \item \textbf{Dẫn đường robot:} Nhận diện vị trí đối tượng hoặc xác định tọa độ để robot thực hiện thao tác.
+  \item \textbf{Đọc mã vạch, OCR:} Tự động đọc nhãn sản phẩm, mã QR, số serial...
+  \item \textbf{Giám sát an toàn:} Theo dõi khu vực nguy hiểm, phát hiện người xâm nhập vùng cấm.
+\end{itemize}
+
+Trong sản xuất điện tử SMT, thị giác máy đặc biệt quan trọng ở khâu kiểm tra AOI. Các mô hình học sâu hiện đại như CNN, YOLO giúp hệ thống phân loại và phát hiện linh kiện nhanh, chính xác hơn, giảm đáng kể tỷ lệ lỗi do con người.
+\subsection{Mạng YOLO - Lược sử phát triển}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{figures/Chapter01/performance-comparison.png}
+    \caption{YOLO Performance.}
+    \label{fig:yolo}
+\end{figure}
+YOLO (You Only Look Once) là một mô hình nổi tiếng trong lĩnh vực phát hiện đối tượng và phân đoạn ảnh, 
+được phát triển bởi Joseph Redmon và Ali Farhadi tại Đại học Washington. 
+Ra mắt vào năm 2015, YOLO nhanh chóng được ưa chuộng nhờ tốc độ cao và độ chính xác vượt trội.  
+
+\begin{itemize}
+  \item \textbf{YOLOv2 (2016):} Cải tiến so với bản gốc bằng cách bổ sung \textit{batch normalization}, 
+  \textit{anchor boxes} và \textit{dimension clusters}.
+  
+  \item \textbf{YOLOv3 (2018):} Nâng cao hiệu năng với \textit{backbone} hiệu quả hơn, nhiều \textit{anchors} 
+  hơn và \textit{spatial pyramid pooling}.
+  
+  \item \textbf{YOLOv4 (2020):} Giới thiệu các cải tiến như \textit{Mosaic data augmentation}, 
+  \textit{anchor-free detection head} và \textit{loss function} mới.
+  
+  \item \textbf{YOLOv5:} Tiếp tục cải thiện hiệu năng và bổ sung tính năng mới như tối ưu siêu tham số 
+  (\textit{hyperparameter optimization}), theo dõi thí nghiệm tích hợp, và tự động xuất ra các định dạng phổ biến.
+  
+  \item \textbf{YOLOv6 (2022):} Được Meituan phát hành mã nguồn mở, ứng dụng nhiều trong các robot giao hàng tự động.
+  
+  \item \textbf{YOLOv7:} Mở rộng thêm các tác vụ như ước lượng tư thế (\textit{pose estimation}) trên tập dữ liệu 
+  \textit{COCO keypoints}.
+  
+  \item \textbf{YOLOv8 (2023, Ultralytics):} Bổ sung nhiều tính năng và cải tiến mới, tăng hiệu suất, tính linh hoạt 
+  và hiệu quả, đồng thời hỗ trợ đầy đủ các tác vụ thị giác máy tính (\textit{vision AI}).
+  
+  \item \textbf{YOLOv9:} Giới thiệu phương pháp mới như \textit{Programmable Gradient Information (PGI)} 
+  và \textit{Generalized Efficient Layer Aggregation Network (GELAN)}.
+  
+  \item \textbf{YOLOv10:} Do các nhà nghiên cứu Đại học Thanh Hoa phát triển bằng gói Python của Ultralytics, 
+  mang lại tiến bộ trong phát hiện đối tượng thời gian thực nhờ \textit{End-to-End head} loại bỏ nhu cầu sử dụng 
+  \textit{Non-Maximum Suppression (NMS)}.
+  
+  \item \textbf{YOLOv11 (Mới nhất):} Dòng mô hình mới nhất của Ultralytics, đạt hiệu suất tiên tiến 
+  (\textit{state-of-the-art}) trên nhiều tác vụ như phát hiện đối tượng, phân đoạn, ước lượng tư thế, 
+  theo dõi và phân loại, với khả năng ứng dụng rộng rãi trong nhiều lĩnh vực AI.
+
+
+\end{itemize}
+
+\subsection{Ultralytics YOLOv11}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/Chapter01/yolotasks.png}
+    \caption{YOLOv11 Tasks}
+    \label{fig:yolov11}
+\end{figure}
+Ultralytics YOLO11 là một khung AI linh hoạt, hỗ trợ nhiều tác vụ thị giác máy tính khác nhau. Khung này có thể được sử dụng để thực hiện phát hiện đối tượng (detection), phân đoạn ảnh (segmentation), OBB (Oriented Bounding Box), phân loại (classification), và ước lượng tư thế (pose estimation). Mỗi tác vụ có mục tiêu và ứng dụng riêng, cho phép giải quyết nhiều thách thức trong thị giác máy tính chỉ với một framework duy nhất (Hình \ref{fig:yolov11}).
+
+\begin{enumerate}
+    \item \textbf{Detection (Phát hiện đối tượng)}: Phát hiện là tác vụ chính được hỗ trợ bởi YOLO11. Nó bao gồm việc xác định các đối tượng trong ảnh hoặc video và vẽ hộp bao quanh (bounding box) chúng. Các đối tượng được phân loại dựa trên đặc trưng. YOLO11 có thể phát hiện nhiều đối tượng trong một ảnh với độ chính xác và tốc độ cao, phù hợp cho các ứng dụng thời gian thực như giám sát an ninh và xe tự hành.
+    \item \textbf{Segmentation (Phân đoạn ảnh)}: Phân đoạn chia ảnh thành nhiều vùng dựa trên nội dung, với độ chính xác đến từng pixel. Ứng dụng điển hình gồm chẩn đoán y tế, phân tích nông nghiệp, và kiểm soát chất lượng. YOLO11 triển khai một biến thể của kiến trúc U-Net để đạt hiệu quả cao.
+    \item \textbf{Classification (Phân loại ảnh)}: Phân loại gán nhãn cho toàn bộ ảnh dựa trên nội dung. YOLO11 sử dụng biến thể của EfficientNet để đạt hiệu năng cao. Tác vụ này quan trọng trong thương mại điện tử, kiểm duyệt nội dung, và theo dõi động vật hoang dã.
+    \item \textbf{Pose Estimation (Ước lượng tư thế)}: Ước lượng tư thế phát hiện các điểm mốc (keypoints) trong ảnh hoặc video để theo dõi chuyển động hoặc ước lượng dáng điệu. Các điểm mốc có thể là khớp cơ thể, đặc điểm khuôn mặt, hoặc các điểm quan trọng khác. YOLO11 cho độ chính xác cao, ứng dụng trong thể dục, phân tích thể thao, và tương tác người–máy.
+    \item \textbf{OBB (Oriented Bounding Box – Hộp bao định hướng)}: OBB mở rộng phát hiện đối tượng bằng cách thêm thông tin góc xoay, giúp định vị chính xác các vật thể bị nghiêng hoặc xoay. Điều này đặc biệt hữu ích trong phân tích ảnh hàng không, xử lý tài liệu, và các ứng dụng công nghiệp. YOLO11 hỗ trợ OBB với tốc độ và độ chính xác cao.
+\end{enumerate}
+
+

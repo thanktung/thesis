@@ -1,0 +1,160 @@
+\chapter{Xây dựng hệ thống và chương trình điều khiển}
+
+\section{Sơ đồ khối hệ thống}
+Thành phần hệ thống bao gồm một bộ PLC bao gồm nguồn, CPU, Module QJ61BT11N, Module QD77MS16; một màn hình HMI; các remote IO và các trạm Robot; các động cơ servo cùng bộ khuếch đại; cuối cùng là một máy tính sử dụng để triển khai hệ thống thị giác máy tính.
+Sơ đồ khối hệ thống như Hình \ref{c2:struc}:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/Chapter2/structure.png}
+    \caption{Sơ đồ khối hệ thống}
+    \label{c2:struc}
+\end{figure}
+
+\section{Thuật toán điều khiển}
+
+Giải thích chi tiết cách điều khiển của hệ thống.
+
+
+\section{Cấu hình hệ thống}
+\subsection{Cấu hình hệ thống PLC và module}
+Công cụ lập trình dùng cho PLC Mitsubishi Q Series là phần mềm GX Works 2.
+Khi khởi tạo project cần chọn dòng PLC (Q mode); loại CPU (Q13UDV); loại project (Simple Project) và ngôn ngữ lập trình sử dụng trong project (Ladder). Cấu hình như Hình \ref{c2:newprj}.
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/Chapter2/newprj.png}
+    \caption{Cấu hình New Project}
+    \label{c2:newprj}
+\end{figure}
+
+Sau khi đã tạo thành công project mới, cần cấu hình hệ thống PLC tương ứng với phần cứng sử dụng. 
+\begin{enumerate}
+    \item Cấu hình base unit và các module giống với thiết lập phần cứng như Hình \ref{c2:hardware}. 
+    Thiết lập thông tin của base unit và vị trí module trong GX Works2 như Hình \ref{c2:io} tại \textit{Parameter} $\rightarrow$ \textit{PLC Parameter} $\rightarrow$ \textit{I/O Assignment}.
+    
+    \item Cấu hình giao tiếp/kết nối giữa PLC với GX Works2 như Hình \ref{c2:ethernet}. Bao gồm thiết lập IP cho PLC, giao thức MC Protocol.
+    
+\end{enumerate}
+
+Sau khi kết thúc thiết lập, bấm End để lưu thiết lập.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/Chapter2/phancung.png}
+    \caption{Thiết lập phần cứng}
+    \label{c2:hardware}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/Chapter2/io.png}
+    \caption{IO Assignment}
+    \label{c2:io}
+\end{figure}
+    
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/Chapter2/ethernet.png}
+    \caption{Thiết lập kết nối Ethernet}
+    \label{c2:ethernet}
+\end{figure}    
+
+\subsection{Cấu hình CC-Link giao tiếp giữa PLC và Station}
+
+Để có thể kết nối các Stations với PLC qua CC-Link cần thiết lập cả phần cứng và phần mềm. 
+\begin{enumerate}
+    \item Trạm I/O:
+    Cấu hình các trạm IO là Remote IO Station. 
+    \item Robot Hyundai:
+    Cấu hình robot là Remote Device Station.
+    \item Robot Yaskawa: Để có thể kết nối Robot với PLC qua CC-Link giúp truyền nhận tín hiệu In/Out và Register, cần phải lắp đặt phần cứng là CCS-PCIE Board vào bộ điều khiển của Robot (YRC1000micro), kết nối dây theo tiêu chuẩn của CC-Link và cấu hình Robot như một Remote Device Station. Minh họa như Hình \ref{c2:yas1}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.75\linewidth]{figures/Chapter2/yas1.png}
+        \caption{Kết nối CC-Link giữa Robot Yaskawa và PLC}
+        \label{c2:yas1}
+    \end{figure}
+    \item Cấu hình PLC là Master:
+    Sau khi đã cấu hình xong các trạm Remote I/O và Remote Device Station, tiếp đến là cấu hình giao tiếp CC-Link tại trạm Master (module QJ16BT11N).  
+\end{enumerate}
+\subsection{Cấu hình KepserverEX làm server OPC UA}
+Kết nối KepserverEX với PLC qua card mạng của máy tính. Giao thức được chọn và sử dụng trong phần mềm GX-Works2 và phần mềm KepserverEX phải giống nhau để đảm bảo giao tiếp giữa OPC UA Server với PLC.
+
+\begin{figure}
+        \centering
+        \includegraphics[width=0.75\linewidth]{figures/Chapter2/kepwareprj.png}
+        \caption{Cấu hình Project Kepware}
+        \label{c3:kepwareprj}
+ \end{figure}
+
+\begin{figure}
+        \centering
+        \includegraphics[width=0.75\linewidth]{figures/Chapter2/kepwarechannel.png}
+        \caption{Cấu hình Channel}
+        \label{c3:kepwarechannel}
+ \end{figure}
+
+\begin{figure}
+        \centering
+        \includegraphics[width=0.75\linewidth]{figures/Chapter2/kepwaredevice.png}
+        \caption{Cấu hình Device}
+        \label{c3:kepwaredevice}
+ \end{figure}
+
+
+\subsection{Cấu hình GigE Camera Basler ac2500}
+Kết nối Camera với máy tính qua cổng mạng IP, cần cấu hình IP của camera với IP của máy tính trong cùng lớp mạng.
+
+\begin{figure}
+        \centering
+        \includegraphics[width=0.75\linewidth]{figures/Chapter2/baslerip.png}
+        \caption{Cấu hình IP camera}
+        \label{c3:cameraip}
+ \end{figure}
+
+Tiếp theo là cấu hình thông số ảnh chụp như Gain, Gamma, Exposure time. Có thể sử dụng chức năng Automatic Image Adjustment.
+
+\begin{figure}
+        \centering
+        \includegraphics[width=0.75\linewidth]{figures/Chapter2/baslerauto.png}
+        \caption{Cấu hình ảnh chụp}
+        \label{c3:image}
+ \end{figure}
+
+
+\section{Pipeline xử lý ảnh AVI}
+Hệ thống kiểm tra ngoại quan tự động (Automated Visual Inspection – AVI) vận hành thông qua một chuỗi các bước xử lý ảnh được tổ chức theo dạng pipeline nhằm đảm bảo quá trình kiểm tra diễn ra chính xác, ổn định và nhất quán. Pipeline xử lý ảnh của hệ thống có thể được mô tả qua các giai đoạn chính như sau:
+
+\subsection{Thu nhận hình ảnh}
+Ở giai đoạn đầu tiên, camera độ phân giải cao hoặc thiết bị ghi hình chuyên dụng được sử dụng để thu nhận ảnh hoặc video của sản phẩm. Chất lượng ảnh đầu vào phụ thuộc vào loại camera, ống kính, khoảng cách chụp và cấu hình hệ thống chiếu sáng. Đây là nguồn dữ liệu cơ bản phục vụ toàn bộ quá trình xử lý phía sau.
+
+\subsection{Xử lý và tiền xử lý hình ảnh}
+Sau khi thu nhận, hình ảnh được đưa vào các thuật toán xử lý nhằm tăng cường chất lượng, làm nổi bật đặc trưng quan trọng và giảm nhiễu. Các bước thường bao gồm:
+\begin{itemize}
+    \item Cân bằng sáng, tăng tương phản hoặc hiệu chỉnh màu.
+    \item Lọc nhiễu và cải thiện độ nét.
+    \item Chuẩn hóa kích thước, góc xoay hoặc cắt vùng quan tâm (ROI).
+\end{itemize}
+Giai đoạn này đảm bảo rằng hình ảnh đầu vào luôn đạt chất lượng ổn định để phục vụ nhận diện lỗi.
+
+\subsection{Phân tích ảnh và nhận diện lỗi}
+Ở bước này, hệ thống áp dụng các thuật toán xử lý ảnh nâng cao và mô hình học máy để:
+\begin{itemize}
+    \item Trích xuất đặc trưng của sản phẩm.
+    \item Phát hiện các bất thường hoặc khuyết tật như vết nứt, thiếu linh kiện, sai lệch vị trí, biến dạng hình học.
+    \item So sánh với hình mẫu hoặc tiêu chuẩn kỹ thuật đã thiết lập.
+\end{itemize}
+Thuật toán AI và machine learning giúp hệ thống thích nghi với biến động trong môi trường sản xuất, từ đó cải thiện độ chính xác theo thời gian.
+
+\subsection{Ra quyết định}
+Dựa trên các tiêu chí chất lượng đã định nghĩa trước, hệ thống phân loại sản phẩm thành hai nhóm: đạt yêu cầu (OK) hoặc không đạt (NG). Việc ra quyết định được tự động hóa và đảm bảo tính khách quan, loại bỏ hoàn toàn yếu tố chủ quan của con người.
+
+\subsection{Phản hồi và lưu trữ dữ liệu}
+Kết quả kiểm tra được ghi nhận và phản hồi trực tiếp đến hệ thống sản xuất để thực hiện các hành động kịp thời như loại bỏ sản phẩm lỗi hoặc điều chỉnh quy trình. Đồng thời, dữ liệu hình ảnh, log lỗi và thống kê được lưu trữ trên cơ sở dữ liệu cục bộ hoặc đám mây để phục vụ phân tích chất lượng, tối ưu hoá dây chuyền và truy vết trong sản xuất.
+
+Pipeline trên giúp hệ thống AVI hoạt động mạch lạc, hiệu quả và có khả năng mở rộng theo yêu cầu thực tế của từng dây chuyền sản xuất.
+
+
+
+
+
+
+
