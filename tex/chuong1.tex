@@ -1,12 +1,235 @@
 \chapter{Giới thiệu chung}
 
-\section{Bối cảnh và xu hướng phát triển}
+\section{Bối cảnh và sự cần thiết của hệ thống AVI trong công nghiệp}
+    Trong bối cảnh cạnh tranh sản xuất ngày càng khốc liệt, việc duy trì chất lượng sản phẩm hoàn hảo không còn là lợi thế mà đã trở thành yêu cầu bắt buộc. Lỗi sản phẩm gây ra chi phí rất lớn: thu hồi hàng loạt, lãng phí nguyên vật liệu, gián đoạn dây chuyền và tổn thất nghiêm trọng đến uy tín thương hiệu. Kiểm tra ngoại quan thủ công dù được dùng rộng rãi vẫn bộc lộ hạn chế rõ rệt về tốc độ, tính ổn định và độ chính xác.
 
-\section{}
+Trước các yêu cầu ngày càng khắt khe của thị trường và tiêu chuẩn chất lượng, hệ thống kiểm tra ngoại quan tự động -- \textit{Automated Visual Inspection} (AVI) -- nổi lên như một giải pháp trọng yếu, tận dụng sức mạnh của thị giác máy (\textit{machine vision}) và trí tuệ nhân tạo (AI) để tái định nghĩa cách kiểm soát chất lượng trong sản xuất hiện đại.
 
-Nhu cầu về sản xuất chất lượng cao, hiệu suất lớn và mang tính cá nhân hóa đang tăng mạnh trong thời đại Công nghiệp 4.0, qua đó nhấn mạnh vai trò quan trọng của hệ thống kiểm tra bằng thị giác máy.
+Theo dự báo, thị trường hệ thống thị giác máy toàn cầu sẽ đạt \textbf{9,29 tỷ USD} vào năm 2032, với tốc độ tăng trưởng CAGR \textbf{7,2\%} giai đoạn 2025--2032. Nhu cầu tự động hóa, xu hướng ``zero-defect'' và các công nghệ Công nghiệp 4.0 là yếu tố thúc đẩy mạnh mẽ sự phát triển này.
 
-Thị giác máy, một thành phần của trí tuệ nhân tạo (AI), cho phép kiểm soát 100\% quy trình sản xuất với tốc độ rất cao. Bằng việc sử dụng các thuật toán học máy để nhận dạng hình ảnh, hệ thống có thể giám sát toàn bộ quá trình sản xuất, nâng cao độ chính xác, hiệu suất và chất lượng kiểm soát. Điều này giúp loại bỏ lỗi chủ quan và tình trạng mệt mỏi dễ xảy ra trong kiểm tra thủ công, duy trì quá trình vận hành liên tục và ổn định.
 
-Các ngành như dược phẩm và chế biến thực phẩm phụ thuộc vào hệ thống kiểm tra bằng hình ảnh để đảm bảo tính đồng nhất của sản phẩm và đáp ứng các tiêu chuẩn an toàn. Dưới đây là cách các hệ thống kiểm tra thị giác máy tự động tiên tiến đang định hình ngành sản xuất, cùng các lợi ích chính mà chúng mang lại cho cơ sở sản xuất.
+\section{Hệ thống kiểm tra ngoại quan tự động (AVI) là gì?}
+
+AVI (\textit{Automated Visual Inspection}) là hệ thống kiểm tra chất lượng sử dụng:
+\begin{itemize}
+    \item camera công nghiệp độ phân giải cao,
+    \item cảm biến thông minh,
+    \item thuật toán xử lý ảnh và AI,
+\end{itemize}
+để tự động phát hiện lỗi, phân loại, đánh giá chất lượng và đưa ra quyết định theo thời gian thực.
+
+AVI không chỉ ``chụp ảnh sản phẩm'' mà còn thực sự hiểu và phân tích hình ảnh nhờ các thuật toán tiên tiến như:
+\begin{itemize}
+    \item Machine Learning (ML),
+    \item Deep Learning (CNN, YOLO),
+    \item Anomaly Detection,
+    \item Feature Extraction.
+\end{itemize}
+
+Các chức năng chính của AVI bao gồm:
+\begin{itemize}
+    \item Phát hiện lỗi (\textit{Defect Detection}),
+    \item Phân loại lỗi (\textit{Classification}),
+    \item Nhận diện bất thường (\textit{Anomaly Detection}),
+    \item Định vị lỗi (\textit{Localization}),
+    \item Đánh giá chất lượng tổng thể (\textit{Quality Assessment}).
+\end{itemize}
+
+Khả năng tự học từ dữ liệu giúp AVI ngày càng chính xác, ít phụ thuộc vào cấu hình thủ công và thích ứng nhanh với các biến thể sản phẩm mới.
+
+\section{Quy trình hoạt động của hệ thống AVI}
+
+Quy trình vận hành điển hình của một hệ thống AVI bao gồm:
+
+\begin{enumerate}
+    \item \textbf{Thu nhận hình ảnh} \\
+    Camera độ phân giải cao và hệ thống chiếu sáng tạo ra hình ảnh sắc nét, làm nổi bật các lỗi tiềm ẩn.
+
+    \item \textbf{Xử lý ảnh} \\
+    Áp dụng các kỹ thuật nâng cao chất lượng ảnh, lọc nhiễu, phát hiện biên, phân đoạn và trích xuất đặc trưng.
+
+    \item \textbf{So sánh và phân tích} \\
+    Hình ảnh được so sánh với các tiêu chuẩn chất lượng hoặc ``golden image''. Các thuật toán AI phân tích sai lệch và nhận diện lỗi.
+
+    \item \textbf{Ra quyết định} \\
+    Hệ thống xác định sản phẩm đạt hoặc không đạt dựa trên các quy tắc (\textit{rule-based}) hoặc mô hình AI đã được huấn luyện.
+
+    \item \textbf{Phản hồi và báo cáo} \\
+    Kết quả được gửi ngược lại dây chuyền để loại bỏ sản phẩm NG, điều chỉnh tham số và ghi log phục vụ phân tích xu hướng.
+\end{enumerate}
+
+\section{Các thành phần của hệ thống AVI}
+
+Hệ thống AVI vận hành dựa trên sự kết hợp giữa phần cứng hiện đại và phần mềm thông minh nhằm đảm bảo quá trình kiểm tra đạt độ chính xác và hiệu quả cao.
+
+\subsection{Thành phần phần cứng}
+
+\begin{itemize}
+    \item \textbf{Camera:} Các camera công nghiệp độ phân giải cao như area-scan, line-scan, camera 3D, multispectral, infrared và X-ray được sử dụng để thu thập dữ liệu hình ảnh chi tiết. Việc lựa chọn camera phụ thuộc vào yêu cầu của từng ứng dụng.
+    
+    \item \textbf{Hệ thống chiếu sáng:} Ánh sáng phù hợp là yếu tố then chốt để tạo ra hình ảnh rõ ràng và ổn định. Các loại đèn phổ biến gồm ring light, backlight, dome light, directional lighting, strobe và LED arrays, được sử dụng nhằm làm nổi bật các đặc điểm hoặc lỗi trên sản phẩm.
+    
+    \item \textbf{Cảm biến:} Ngoài camera, hệ thống AVI có thể tích hợp cảm biến 3D, LIDAR, cảm biến hồng ngoại, cảm biến tiệm cận và cảm biến áp suất để thu thập dữ liệu phi hình ảnh, tăng cường khả năng kiểm tra.
+    
+    \item \textbf{Ống kính và quang học:} Các ống kính chuyên dụng giúp đảm bảo độ nét, trường nhìn, độ phóng đại và độ sâu trường ảnh phù hợp. Ống kính telecentric thường được sử dụng cho các bài đo kích thước có độ chính xác cao.
+    
+    \item \textbf{Phần cứng xử lý:} Các CPU, GPU và DSP hiệu năng cao trong máy tính công nghiệp đảm nhiệm việc xử lý và phân tích dữ liệu theo thời gian thực, đặc biệt quan trọng đối với các tác vụ deep learning.
+\end{itemize}
+
+\subsection{Thành phần phần mềm}
+
+\begin{itemize}
+    \item \textbf{Phần mềm xử lý ảnh:} Các phần mềm chuyên dụng sử dụng thuật toán nâng cao chất lượng ảnh, lọc nhiễu, nhận dạng mẫu và trích xuất đặc trưng. Các công cụ so sánh rule-based và phân tích thống kê cũng được sử dụng.
+    
+    \item \textbf{Thuật toán học máy:} Các thuật toán AI như deep learning (CNN, YOLO) và anomaly detection giúp hệ thống học từ dữ liệu và cải thiện độ chính xác trong phát hiện lỗi theo thời gian.
+    
+    \item \textbf{Giao diện người dùng (UI):} Giao diện trực quan cho phép người vận hành thiết lập tham số kiểm tra, xem ảnh trực tiếp, hiển thị kết quả và truy cập dữ liệu lịch sử.
+    
+    \item \textbf{Lưu trữ dữ liệu:} Hệ thống lưu trữ cục bộ hoặc đám mây được sử dụng để quản lý lượng lớn dữ liệu kiểm tra sinh ra trong quá trình vận hành.
+    
+    \item \textbf{Thành phần mạng:} Kết nối qua Ethernet, Wi-Fi hoặc các giao thức công nghiệp cho phép hệ thống AVI tích hợp với các hệ thống khác và hỗ trợ giám sát từ xa.
+    
+    \item \textbf{Cơ chế phản hồi:} Hệ thống AVI có thể gửi kết quả kiểm tra đến các thiết bị trên dây chuyền như bộ loại NG hoặc điều chỉnh thông số vận hành.
+\end{itemize}
+
+\section{Các loại lỗi mà hệ thống AVI có thể phát hiện}
+
+Hệ thống kiểm tra ngoại quan tự động (AVI) có khả năng phát hiện nhiều loại lỗi trên nhiều dạng sản phẩm và ngành công nghiệp khác nhau, bao gồm:
+
+\begin{itemize}
+    \item \textbf{Lỗi bề mặt (Surface Defects):} trầy xước, móp, đổi màu, vết bẩn, nứt, sứt mẻ, ba via, rỗ khí, không đồng nhất bề mặt, nhăn, rách và nốt sần.
+    
+    \item \textbf{Lỗi kích thước (Dimensional Defects):} sai lệch về kích thước, hình dạng, góc, thể tích, lệch vị trí và lắp ghép không chuẩn.
+    
+    \item \textbf{Lỗi lắp ráp (Assembly Defects):} thiếu linh kiện, lắp sai vị trí, linh kiện sai loại, lỗi cực tính, lỗi hàn và lắp ráp chưa hoàn chỉnh.
+    
+    \item \textbf{Lỗi thẩm mỹ (Cosmetic Defects):} trầy xước nhẹ, vết quệt, đường sọc nhỏ, chấm đen và đổi màu ảnh hưởng đến ngoại quan.
+    
+    \item \textbf{Lỗi bao bì (Packaging Defects):} nhãn sai, bao bì hỏng, seal lỗi, thiếu vật liệu, mức đầy không đúng, lỗi mã vạch/QR và nhiễm bẩn.
+    
+    \item \textbf{Lỗi vật liệu (Material Defects):} tạp chất, sai lệch thành phần, nứt, rỗ và bụi ngoại lai.
+\end{itemize}
+
+\section{Ứng dụng của hệ thống AVI trong công nghiệp}
+
+Hệ thống kiểm tra ngoại quan tự động (AVI) được triển khai rộng rãi trong nhiều lĩnh vực, mỗi ngành tận dụng công nghệ này để đáp ứng các yêu cầu kiểm soát chất lượng riêng:
+
+\begin{itemize}
+    \item \textbf{Ô tô (Automotive):} kiểm tra ghế xe, lớp sơn, mối hàn, lắp ráp linh kiện và gai lốp. Theo Volvo Cars, hệ thống AVI tích hợp AI có khả năng phát hiện nhiều hơn 10\% đến 40\% lỗi so với phương pháp kiểm tra thủ công.
+
+    \item \textbf{Điện tử (Electronics Manufacturing):} kiểm tra chất lượng PCB, mối hàn, vị trí linh kiện và phát hiện lỗi linh kiện gắn bề mặt (SMT).
+
+    \item \textbf{Dược phẩm (Pharmaceuticals):} kiểm tra viên nén, nang, thuốc dạng lỏng nhằm phát hiện nhiễm bẩn, lỗi bao bì và kiểm tra độ chính xác của nhãn.
+
+    \item \textbf{Ngành gỗ (Wood Industry):} kiểm tra lỗi bề mặt sàn gỗ như lệch màu, mắt gỗ và trầy xước.
+
+    \item \textbf{Thực phẩm và đồ uống (Food and Beverage):} kiểm tra tính toàn vẹn bao bì, phát hiện dị vật, đảm bảo mức đầy, chất lượng hạt và tính đồng nhất ngoại quan.
+
+    \item \textbf{Hàng không (Aerospace):} kiểm tra linh kiện động cơ, vật liệu composite và các cụm chi tiết quan trọng về an toàn.
+
+    \item \textbf{Xây dựng (Construction):} phát hiện vết nứt trong kết cấu, giám sát độ lún nền móng và kiểm tra bố trí cốt thép.
+
+    \item \textbf{Dệt may (Textile):} kiểm tra lỗ thủng, vết bẩn, sai hoa văn và lỗi dệt.
+
+    \item \textbf{Thiết bị y tế (Medical Device):} kiểm tra dụng cụ phẫu thuật, implant và thiết bị chẩn đoán nhằm đảm bảo độ chính xác kích thước và chất lượng bề mặt.
+
+    \item \textbf{Bán dẫn (Semiconductor):} kiểm tra wafer silicon và vi mạch để phát hiện các lỗi siêu nhỏ và nhiễm bẩn.
+\end{itemize}
+
+\section{Lợi ích nổi bật của hệ thống AVI}
+
+Việc triển khai hệ thống AVI mang lại nhiều lợi ích quan trọng cho các doanh nghiệp sản xuất trong việc nâng cao hiệu quả kiểm soát chất lượng:
+
+\begin{itemize}
+    \item \textbf{Độ chính xác và tính ổn định cao:}  
+    Hệ thống AVI có khả năng phát hiện các lỗi rất nhỏ với độ chính xác từ 95\% đến 99.5\%, vượt trội so với kiểm tra thủ công. Các hệ thống tích hợp AI có thể phát hiện nhiều hơn 10\% đến 40\% lỗi so với phương pháp kiểm tra bằng mắt người.
+
+    \item \textbf{Tăng năng suất và hiệu quả:}  
+    Tốc độ kiểm tra có thể đạt 0.1--0.5 giây mỗi sản phẩm, so với 3--10 giây trong kiểm tra thủ công. Hệ thống có thể vận hành liên tục 24/7 mà không bị mệt mỏi.
+
+    \item \textbf{Tiết kiệm chi phí đáng kể:}  
+    Giảm chi phí nhân công, giảm phế phẩm, giảm tái chế và ngăn chặn các đợt thu hồi tốn kém. Mặc dù chi phí đầu tư ban đầu nằm trong khoảng 50,000--250,000 USD, thời gian hoàn vốn thường chỉ từ 12--24 tháng.
+
+    \item \textbf{Cải thiện chất lượng sản phẩm:}  
+    Các đánh giá khách quan và nhất quán giúp nâng cao chất lượng đầu ra và tăng sự hài lòng của khách hàng.
+
+    \item \textbf{Mở rộng và thích ứng linh hoạt:}  
+    Hệ thống AVI có thể được tái cấu hình nhanh chóng để kiểm tra nhiều loại sản phẩm và đáp ứng các mức sản lượng khác nhau.
+
+    \item \textbf{Đánh giá khách quan:}  
+    Loại bỏ sự thiên vị của con người và đảm bảo việc áp dụng tiêu chuẩn chất lượng một cách nhất quán.
+
+    \item \textbf{Vận hành trong môi trường nguy hiểm:}  
+    Hệ thống AVI có thể được triển khai tại các khu vực nguy hiểm hoặc khó tiếp cận mà con người không thể làm việc trực tiếp.
+
+    \item \textbf{Thu thập và báo cáo dữ liệu toàn diện:}  
+    Dữ liệu kiểm tra chi tiết hỗ trợ phân tích xu hướng, cải tiến quy trình và đảm bảo tuân thủ các yêu cầu quy định.
+
+    \item \textbf{Bảo vệ thương hiệu:}  
+    Giảm nguy cơ sản phẩm lỗi lọt ra thị trường và giảm thiểu thiệt hại liên quan đến thu hồi sản phẩm.
+\end{itemize}
+
+\section{Thách thức và hạn chế}
+
+
+Mặc dù mang lại nhiều lợi ích, việc triển khai và vận hành hệ thống kiểm tra ngoại quan tự động (AVI) cũng tồn tại một số thách thức và hạn chế nhất định:
+
+\begin{itemize}
+    \item \textbf{Chi phí đầu tư ban đầu cao:}  
+    Chi phí phần cứng, phần mềm và tích hợp có thể trở thành rào cản lớn đối với nhiều doanh nghiệp.
+
+    \item \textbf{Độ nhạy với môi trường:}  
+    Hệ thống thường yêu cầu ánh sáng ổn định và vị trí sản phẩm chính xác để đảm bảo kết quả kiểm tra tin cậy.
+
+    \item \textbf{Khó phát hiện các lỗi tinh vi:}  
+    Những lỗi rất nhỏ hoặc bất thường khó đoán có thể vẫn thách thức ngay cả với các hệ thống tiên tiến.
+
+    \item \textbf{Nhu cầu dữ liệu huấn luyện lớn:}  
+    Các hệ thống dựa trên AI yêu cầu tập dữ liệu lớn, đa dạng để huấn luyện mô hình hiệu quả.
+
+    \item \textbf{Xử lý sự biến thiên của sản phẩm:}  
+    Sự thay đổi tự nhiên của ngoại quan sản phẩm có thể dẫn đến hiện tượng loại sai (false reject).
+
+    \item \textbf{Nguy cơ sai sót:}  
+    Sai lệch trong kiểm tra như false positive và false negative vẫn có thể xảy ra.
+
+    \item \textbf{Độ phức tạp khi tích hợp:}  
+    Việc tích hợp hệ thống AVI với dây chuyền hiện tại và hạ tầng IT có thể phức tạp và đòi hỏi thời gian.
+
+    \item \textbf{Yêu cầu nhân lực kỹ thuật:}  
+    Vận hành và bảo trì hệ thống đòi hỏi đội ngũ kỹ sư và kỹ thuật viên có chuyên môn cao.
+
+    \item \textbf{Hạn chế theo thiết kế sản phẩm và quy trình:}  
+    Hình dạng sản phẩm hoặc đặc thù quy trình sản xuất có thể gây khó khăn cho việc kiểm tra toàn diện.
+\end{itemize}
+
+\section{Xu hướng phát triển của hệ thống AVI}
+
+Lĩnh vực kiểm tra ngoại quan tự động (AVI) đang không ngừng phát triển với nhiều tiến bộ nổi bật, mở rộng mạnh mẽ khả năng ứng dụng trong công nghiệp hiện đại:
+
+\begin{itemize}
+    \item \textbf{Tích hợp AI tiên tiến:}  
+    Các thuật toán tự học, phân tích lỗi dự đoán và tối ưu hóa hệ thống tự động giúp nâng cao khả năng kiểm tra và độ thông minh của toàn bộ hệ thống.
+
+    \item \textbf{Công nghệ hình ảnh nâng cao:}  
+    Quét 3D độ chính xác cao, hình ảnh đa phổ (multispectral), tích hợp X-ray và CT, cùng công nghệ hyperspectral giúp quá trình kiểm tra toàn diện và sâu hơn.
+
+    \item \textbf{Edge Computing:}  
+    Xử lý dữ liệu thời gian thực ngay tại nguồn, giúp giảm độ trễ, giảm nhu cầu băng thông và tăng cường bảo mật cho hệ thống.
+
+    \item \textbf{Robot cộng tác (Cobots):}  
+    Việc tích hợp robot với hệ thống thị giác tiên tiến mang lại khả năng kiểm tra linh hoạt, đa góc và phù hợp với nhiều ứng dụng khác nhau.
+
+    \item \textbf{Phần mềm thân thiện và nền tảng no-code:}  
+    Cho phép người dùng không có nhiều kiến thức lập trình vẫn có thể thiết lập và vận hành hệ thống AVI dễ dàng.
+
+    \item \textbf{Mô hình phát hiện bất thường dựa trên AI:}  
+    Các thuật toán học từ ảnh không lỗi để phát hiện bất thường, giảm nhu cầu thu thập lượng lớn mẫu lỗi trong quá trình huấn luyện.
+\end{itemize}
+
+\section{Kết luận}
+Hệ thống kiểm tra ngoại quan tự động (AVI) đang tạo ra sự thay đổi mạnh mẽ trong hoạt động kiểm soát chất lượng của sản xuất hiện đại. Với độ chính xác vượt trội, hiệu suất cao và khả năng vận hành ổn định, AVI giúp các doanh nghiệp trong nhiều ngành nâng cao chất lượng sản phẩm, giảm chi phí và tăng cường lợi thế cạnh tranh.
+
+Khi các công nghệ như trí tuệ nhân tạo, học máy và thị giác máy tiếp tục phát triển, vai trò của hệ thống AVI sẽ càng trở nên quan trọng hơn, góp phần định hình tương lai của ngành sản xuất thông minh và tối ưu hóa hiệu suất toàn diện.
+
 
