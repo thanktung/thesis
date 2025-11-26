@@ -287,6 +287,64 @@ Sơ đồ kết nối tổng quát của hệ thống robot được mô tả nh
 Hệ thống tại phòng thực hành sử dụng tay máy GP7 và bộ điều khiển công nghiệp YRC1000micro cùng với điều khiển cầm tay đi kèm.
 
 
+\subsubsection{Tay máy GP7}
+Robot Yaskawa GP7 là robot công nghiệp 6 trục với tải trọng 7\,kg, tốc độ cao và độ chính xác vượt trội. Thiết kế nhỏ gọn tối ưu cho các không gian hẹp, phù hợp với nhiều ứng dụng như gắp--đặt, lắp ráp, đóng gói và kiểm tra. GP7 hỗ trợ điều khiển linh hoạt và lập trình dễ dàng thông qua bộ điều khiển YRC1000. Robot có độ chính xác lặp lại đạt \(\pm 0.01\,\mathrm{mm}\), tốc độ di chuyển nhanh giúp cải thiện hiệu suất và độ ổn định của dây chuyền tự động hóa. Đây là một trong những lựa chọn phổ biến trong các hệ thống sản xuất hiện đại.
+
+Thông số kỹ thuật chính:
+\begin{itemize}
+    \item Tải trọng: \textbf{7\,kg}
+    \item Tầm với ngang (Horizontal reach): \textbf{927\,mm}
+    \item Tầm với dọc (Vertical reach): \textbf{1693\,mm}
+    \item Độ chính xác lặp lại (Repeatability): \(\pm 0.01\,\mathrm{mm}\)
+\end{itemize}
+
+Phạm vi hoạt động theo từng trục:
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Trục} & \textbf{Phạm vi chuyển động (Degrees)} & \textbf{Tốc độ (º/s)} & \textbf{Moment (N·m)} \\
+\hline
+S & \(\pm 170\) & 375 & - \\
+L & \(+145/-65\) & 315 & - \\
+U & \(+190/-70\) & 410 & - \\
+R & \(\pm 190\) & 550 & 17 \\
+B & \(\pm 135\) & 550 & 17 \\
+T & \(\pm 360\) & 1000 & 10 \\
+\hline
+\end{tabular}
+\caption{Thông số chuyển động các trục của robot Yaskawa GP7}
+\label{tab:gp7_axes}
+\end{table}
+
+Bộ điều khiển tương thích:
+\begin{itemize}
+    \item \textbf{YRC1000}
+    \item \textbf{YRC1000micro}
+\end{itemize}
+
+\subsubsection{Bộ điều khiển YRC1000micro}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/Chapter2/yrc1000micro.png}
+    \caption{Bộ điều khiển YRC1000micro}
+    \label{fig:yrc1000}
+\end{figure}
+
+Mặt trước của bộ điều khiển robot bao gồm các cổng kết nối và thành phần điều khiển chính như sau:
+
+\begin{itemize}
+    \item \textbf{AC input power supply connector}: Đầu kết nối nguồn cấp cho hệ thống.
+    \item \textbf{Main power switch}: Công tắc gạt dùng để bật/tắt nguồn hệ thống.
+    \item \textbf{Robot axis power supply connector}: Đầu kết nối cấp nguồn và tín hiệu điều khiển tới tay máy robot.
+    \item \textbf{USB connector}: Cổng USB dùng để kết nối bộ nhớ ngoài (tương tự USB/SD card trên pendant).
+    \item \textbf{Programming pendant connector}: Đầu kết nối với thiết bị điều khiển cầm tay (programming pendant).
+    \item \textbf{LAN RJ-45}: Cổng kết nối Ethernet/IP để truyền thông mạng công nghiệp.
+    \item \textbf{General-purpose I/O connector}: Cổng I/O kết nối với các thiết bị ngoại vi như cảm biến, công tắc, relay, v.v.
+    \item \textbf{Robot system input connector (SAFETY)}: Cổng đầu vào chuyên dụng cho các chức năng an toàn (cửa an toàn, công tắc dừng khẩn cấp, cảm biến vùng), dùng để ngừng robot khi điều kiện an toàn không được đảm bảo.
+\end{itemize}
+
 \subsection{Hệ thống robot Hyundai}
 
 \section{Thị giác máy tính và mô hình YOLO}
