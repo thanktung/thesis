@@ -15,19 +15,20 @@
 \contentsline {figure}{\numberline {2.12}{\ignorespaces Động cơ servo HG-KR32}}{22}{figure.caption.23}%
 \contentsline {figure}{\numberline {2.13}{\ignorespaces Bộ khuếch đại servo MR-J4-20B}}{22}{figure.caption.24}%
 \contentsline {figure}{\numberline {2.14}{\ignorespaces Bộ điều khiển QD77MS16}}{23}{figure.caption.25}%
-\contentsline {figure}{\numberline {2.15}{\ignorespaces YOLO Performance.}}{26}{figure.caption.26}%
-\contentsline {figure}{\numberline {2.16}{\ignorespaces YOLOv11 Tasks}}{27}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Sơ đồ tổng quát hệ thống robot công nghiệp đơn giản}}{25}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces YOLO Performance.}}{26}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces YOLOv11 Tasks}}{28}{figure.caption.28}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Sơ đồ khối hệ thống}}{29}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Cấu hình New Project}}{30}{figure.caption.29}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Thiết lập phần cứng}}{31}{figure.caption.30}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces IO Assignment}}{31}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Thiết lập kết nối Ethernet}}{32}{figure.caption.32}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Kết nối CC-Link giữa Robot Yaskawa và PLC}}{33}{figure.caption.33}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Cấu hình Project Kepware}}{34}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Cấu hình Channel}}{34}{figure.caption.35}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Cấu hình Device}}{34}{figure.caption.36}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Cấu hình IP camera}}{35}{figure.caption.37}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Cấu hình ảnh chụp}}{35}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Sơ đồ khối hệ thống}}{30}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Cấu hình New Project}}{31}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Thiết lập phần cứng}}{32}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces IO Assignment}}{32}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Thiết lập kết nối Ethernet}}{33}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Kết nối CC-Link giữa Robot Yaskawa và PLC}}{34}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Cấu hình Project Kepware}}{35}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Cấu hình Channel}}{35}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Cấu hình Device}}{35}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Cấu hình IP camera}}{36}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Cấu hình ảnh chụp}}{36}{figure.caption.39}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

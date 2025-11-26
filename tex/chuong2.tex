@@ -263,7 +263,29 @@ QD77MS16 (Hình \ref{fig:qd77ms})là module điều khiển chuyển động (Si
 
 
 \section{Robot công nghiệp}
+
+Trong bối cảnh cuộc cách mạng công nghiệp 4.0 đang diễn ra mạnh mẽ, việc ứng dụng robot, đặc biệt là cánh tay robot, vào sản xuất và đời sống đã trở thành xu hướng tất yếu để nâng cao năng suất, chất lượng và giảm thiểu chi phí lao động.
+
 \subsection{Hệ thống Robot Yaskawa}
+ Hệ thống điều khiển Robot tiêu chuẩn bao gồm Controller (Bộ điều khiển robot công nghiệp), Manipulator (Tay máy), Programming pendant (Điều khiển cầm tay). 
+Ngoài ra còn cần các cáp kết nối giữa các bộ phận của hệ thống robot.
+\begin{itemize}
+    \item \textbf{Programming pendant cable}: Cáp kết nối thiết bị điều khiển cầm tay với bộ điều khiển.
+    \item \textbf{Manipulator cable}: Cáp kết nối bộ điều khiển với tay máy, cung cấp nguồn và tín hiệu điều khiển servo.
+    \item \textbf{Power supply cable}: Cáp cấp nguồn cho toàn bộ hệ thống (nguồn 1 pha hoặc 3 pha), yêu cầu có bộ lọc nhiễu.
+\end{itemize}
+
+Sơ đồ kết nối tổng quát của hệ thống robot được mô tả như Hình \ref{fig:yaskawa-dia} 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/Chapter2/yaskawa-diagram.png}
+    \caption{Sơ đồ tổng quát hệ thống robot công nghiệp đơn giản}
+    \label{fig:yaskawa-dia}
+\end{figure}
+
+Hệ thống tại phòng thực hành sử dụng tay máy GP7 và bộ điều khiển công nghiệp YRC1000micro cùng với điều khiển cầm tay đi kèm.
+
 
 \subsection{Hệ thống robot Hyundai}
 

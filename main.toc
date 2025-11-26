@@ -24,35 +24,35 @@
 \contentsline {section}{\numberline {2.3}Servo motor và Module QD77MS16}{21}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Servo và Servo Amplifier}{21}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Module QD77MS16}{23}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Robot công nghiệp}{25}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Hệ thống Robot Yaskawa}{25}{subsection.2.4.1}%
+\contentsline {section}{\numberline {2.4}Robot công nghiệp}{24}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Hệ thống Robot Yaskawa}{24}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Hệ thống robot Hyundai}{25}{subsection.2.4.2}%
 \contentsline {section}{\numberline {2.5}Thị giác máy tính và mô hình YOLO}{25}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Thị giác máy tính}{25}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Mạng YOLO - Lược sử phát triển}{26}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Ultralytics YOLOv11}{27}{subsection.2.5.3}%
-\contentsline {chapter}{\numberline {3}Xây dựng hệ thống và chương trình điều khiển}{29}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Sơ đồ khối hệ thống}{29}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Thuật toán điều khiển}{29}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Cấu hình hệ thống}{30}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Cấu hình hệ thống PLC và module}{30}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Cấu hình CC-Link giao tiếp giữa PLC và Station}{32}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Cấu hình KepserverEX làm server OPC UA}{32}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Cấu hình GigE Camera Basler ac2500}{33}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Pipeline xử lý ảnh AVI}{33}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Thu nhận hình ảnh}{36}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Xử lý và tiền xử lý hình ảnh}{36}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Phân tích ảnh và nhận diện lỗi}{36}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Ra quyết định}{37}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Phản hồi và lưu trữ dữ liệu}{37}{subsection.3.4.5}%
-\contentsline {chapter}{\numberline {4}Thực nghiệm và đánh giá}{38}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Giao diện hệ thống (nếu có)}{38}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Kết quả nhận diện và phân loại sản phẩm}{38}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Đánh giá hiệu suất: tốc độ, độ chính xác, độ ổn định}{38}{section.4.3}%
-\contentsline {section}{\numberline {4.4}So sánh với phương pháp thủ công}{38}{section.4.4}%
-\contentsline {chapter}{{\bf KẾT LUẬN}\rm }{39}{chapter*.39}%
-\contentsline {chapter}{{\bf CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ }\rm }{40}{chapter*.40}%
-\contentsline {chapter}{{\bf TÀI LIỆU THAM KHẢO}}{41}{chapter*.41}%
+\contentsline {subsection}{\numberline {2.5.2}Mạng YOLO - Lược sử phát triển}{27}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Ultralytics YOLOv11}{28}{subsection.2.5.3}%
+\contentsline {chapter}{\numberline {3}Xây dựng hệ thống và chương trình điều khiển}{30}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Sơ đồ khối hệ thống}{30}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Thuật toán điều khiển}{30}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Cấu hình hệ thống}{31}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Cấu hình hệ thống PLC và module}{31}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Cấu hình CC-Link giao tiếp giữa PLC và Station}{33}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Cấu hình KepserverEX làm server OPC UA}{33}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Cấu hình GigE Camera Basler ac2500}{34}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Pipeline xử lý ảnh AVI}{34}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Thu nhận hình ảnh}{37}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Xử lý và tiền xử lý hình ảnh}{37}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Phân tích ảnh và nhận diện lỗi}{37}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Ra quyết định}{38}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Phản hồi và lưu trữ dữ liệu}{38}{subsection.3.4.5}%
+\contentsline {chapter}{\numberline {4}Thực nghiệm và đánh giá}{39}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Giao diện hệ thống (nếu có)}{39}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Kết quả nhận diện và phân loại sản phẩm}{39}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Đánh giá hiệu suất: tốc độ, độ chính xác, độ ổn định}{39}{section.4.3}%
+\contentsline {section}{\numberline {4.4}So sánh với phương pháp thủ công}{39}{section.4.4}%
+\contentsline {chapter}{{\bf KẾT LUẬN}\rm }{40}{chapter*.40}%
+\contentsline {chapter}{{\bf CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ }\rm }{41}{chapter*.41}%
+\contentsline {chapter}{{\bf TÀI LIỆU THAM KHẢO}}{42}{chapter*.42}%
 \renewcommand {\cftchappresnum }{PHỤ LỤC\nobreakspace }
 \contentsline {chapter}{\numberline {A}}{P1}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Mã nguồn thực hiện phép phân tích nhóm}{P1}{section.A.1}%
