@@ -345,6 +345,52 @@ Mặt trước của bộ điều khiển robot bao gồm các cổng kết nố
     \item \textbf{Robot system input connector (SAFETY)}: Cổng đầu vào chuyên dụng cho các chức năng an toàn (cửa an toàn, công tắc dừng khẩn cấp, cảm biến vùng), dùng để ngừng robot khi điều kiện an toàn không được đảm bảo.
 \end{itemize}
 
+
+\subsubsection{Dạy JOB cho Robot Yaskawa}
+Trước khi có thể dạy một Job cho robot, cần kiểm tra các điều kiện: nút [EMERGENCY STOP] không được nhấn và [Mode switch] ở trạng thái Teach Mode. Sau đó có thể di chuyển Robot bẳng cách nhấn Switch sau tay cầm và bật nguồn Servo, dùng các nút di chuyển trục để di chuyển.
+Để tạo mới một Job, ấn nút [MAIN MENU] -> JOB -> CREATE NEW JOB. Sau đó điền tên Job và có thể chọn Folder để lưu trữ Job. Kết thúc quá trình bằng nút EXECUTE.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/Chapter2/yaskawa-process.png}
+    \caption{Tạo Job bằng Pendant}
+    \label{fig:yakawa-process}
+\end{figure}
+
+Màn hình viết chương trình trong Job sẽ được hiển thị:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/Chapter2/job.png}
+    \caption{Màn hình tạo Job}
+    \label{fig:job}
+\end{figure}
+
+Ngôn ngữ được sử dụng để viết chương trình là INFORM III. Cấu trúc của một câu lệnh bao gồm hai phần là Instruction và Additional item.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/Chapter2/inform.png}
+    \caption{Ngôn ngữ INFORM III}
+    \label{fig:inform}
+\end{figure}
+
+\subsubsection{Cấu hình Robot Yaskawa làm Slave trong mạng CC-Link}
+Để có thể giao tiếp cần có CCS-PCIE board, gắn vào phần Optional Slot của bộ điều khiển YRC1000micro. 
+Để thiết lập cần vào Maintenance Mode: Nhấn [MAIN MENU] trong khi bật nguồn YRC1000micro.
+[MAIN MENU] -> SYSTEM -> SETUP -> OPTION BOARD -> CCS-PCIE.
+Thiết lập thông số cho board CCS-PCIE như dưới:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/Chapter2/cclink1.png}
+    \caption{Kiểm tra Maintenance Mode}
+    \label{fig:cc1}
+\end{figure}
+
+Ấn [ENTER], cho đến màn hình EXTERNAL IO SETUP. Đây là phần thiết lập dữ liệu gửi và nhận (Rx, Ry) trên mạng CC-Link được đưa vào External Input và External Output.
+
+
+
 \subsection{Hệ thống robot Hyundai}
 
 \section{Thị giác máy tính và mô hình YOLO}
