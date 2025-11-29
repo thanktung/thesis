@@ -1,36 +1,34 @@
 \chapter{Cơ sở lý thuyết}
-
+% =======================
+% PHẦN 1: LÝ THUYẾT VỀ PLC VÀ HMI
+% =======================
 \section{PLC Mitsubishi và HMI PFXGP4501TAA}
 \subsection{PLC Mitsubishi}
  
-Bộ điều khiển logic khả trình (PLC) Mitsubishi Q13UDVCPU (Hình \ref{fig:plc_q13udvcpu}) thuộc dòng MELSEC-Q Series, là loại CPU đa năng (Universal CPU) có hiệu suất xử lý cao và khả năng mở rộng linh hoạt. Với tốc độ thực thi lệnh cơ bản chỉ 1,9 ns, bộ nhớ chương trình 130K steps và khả năng quản lý tới 8.192 điểm I/O, Q13UDVCPU đáp ứng tốt các hệ thống sản xuất yêu cầu xử lý nhanh và ổn định. CPU này tích hợp sẵn cổng Ethernet, USB và khe cắm thẻ SD, giúp kết nối dễ dàng với các thiết bị ngoại vi, mạng công nghiệp cũng như hệ thống SCADA. Nhờ đó, PLC Mitsubishi Q13UDVCPU thường được sử dụng trong các dây chuyền tự động hóa, kết hợp cùng màn hình HMI để giám sát và vận hành thuận tiện.
+Bộ điều khiển logic khả trình (PLC) Mitsubishi Q13UDVCPU (Hình \ref{c2:plc_q13udvcpu}) thuộc dòng MELSEC-Q Series, là loại CPU đa năng có hiệu suất xử lý cao và khả năng mở rộng linh hoạt. Với tốc độ thực thi lệnh cơ bản chỉ 1,9 ns, bộ nhớ chương trình 130K steps và khả năng quản lý tới 8.192 điểm I/O, Q13UDVCPU đáp ứng tốt các hệ thống sản xuất yêu cầu xử lý nhanh và ổn định. CPU này tích hợp sẵn cổng Ethernet, USB và khe cắm thẻ SD, giúp kết nối dễ dàng với các thiết bị ngoại vi, mạng công nghiệp cũng như hệ thống SCADA. Nhờ đó, PLC Mitsubishi Q13UDVCPU thường được sử dụng trong các dây chuyền tự động hóa, kết hợp cùng màn hình HMI để giám sát và vận hành thuận tiện.
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.3\textwidth]{figures/Chapter01/plc-cpu.png}
+    \includegraphics[width=0.3\textwidth]{figures/Chapter2/plc-cpu.png}
     \caption{PLC Mitsubishi Q13UDVCPU}
-    \label{fig:plc_q13udvcpu}
+    \label{c2:plc_q13udvcpu}
 \end{figure}
 
-
-Một hệ thống PLC Mitsubishi Q Series cơ bản như Hình \ref{fig:plc-structure} bao gồm các thành phần: module nguồn (Power Supply), 
+Một hệ thống PLC Mitsubishi Q Series cơ bản như Hình \ref{c2:plc-structure} bao gồm các thành phần: module nguồn (Power Supply), 
 base unit, CPU Q13UDVCPU, và các module mở rộng I/O hoặc truyền thông. 
 Module nguồn thường được lắp ở vị trí ngoài cùng bên trái để cung cấp điện cho toàn bộ rack. 
 CPU Q13UDVCPU được lắp trực tiếp lên base unit, bên cạnh module nguồn. Các module I/O số, I/O tương tự, 
-truyền thông (ví dụ CC-Link) hoặc điều khiển chuyển động (motion) sẽ được lắp nối tiếp sang bên phải CPU. 
-Việc lắp đặt cần đảm bảo các connector tiếp xúc chắc chắn, không để bụi bẩn hoặc rung động mạnh. 
+truyền thông (ví dụ CC-Link) hoặc điều khiển chuyển động (motion) sẽ được lắp nối tiếp sang bên phải CPU. Việc lắp đặt cần đảm bảo các connector tiếp xúc chắc chắn, không để bụi bẩn hoặc rung động mạnh. 
 
 Sau khi hoàn tất lắp đặt, hệ thống cần được cấu hình phần cứng trên phần mềm GX Works2 hoặc GX Developer. 
 Quá trình này bao gồm việc khai báo CPU, module nguồn, các module I/O theo đúng vị trí trên base unit. 
 Nếu có sử dụng module mở rộng ở remote rack, cần khai báo địa chỉ truyền thông tương ứng. 
 Việc cấu hình chính xác giúp hệ thống vận hành ổn định và tránh lỗi khi chạy chương trình điều khiển.
 
-
-
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\linewidth]{figures/Chapter01/plc-structure.png}
+    \includegraphics[width=0.5\linewidth]{figures/Chapter2/plc-structure.png}
     \caption{Hệ thống PLC Q Series}
-    \label{fig:plc-structure}
+    \label{c2:plc-structure}
 \end{figure}
 
 \begin{table}
@@ -57,20 +55,26 @@ Chuẩn chống rung/sốc & JIS B 3502, IEC 61131-2 \\ \hline
 \end{table}
 
 
-Để lập trình và cấu hình PLC Mitsubishi Q13UDVCPU, phần mềm được sử dụng phổ biến là GX Works2. Đây là môi trường phát triển tích hợp (IDE) của Mitsubishi Electric, cho phép thiết kế, viết chương trình, cấu hình phần cứng, giám sát trạng thái và chẩn đoán lỗi. GX Works2 hỗ trợ nhiều ngôn ngữ lập trình chuẩn IEC 61131-3 như Ladder Diagram (LD), Structured Text (ST), và Function Block Diagram (FBD), giúp kỹ sư có thể lựa chọn phong cách lập trình phù hợp với ứng dụng thực tế. 
+Để lập trình và cấu hình PLC Mitsubishi Q13UDVCPU, phần mềm được sử dụng phổ biến là GX Works2. 
+Đây là môi trường phát triển tích hợp (IDE) của Mitsubishi Electric, cho phép thiết kế, viết chương trình, cấu hình phần cứng, giám sát trạng thái và chẩn đoán lỗi.
+GX Works2 hỗ trợ nhiều ngôn ngữ lập trình chuẩn IEC 61131-3 như Ladder Diagram (LD), Structured Text (ST), và Function Block Diagram (FBD), giúp kỹ sư có thể lựa chọn phong cách lập trình phù hợp với ứng dụng thực tế. 
 
-Trong quá trình cấu hình, người dùng khai báo loại CPU, module nguồn, vị trí các module I/O, module truyền thông hoặc motion tương ứng trên base unit. Ngoài ra, GX Works2 cũng cho phép thiết lập tham số mạng (Ethernet, CC-Link, v.v.), quản lý bộ nhớ và tải chương trình xuống CPU thông qua cổng USB hoặc Ethernet. Phần mềm còn cung cấp chức năng monitoring online, giúp quan sát trạng thái hoạt động của các bit, thanh ghi, timer/counter theo thời gian thực, từ đó hỗ trợ quá trình kiểm tra và gỡ lỗi nhanh chóng. 
+Trong quá trình cấu hình, người dùng khai báo loại CPU, module nguồn, vị trí các module I/O, module truyền thông hoặc motion tương ứng trên base unit. 
+Ngoài ra, GX Works2 cũng cho phép thiết lập tham số mạng (Ethernet, CC-Link, v.v.), quản lý bộ nhớ và tải chương trình xuống CPU thông qua cổng USB hoặc Ethernet. 
+Phần mềm còn cung cấp chức năng monitoring online, giúp quan sát trạng thái hoạt động của các bit, thanh ghi, timer/counter theo thời gian thực, từ đó hỗ trợ quá trình kiểm tra và gỡ lỗi nhanh chóng. 
 
 \subsection{Giao diện người máy HMI}
-Giao diện Người – Máy (Human-Machine Interface, HMI) là thiết bị cho phép người vận hành tương tác trực tiếp với hệ thống điều khiển thông qua màn hình trực quan. Trong hệ thống này, HMI được sử dụng để giám sát trạng thái hoạt động, hiển thị dữ liệu sản xuất, theo dõi cảnh báo và cho phép người dùng nhập các lệnh điều khiển. Thiết bị HMI giúp đơn giản hóa việc vận hành, giảm sai sót và tăng tính trực quan khi quản lý dây chuyền tự động hóa.  
+Giao diện Người – Máy (Human-Machine Interface, HMI) là thiết bị cho phép người vận hành tương tác trực tiếp với hệ thống điều khiển thông qua màn hình trực quan. 
+Trong hệ thống này, HMI được sử dụng để giám sát trạng thái hoạt động, hiển thị dữ liệu sản xuất, theo dõi cảnh báo và cho phép người dùng nhập các lệnh điều khiển. 
+Thiết bị HMI giúp đơn giản hóa việc vận hành, giảm sai sót và tăng tính trực quan khi quản lý dây chuyền tự động hóa.  
 
-Màn hình HMI PFXGP4501TAA thuộc dòng GP4000 Series của hãng Pro-face (Schneider Electric), là một trong những thiết bị giao diện phổ biến, được thiết kế nhỏ gọn nhưng mạnh mẽ, thích hợp kết nối với PLC Mitsubishi Q Series (Hình \ref{fig:hmi_pfxgp4501taa}). 
+Màn hình HMI PFXGP4501TAA thuộc dòng GP4000 Series của hãng Pro-face (Schneider Electric), là một trong những thiết bị giao diện phổ biến, được thiết kế nhỏ gọn nhưng mạnh mẽ, thích hợp kết nối với PLC Mitsubishi Q Series (Hình \ref{c2:hmi}). 
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/Chapter01/pfxgp4501taa.jpg}
+    \includegraphics[width=0.5\textwidth]{figures/Chapter2/pfxgp4501taa.jpg}
     \caption{HMI Mitsubishi PFXGP4501TAA}
-    \label{fig:hmi_pfxgp4501taa}
+    \label{c2:hmi}
 \end{figure}
 
 \begin{table}[H]
@@ -96,9 +100,11 @@ Chuẩn bảo vệ & IP65 (mặt trước) \\ \hline
 
 Nhờ tích hợp nhiều cổng giao tiếp và hỗ trợ cấu hình qua phần mềm Pro-face GP-Pro EX, PFXGP4501TAA có khả năng kết nối linh hoạt với PLC, biến nó thành công cụ trực quan hóa dữ liệu và điều khiển sản xuất hiệu quả trên dây chuyền.
 
-
+% =======================
+% PHẦN 2: GIỚI THIỆU VỀ CC-LINK
+% =======================
 \section{Mạng CC-Link và Module CC-Link QJ16BT11N}
-
+%===============================================================================================================
 \subsection{CC-Link}
 CC-Link (Control \& Communication Link) là một mạng truyền thông công nghiệp do Mitsubishi Electric phát triển, được sử dụng rộng rãi để kết nối các thiết bị điều khiển trong hệ thống tự động hóa. CC-Link cho phép truyền tải cả tín hiệu ON/OFF và dữ liệu số giữa PLC và các module phân tán thông qua cáp chuyên dụng, đảm bảo tốc độ cao và độ tin cậy trong vận hành.
 Ưu điểm chính của CC-Link: 
@@ -115,9 +121,7 @@ CC-Link (Control \& Communication Link) là một mạng truyền thông công n
     \caption{Mạng CC-Link}
     \label{fig:cclink-structure}
 \end{figure}
-
-
-
+%==============================================================================================================================
 \subsection{Master/Local Modules}
 Bằng cách sử dụng Master/Local Modules, các PLC thuộc dòng MELSEC-Q có thể kết nối với nhau qua hệ thống CC-Link. Các trạm PLC ở xa trong hệ thống CC-Link có thẻ được điều khiển như khi ở cùng base unit. 
 Module hoạt động như một trạm Master hoặc một trạm Local trong hệ thống CC-Link.
@@ -154,7 +158,6 @@ Các đặc điểm/tính năng chính của hệ thống CC-Link:
     \label{fig:cclink-diagnostics}
     \end{figure} 
   
-
   
   \item Module tương thích với CC-Link Ver.2: Vì master/local module là module tương thích CC-Link Ver.2, nên số điểm (points) trong mỗi hệ thống có thể tăng lên đến 8192 cho RX/RY và số word có thể tăng lên đến 2048 cho RWr/RWw. Trên cơ sở từng trạm, số điểm có thể tăng lên đến 896 cho RX/RY và số word là 128 cho RWr/RWw. Một hệ thống tương thích CC-Link Ver.2 có thể lớn hơn hệ thống tương thích CC-Link Ver.1 (Hình \ref{fig:cclink-ver2}).
    \begin{figure}[h]
@@ -173,6 +176,7 @@ Các đặc điểm/tính năng chính của hệ thống CC-Link:
     \end{figure} 
 \end{enumerate}
 
+%==========================================================================================================
 \subsection{Module QJ61BT11N}
 QJ61BT11N là module Master/Local CC-Link dùng cho dòng PLC MELSEC-Q của Mitsubishi.
 \begin{figure}
@@ -184,8 +188,11 @@ QJ61BT11N là module Master/Local CC-Link dùng cho dòng PLC MELSEC-Q của Mit
 
 Giao diện mặt trước của module gồm các phần: Led thông báo/hiển thị trạng thái (1); thiết lập thứ tự trạm (2); thiết lập tốc độ truyền thông (3); giao diện kết nối cáp CC-Link (4); Serial Number (5).
 
-
+% =======================
+% PHẦN 3: HỆ CHUYỂN ĐỘNG SERVO
+% =======================
 \section{Servo motor và Module QD77MS16}
+%=======================================================================================
 \subsection{Servo và Servo Amplifier}
 Servo (servo motor và bộ khuếch đại điều khiển) là thiết bị truyền động được sử dụng rộng rãi trong tự động hóa công nghiệp để điều khiển vị trí, tốc độ và mô-men xoắn một cách chính xác. Khác với động cơ thường, servo được trang bị encoder hoặc cảm biến hồi tiếp, giúp hệ thống biết chính xác trạng thái của trục motor và thực hiện điều khiển vòng kín (closed-loop control). Nhờ vậy, servo có khả năng đáp ứng nhanh, sai số nhỏ, ổn định cao và phù hợp cho các ứng dụng yêu cầu độ chính xác như máy CNC, robot công nghiệp, dây chuyền sản xuất điện tử, đóng gói và in ấn. Một hệ thống servo thường bao gồm servo motor (động cơ), servo amplifier/driver (bộ khuếch đại) và bộ điều khiển (PLC, motion controller), trong đó bộ khuếch đại đóng vai trò nhận lệnh từ bộ điều khiển, điều chỉnh dòng điện cấp cho motor theo tín hiệu phản hồi từ encoder. Nhờ ưu điểm gọn nhẹ, hiệu suất cao và khả năng đồng bộ nhiều trục, servo ngày nay đã trở thành thành phần không thể thiếu trong các giải pháp tự động hóa hiện đại.
 
@@ -204,7 +211,7 @@ Servo được sử dụng là HG-KR32 (Hình \ref{fig:hgkr32}) kết hợp cùn
     \caption{Bộ khuếch đại servo MR-J4-20B}
     \label{fig:mrj4}
 \end{figure}
-
+%===========================================================================================
 \subsection{Module QD77MS16}
 QD77MS16 (Hình \ref{fig:qd77ms})là module điều khiển chuyển động (Simple Motion Module) thuộc dòng MELSEC-Q series của Mitsubishi Electric. Module này được thiết kế để thực hiện các bài toán điều khiển vị trí, tốc độ và mô-men xoắn với độ chính xác cao, đồng bộ nhiều trục trong hệ thống tự động hóa.
 \begin{figure}[h]
@@ -261,11 +268,12 @@ QD77MS16 (Hình \ref{fig:qd77ms})là module điều khiển chuyển động (Si
   không cần proximity dog; khi bật nguồn lại không cần HPR.
 \end{itemize}
 
-
+% =======================
+% PHẦN 4: ROBOT CÔNG NGHIỆP
+% =======================
 \section{Robot công nghiệp}
-
 Trong bối cảnh cuộc cách mạng công nghiệp 4.0 đang diễn ra mạnh mẽ, việc ứng dụng robot, đặc biệt là cánh tay robot, vào sản xuất và đời sống đã trở thành xu hướng tất yếu để nâng cao năng suất, chất lượng và giảm thiểu chi phí lao động.
-
+%=====================================================================================
 \subsection{Hệ thống Robot Yaskawa}
  Hệ thống điều khiển Robot tiêu chuẩn bao gồm Controller (Bộ điều khiển robot công nghiệp), Manipulator (Tay máy), Programming pendant (Điều khiển cầm tay). 
 Ngoài ra còn cần các cáp kết nối giữa các bộ phận của hệ thống robot.
@@ -286,9 +294,15 @@ Sơ đồ kết nối tổng quát của hệ thống robot được mô tả nh
 
 Hệ thống tại phòng thực hành sử dụng tay máy GP7 và bộ điều khiển công nghiệp YRC1000micro cùng với điều khiển cầm tay đi kèm.
 
-
 \subsubsection{Tay máy GP7}
-Robot Yaskawa GP7 là robot công nghiệp 6 trục với tải trọng 7\,kg, tốc độ cao và độ chính xác vượt trội. Thiết kế nhỏ gọn tối ưu cho các không gian hẹp, phù hợp với nhiều ứng dụng như gắp--đặt, lắp ráp, đóng gói và kiểm tra. GP7 hỗ trợ điều khiển linh hoạt và lập trình dễ dàng thông qua bộ điều khiển YRC1000. Robot có độ chính xác lặp lại đạt \(\pm 0.01\,\mathrm{mm}\), tốc độ di chuyển nhanh giúp cải thiện hiệu suất và độ ổn định của dây chuyền tự động hóa. Đây là một trong những lựa chọn phổ biến trong các hệ thống sản xuất hiện đại.
+Robot Yaskawa GP7 (Hình\ref{c2:gp7}) là robot công nghiệp 6 trục với tải trọng 7\,kg, tốc độ cao và độ chính xác vượt trội. Thiết kế nhỏ gọn tối ưu cho các không gian hẹp, phù hợp với nhiều ứng dụng như gắp--đặt, lắp ráp, đóng gói và kiểm tra. GP7 hỗ trợ điều khiển linh hoạt và lập trình dễ dàng thông qua bộ điều khiển YRC1000. Robot có độ chính xác lặp lại đạt \(\pm 0.01\,\mathrm{mm}\), tốc độ di chuyển nhanh giúp cải thiện hiệu suất và độ ổn định của dây chuyền tự động hóa. Đây là một trong những lựa chọn phổ biến trong các hệ thống sản xuất hiện đại.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/Chapter2/gp7.jpg}
+    \caption{Tay máy GP7}
+    \label{c2:gp7}
+\end{figure}
 
 Thông số kỹ thuật chính:
 \begin{itemize}
@@ -346,56 +360,135 @@ Mặt trước của bộ điều khiển robot bao gồm các cổng kết nố
 \end{itemize}
 
 
-\subsubsection{Dạy JOB cho Robot Yaskawa}
-Trước khi có thể dạy một Job cho robot, cần kiểm tra các điều kiện: nút [EMERGENCY STOP] không được nhấn và [Mode switch] ở trạng thái Teach Mode. Sau đó có thể di chuyển Robot bẳng cách nhấn Switch sau tay cầm và bật nguồn Servo, dùng các nút di chuyển trục để di chuyển.
-Để tạo mới một Job, ấn nút [MAIN MENU] -> JOB -> CREATE NEW JOB. Sau đó điền tên Job và có thể chọn Folder để lưu trữ Job. Kết thúc quá trình bằng nút EXECUTE.
+\subsubsection{Viết chương trình cho Robot Yaskawa}
+Trước khi có thể viết một chương trình cho robot, cần kiểm tra các điều kiện: nút [EMERGENCY STOP] không được nhấn và [Mode switch] ở trạng thái Teach Mode. Sau đó có thể di chuyển Robot bẳng cách nhấn Switch sau tay cầm và bật nguồn Servo, dùng các nút di chuyển trục để di chuyển.
+Để tạo mới một một chương trình, ấn nút [MAIN MENU] -> JOB -> CREATE NEW JOB. Sau đó điền tên chương trình và có thể chọn Folder để lưu trữ. Kết thúc quá trình bằng nút EXECUTE.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{figures/Chapter2/yaskawa-process.png}
-    \caption{Tạo Job bằng Pendant}
-    \label{fig:yakawa-process}
+    \caption{Tạo chương trình mới bằng Pendant}
+    \label{c2:yakawa-process}
 \end{figure}
 
-Màn hình viết chương trình trong Job sẽ được hiển thị:
-
+Màn hình viết chương trình sẽ được hiển thị:
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{figures/Chapter2/job.png}
     \caption{Màn hình tạo Job}
-    \label{fig:job}
+    \label{c2:job}
 \end{figure}
 
 Ngôn ngữ được sử dụng để viết chương trình là INFORM III. Cấu trúc của một câu lệnh bao gồm hai phần là Instruction và Additional item.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/Chapter2/inform.png}
+    \includegraphics[width=0.5\textwidth]{figures/Chapter2/inform.png}
     \caption{Ngôn ngữ INFORM III}
-    \label{fig:inform}
+    \label{c2:inform}
 \end{figure}
 
-\subsubsection{Cấu hình Robot Yaskawa làm Slave trong mạng CC-Link}
-Để có thể giao tiếp cần có CCS-PCIE board, gắn vào phần Optional Slot của bộ điều khiển YRC1000micro. 
-Để thiết lập cần vào Maintenance Mode: Nhấn [MAIN MENU] trong khi bật nguồn YRC1000micro.
-[MAIN MENU] -> SYSTEM -> SETUP -> OPTION BOARD -> CCS-PCIE.
-Thiết lập thông số cho board CCS-PCIE như dưới:
+\begin{itemize}
+    \item \textbf{Instruction}: Hướng dẫn để thực hiện một lệnh.
+    \item \textbf{Additional item}: Phần điều kiện bổ sung cho Instruction trước đó.
+\end{itemize}
+
+Các loại Instruction trong INFORM III như sau:
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Type} & \textbf{Content} \\ \hline
+I/O Instruction & Các lệnh điều khiển I/O \\ \hline
+Control Instruction & Điều khiển luồng xử lý của chương trình \\ \hline
+Operating Instruction & Điều khiển các biến trong chương trình \\ \hline
+Move Instruction & Điều khiển di chuyển của tay máy \\ \hline
+Shift Instruction & Di chuyển điểm dạy hiện tại \\ \hline
+Adheres Instruction & Lệnh đi kèm theo lệnh khác \\ \hline
+Work Instruction & Lệnh liên quan đến làm việc của robot \\ \hline
+Optional Instruction & Lệnh chức năng tùy chọn \\ \hline
+\end{tabular}
+\end{center}
+
+Chi tiết về các lệnh có trong \textit{[YRC1000micro OPTIONS INSTRUCTION FOR INFORM LANGUAGE RE-CKI-A468]}.
+
+
+%===========================================================================================
+\subsection{Hệ thống robot Hyundai}
+
+\subsubsection{Tay máy và bộ điều khiển}
+
+Tương tự như hệ thống của Robot Yaskawa, hệ thống Robot Hyundai cũng chia làm hai phần chính là cánh tay Robot và bộ điều khiển dùng để điều khiển Robot. Như minh họa tại Hình\ref{fig:hyun1}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/Chapter2/cclink1.png}
-    \caption{Kiểm tra Maintenance Mode}
-    \label{fig:cc1}
+    \includegraphics[width=0.75\textwidth]{figures/Chapter2/hyundai-diagram}
+    \caption{Hệ thống Robot Hyundai cơ bản}
+    \label{fig:hyun1}
 \end{figure}
 
-Ấn [ENTER], cho đến màn hình EXTERNAL IO SETUP. Đây là phần thiết lập dữ liệu gửi và nhận (Rx, Ry) trên mạng CC-Link được đưa vào External Input và External Output.
+Hệ thống Robot Hyundai dùng tại phòng thực hành bao gồm tay máy Hyundai HH7 và bộ điều khiển Hi5a.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/Chapter2/HH7.png}
+    \caption{Tay máy HH7}
+    \label{fig:hyun2}
+\end{figure}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/Chapter2/hi5a.jpg}
+    \caption{Bộ điều khiển Hi5a}
+    \label{fig:hyun3}
+\end{figure}
 
-\subsection{Hệ thống robot Hyundai}
+Teach pendant của Hi5a cũng cho phép chuyển chế độ hoạt động, điều khiển hệ thống tương tư với teach pendant của Robot Yaskawa.
 
+\subsubsection{Viết chương trình điều khiển bằng Teach pendant}
+
+Chọn chương trình bằng cách bấm phím [SHIFT] + [PROG] trên Teach pendant, chọn List show/hide để hiện thông tin của chương trình (Hình\ref{fig:hyun4}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/Chapter2/hyun4.png}
+    \caption{Chọn chương trình}
+    \label{fig:hyun4}
+\end{figure}
+
+Một chương trình điều khiển robot thường gồm hai loại lệnh:
+\begin{itemize}
+    \item \textbf{Lệnh bước (step command):} dùng để di chuyển robot.
+    \item \textbf{Lệnh chức năng (function command):} dùng để thực hiện thao tác.
+\end{itemize}
+
+Mỗi lệnh bao gồm phần \textit{command} và các \textit{thuộc tính (properties)}, được chia thành:
+\begin{itemize}
+    \item \textbf{Thuộc tính bắt buộc (base properties).}
+    \item \textbf{Thuộc tính tùy chọn (optional properties).}
+\end{itemize}
+
+Khi người dùng nhập một lệnh, các giá trị mặc định sẽ được gán cho thuộc tính bắt buộc, và có thể thay đổi. Thuộc tính tùy chọn được hiển thị bằng ký tự ``\_'' trên con trỏ làm việc; khi di chuyển đến mục này, khung chính sẽ hiển thị các thuộc tính có thể chỉnh sửa.
+
+Khi chỉnh sửa thuộc tính của lệnh, người dùng có thể:
+\begin{itemize}
+    \item Nhập trực tiếp bằng phím số.
+    \item Chọn tham số hoặc chức năng từ menu và nhập mã (\textit{index}).
+    \item Nhập theo ký tự bằng \textit{Formula} hoặc \textit{Character entry}.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/Chapter2/command.png}
+    \caption{Basic Command}
+    \label{fig:hyun5}
+\end{figure}
+% =======================
+% PHẦN 4: COMPUTER VISION
+% =======================
 \section{Thị giác máy tính và mô hình YOLO}
+%=======================================================================
 \subsection{Thị giác máy tính}
-Thị giác máy tính (\textit{Computer Vision – CV}) là lĩnh vực nghiên cứu cách máy tính hiểu và diễn giải hình ảnh hoặc video, tương tự như cách con người nhận thức thị giác. Trong công nghiệp, thị giác máy đóng vai trò quan trọng trong tự động hóa các tác vụ kiểm tra, giám sát và điều khiển chất lượng.
+Thị giác máy tính (Computer Vision) là lĩnh vực nghiên cứu cách máy tính hiểu và diễn giải hình ảnh hoặc video, tương tự như cách con người nhận thức thị giác. Trong công nghiệp, thị giác máy đóng vai trò quan trọng trong tự động hóa các tác vụ kiểm tra, giám sát và điều khiển chất lượng.
 
 Một trong những ứng dụng phổ biến nhất của thị giác máy tính là kiểm tra sản phẩm trên dây chuyền sản xuất. Hệ thống camera thu thập hình ảnh sản phẩm, sau đó sử dụng thuật toán xử lý ảnh để phát hiện lỗi như thiếu linh kiện, lắp sai hướng, sai vị trí hoặc khuyết tật bề mặt. So với kiểm tra thủ công, thị giác máy có ưu thế vượt trội về tốc độ, độ chính xác và khả năng hoạt động liên tục.
 
@@ -406,7 +499,8 @@ Ngoài kiểm tra chất lượng, thị giác máy còn được ứng dụng t
   \item \textbf{Giám sát an toàn:} Theo dõi khu vực nguy hiểm, phát hiện người xâm nhập vùng cấm.
 \end{itemize}
 
-Trong sản xuất điện tử SMT, thị giác máy đặc biệt quan trọng ở khâu kiểm tra AOI. Các mô hình học sâu hiện đại như CNN, YOLO giúp hệ thống phân loại và phát hiện linh kiện nhanh, chính xác hơn, giảm đáng kể tỷ lệ lỗi do con người.
+Trong sản xuất điện tử SMT, thị giác máy đặc biệt quan trọng ở khâu kiểm tra AOI/AVI. Các mô hình học sâu hiện đại như CNN, YOLO giúp hệ thống phân loại và phát hiện linh kiện nhanh, chính xác hơn, giảm đáng kể tỷ lệ lỗi do con người.
+%===========================================================================
 \subsection{Mạng YOLO - Lược sử phát triển}
 \begin{figure}
     \centering
@@ -452,7 +546,7 @@ Ra mắt vào năm 2015, YOLO nhanh chóng được ưa chuộng nhờ tốc đ�
 
 
 \end{itemize}
-
+%====================================================================
 \subsection{Ultralytics YOLOv11}
 \begin{figure}[h]
     \centering

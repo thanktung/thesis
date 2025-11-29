@@ -1,0 +1,64 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{{\bf MỞ ĐẦU}}{1}{chapter*.9}%
+\contentsline {chapter}{\numberline {1}Giới thiệu chung}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Bối cảnh và sự cần thiết của hệ thống AVI trong công nghiệp}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Hệ thống kiểm tra ngoại quan tự động (AVI) là gì?}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Quy trình hoạt động của hệ thống AVI}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Các thành phần của hệ thống AVI}{6}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Thành phần phần cứng}{6}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Thành phần phần mềm}{7}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Các loại lỗi mà hệ thống AVI có thể phát hiện}{7}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Ứng dụng của hệ thống AVI trong công nghiệp}{8}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Lợi ích nổi bật của hệ thống AVI}{9}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Thách thức và hạn chế}{10}{section.1.8}%
+\contentsline {section}{\numberline {1.9}Xu hướng phát triển của hệ thống AVI}{11}{section.1.9}%
+\contentsline {section}{\numberline {1.10}Kết luận}{12}{section.1.10}%
+\contentsline {chapter}{\numberline {2}Cơ sở lý thuyết}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}PLC Mitsubishi và HMI PFXGP4501TAA}{13}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}PLC Mitsubishi}{13}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Giao diện người máy HMI}{15}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Mạng CC-Link và Module CC-Link QJ16BT11N}{17}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}CC-Link}{17}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Master/Local Modules}{18}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Module QJ61BT11N}{20}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Servo motor và Module QD77MS16}{21}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Servo và Servo Amplifier}{21}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Module QD77MS16}{23}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Robot công nghiệp}{24}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Hệ thống Robot Yaskawa}{24}{subsection.2.4.1}%
+\contentsline {subsubsection}{Tay máy GP7}{25}{subsubsection*.27}%
+\contentsline {subsubsection}{Bộ điều khiển YRC1000micro}{27}{subsubsection*.30}%
+\contentsline {subsubsection}{Viết chương trình cho Robot Yaskawa}{28}{subsubsection*.32}%
+\contentsline {subsection}{\numberline {2.4.2}Hệ thống robot Hyundai}{30}{subsection.2.4.2}%
+\contentsline {subsubsection}{Tay máy và bộ điều khiển}{30}{subsubsection*.36}%
+\contentsline {subsubsection}{Viết chương trình điều khiển bằng Teach pendant}{32}{subsubsection*.40}%
+\contentsline {section}{\numberline {2.5}Thị giác máy tính và mô hình YOLO}{33}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Thị giác máy tính}{33}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Mạng YOLO - Lược sử phát triển}{34}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Ultralytics YOLOv11}{35}{subsection.2.5.3}%
+\contentsline {chapter}{\numberline {3}Xây dựng hệ thống và chương trình điều khiển}{38}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Sơ đồ khối hệ thống}{38}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Thuật toán điều khiển}{38}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Cấu hình hệ thống}{39}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Cấu hình hệ thống PLC và module}{39}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Cấu hình CC-Link giao tiếp giữa PLC và Station}{41}{subsection.3.3.2}%
+\contentsline {subsubsection}{Cấu hình Robot Yaskawa làm Slave trong mạng CC-Link}{42}{subsubsection*.51}%
+\contentsline {subsection}{\numberline {3.3.3}Cấu hình KepserverEX làm server OPC UA}{43}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Cấu hình GigE Camera Basler ac2500}{44}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Pipeline xử lý ảnh AVI}{45}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Thu nhận hình ảnh}{46}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Xử lý và tiền xử lý hình ảnh}{46}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Phân tích ảnh và nhận diện lỗi}{46}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Ra quyết định}{47}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Phản hồi và lưu trữ dữ liệu}{47}{subsection.3.4.5}%
+\contentsline {chapter}{\numberline {4}Thực nghiệm và đánh giá}{48}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Giao diện hệ thống (nếu có)}{48}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Kết quả nhận diện và phân loại sản phẩm}{48}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Đánh giá hiệu suất: tốc độ, độ chính xác, độ ổn định}{48}{section.4.3}%
+\contentsline {section}{\numberline {4.4}So sánh với phương pháp thủ công}{48}{section.4.4}%
+\contentsline {chapter}{{\bf KẾT LUẬN}\rm }{49}{chapter*.58}%
+\contentsline {chapter}{{\bf CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ }\rm }{50}{chapter*.59}%
+\contentsline {chapter}{{\bf TÀI LIỆU THAM KHẢO}}{51}{chapter*.60}%
+\renewcommand {\cftchappresnum }{PHỤ LỤC\nobreakspace }
+\contentsline {chapter}{\numberline {A}}{P1}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Mã nguồn thực hiện phép phân tích nhóm}{P1}{section.A.1}%
