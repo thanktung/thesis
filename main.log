@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.11.15)  29 NOV 2025 23:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.11.15)  30 NOV 2025 11:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1422,7 +1422,11 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
- (./main.aux (./tex/00bia.aux) (./tex/01camon.aux) (./tex/02camdoan.aux) (./tex/03tomtat.aux) (./tex/chuong0_modau.aux) (./tex/chuong1.aux) (./tex/chuong2.aux) (./tex/chuong3.aux) (./tex/chuong4.aux) (./tex/05ketluan.aux) (./tex/06congbo.aux) (./tex/07phuluc.aux))
+ (./main.aux (./tex/00bia.aux) (./tex/01camon.aux) (./tex/02camdoan.aux) (./tex/03tomtat.aux) (./tex/chuong0_modau.aux) (./tex/chuong1.aux) (./tex/chuong2.aux) (./tex/chuong3.aux
+
+LaTeX Warning: Label `c3:plc1' multiply defined.
+
+) (./tex/chuong4.aux) (./tex/05ketluan.aux) (./tex/06congbo.aux) (./tex/07phuluc.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -1742,7 +1746,7 @@ Chapter 1.
 
  (./tex/chuong2.tex
 Chapter 2.
-<figures/Chapter2/plc-cpu.png, id=318, 409.53pt x 617.30624pt>
+<figures/Chapter2/plc-cpu.png, id=339, 409.53pt x 617.30624pt>
 File: figures/Chapter2/plc-cpu.png Graphic file (type png)
 <use figures/Chapter2/plc-cpu.png>
 Package pdftex.def Info: figures/Chapter2/plc-cpu.png  used on input line 11.
@@ -1755,7 +1759,7 @@ Package pdftex.def Info: figures/Chapter2/plc-cpu.png  used on input line 11.
 
 
  <./figures/Chapter2/plc-cpu.png (PNG copy)>]
-<figures/Chapter2/plc-structure.png, id=325, 1371.1225pt x 1051.93pt>
+<figures/Chapter2/plc-structure.png, id=345, 1371.1225pt x 1051.93pt>
 File: figures/Chapter2/plc-structure.png Graphic file (type png)
 <use figures/Chapter2/plc-structure.png>
 Package pdftex.def Info: figures/Chapter2/plc-structure.png  used on input line 29.
@@ -1763,7 +1767,7 @@ Package pdftex.def Info: figures/Chapter2/plc-structure.png  used on input line 
 
 
 [14 <./figures/Chapter2/plc-structure.png (PNG copy)>]
-<figures/Chapter2/pfxgp4501taa.jpg, id=332, 37.16743pt x 24.77829pt>
+<figures/Chapter2/pfxgp4501taa.jpg, id=352, 37.16743pt x 24.77829pt>
 File: figures/Chapter2/pfxgp4501taa.jpg Graphic file (type jpg)
 <use figures/Chapter2/pfxgp4501taa.jpg>
 Package pdftex.def Info: figures/Chapter2/pfxgp4501taa.jpg  used on input line 75.
@@ -1778,7 +1782,7 @@ Overfull \hbox (7.28514pt too wide) in paragraph at lines 84--99
 [15]
 
 [16 <./figures/Chapter2/pfxgp4501taa.jpg>]
-<figures/Chapter01/cc-link2.png, id=342, 581.92406pt x 358.33875pt>
+<figures/Chapter01/cc-link2.png, id=362, 581.92406pt x 358.33875pt>
 File: figures/Chapter01/cc-link2.png Graphic file (type png)
 <use figures/Chapter01/cc-link2.png>
 Package pdftex.def Info: figures/Chapter01/cc-link2.png  used on input line 120.
@@ -1786,17 +1790,17 @@ Package pdftex.def Info: figures/Chapter01/cc-link2.png  used on input line 120.
 
 
 [17 <./figures/Chapter01/cc-link2.png>]
-<figures/Chapter01/cclink3.png, id=351, 764.8575pt x 408.77719pt>
+<figures/Chapter01/cclink3.png, id=371, 764.8575pt x 408.77719pt>
 File: figures/Chapter01/cclink3.png Graphic file (type png)
 <use figures/Chapter01/cclink3.png>
 Package pdftex.def Info: figures/Chapter01/cclink3.png  used on input line 134.
 (pdftex.def)             Requested size: 318.66948pt x 170.313pt.
-<figures/Chapter01/cclink4.png, id=352, 624.83438pt x 379.4175pt>
+<figures/Chapter01/cclink4.png, id=372, 624.83438pt x 379.4175pt>
 File: figures/Chapter01/cclink4.png Graphic file (type png)
 <use figures/Chapter01/cclink4.png>
 Package pdftex.def Info: figures/Chapter01/cclink4.png  used on input line 140.
 (pdftex.def)             Requested size: 318.66948pt x 193.50615pt.
-<figures/Chapter01/cclink5.png, id=355, 871.00406pt x 466.74374pt>
+<figures/Chapter01/cclink5.png, id=375, 871.00406pt x 466.74374pt>
 File: figures/Chapter01/cclink5.png Graphic file (type png)
 <use figures/Chapter01/cclink5.png>
 Package pdftex.def Info: figures/Chapter01/cclink5.png  used on input line 149.
@@ -1804,12 +1808,12 @@ Package pdftex.def Info: figures/Chapter01/cclink5.png  used on input line 149.
 
 
 [18 <./figures/Chapter01/cclink3.png> <./figures/Chapter01/cclink4.png>]
-<figures/Chapter01/cclink6.png, id=363, 696.35156pt x 577.40718pt>
+<figures/Chapter01/cclink6.png, id=383, 696.35156pt x 577.40718pt>
 File: figures/Chapter01/cclink6.png Graphic file (type png)
 <use figures/Chapter01/cclink6.png>
 Package pdftex.def Info: figures/Chapter01/cclink6.png  used on input line 156.
 (pdftex.def)             Requested size: 318.66948pt x 264.23608pt.
-<figures/Chapter01/cclink7.png, id=365, 621.07031pt x 161.10187pt>
+<figures/Chapter01/cclink7.png, id=385, 621.07031pt x 161.10187pt>
 File: figures/Chapter01/cclink7.png Graphic file (type png)
 <use figures/Chapter01/cclink7.png>
 Package pdftex.def Info: figures/Chapter01/cclink7.png  used on input line 165.
@@ -1817,12 +1821,12 @@ Package pdftex.def Info: figures/Chapter01/cclink7.png  used on input line 165.
 
 
 [19 <./figures/Chapter01/cclink5.png> <./figures/Chapter01/cclink6.png>]
-<figures/Chapter01/cclink8.png, id=374, 790.45313pt x 456.20438pt>
+<figures/Chapter01/cclink8.png, id=394, 790.45313pt x 456.20438pt>
 File: figures/Chapter01/cclink8.png Graphic file (type png)
 <use figures/Chapter01/cclink8.png>
 Package pdftex.def Info: figures/Chapter01/cclink8.png  used on input line 173.
 (pdftex.def)             Requested size: 318.66948pt x 183.91945pt.
-<figures//Chapter01/qj61bt11n.png, id=375, 434.37282pt x 589.4522pt>
+<figures//Chapter01/qj61bt11n.png, id=395, 434.37282pt x 589.4522pt>
 File: figures//Chapter01/qj61bt11n.png Graphic file (type png)
 <use figures//Chapter01/qj61bt11n.png>
 Package pdftex.def Info: figures//Chapter01/qj61bt11n.png  used on input line 184.
@@ -1832,17 +1836,17 @@ Package pdftex.def Info: figures//Chapter01/qj61bt11n.png  used on input line 18
 [20 <./figures/Chapter01/cclink7.png> <./figures/Chapter01/cclink8.png>]
 
 [21 <./figures//Chapter01/qj61bt11n.png>]
-<figures/Chapter01/servo.jpg, id=392, 803.0pt x 803.0pt>
+<figures/Chapter01/servo.jpg, id=412, 803.0pt x 803.0pt>
 File: figures/Chapter01/servo.jpg Graphic file (type jpg)
 <use figures/Chapter01/servo.jpg>
 Package pdftex.def Info: figures/Chapter01/servo.jpg  used on input line 203.
 (pdftex.def)             Requested size: 182.09486pt x 182.08852pt.
-<figures/Chapter01/mrj420b.png, id=393, 475.7775pt x 424.58624pt>
+<figures/Chapter01/mrj420b.png, id=413, 475.7775pt x 424.58624pt>
 File: figures/Chapter01/mrj420b.png Graphic file (type png)
 <use figures/Chapter01/mrj420b.png>
 Package pdftex.def Info: figures/Chapter01/mrj420b.png  used on input line 210.
 (pdftex.def)             Requested size: 182.09486pt x 162.50412pt.
-<figures/Chapter01/qd77ms16.png, id=395, 475.7775pt x 475.7775pt>
+<figures/Chapter01/qd77ms16.png, id=415, 475.7775pt x 475.7775pt>
 File: figures/Chapter01/qd77ms16.png Graphic file (type png)
 <use figures/Chapter01/qd77ms16.png>
 Package pdftex.def Info: figures/Chapter01/qd77ms16.png  used on input line 219.
@@ -1858,12 +1862,12 @@ File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 
 [24]
-<figures/Chapter2/yaskawa-diagram.png, id=410, 855.195pt x 389.20406pt>
+<figures/Chapter2/yaskawa-diagram.png, id=430, 855.195pt x 389.20406pt>
 File: figures/Chapter2/yaskawa-diagram.png Graphic file (type png)
 <use figures/Chapter2/yaskawa-diagram.png>
 Package pdftex.def Info: figures/Chapter2/yaskawa-diagram.png  used on input line 290.
 (pdftex.def)             Requested size: 341.43307pt x 155.38786pt.
-<figures/Chapter2/gp7.jpg, id=412, 635.37375pt x 635.37375pt>
+<figures/Chapter2/gp7.jpg, id=432, 635.37375pt x 635.37375pt>
 File: figures/Chapter2/gp7.jpg Graphic file (type jpg)
 <use figures/Chapter2/gp7.jpg>
 Package pdftex.def Info: figures/Chapter2/gp7.jpg  used on input line 302.
@@ -1883,7 +1887,7 @@ Overfull \hbox (4.9268pt too wide) in paragraph at lines 318--330
 
 
 [26 <./figures/Chapter2/gp7.jpg>]
-<figures/Chapter2/yrc1000micro.png, id=428, 718.93594pt x 356.0803pt>
+<figures/Chapter2/yrc1000micro.png, id=448, 718.93594pt x 356.0803pt>
 File: figures/Chapter2/yrc1000micro.png Graphic file (type png)
 <use figures/Chapter2/yrc1000micro.png>
 Package pdftex.def Info: figures/Chapter2/yrc1000micro.png  used on input line 344.
@@ -1891,12 +1895,12 @@ Package pdftex.def Info: figures/Chapter2/yrc1000micro.png  used on input line 3
 
 
 [27 <./figures/Chapter2/yrc1000micro.png>]
-<figures/Chapter2/yaskawa-process.png, id=435, 979.40906pt x 406.51875pt>
+<figures/Chapter2/yaskawa-process.png, id=456, 979.40906pt x 406.51875pt>
 File: figures/Chapter2/yaskawa-process.png Graphic file (type png)
 <use figures/Chapter2/yaskawa-process.png>
 Package pdftex.def Info: figures/Chapter2/yaskawa-process.png  used on input line 369.
 (pdftex.def)             Requested size: 341.43307pt x 141.71301pt.
-<figures/Chapter2/job.png, id=436, 481.8pt x 402.75468pt>
+<figures/Chapter2/job.png, id=457, 481.8pt x 402.75468pt>
 File: figures/Chapter2/job.png Graphic file (type png)
 <use figures/Chapter2/job.png>
 Package pdftex.def Info: figures/Chapter2/job.png  used on input line 377.
@@ -1904,7 +1908,7 @@ Package pdftex.def Info: figures/Chapter2/job.png  used on input line 377.
 
 
 [28 <./figures/Chapter2/yaskawa-process.png>]
-<figures/Chapter2/inform.png, id=442, 198.7425pt x 73.02281pt>
+<figures/Chapter2/inform.png, id=463, 198.7425pt x 73.02281pt>
 File: figures/Chapter2/inform.png Graphic file (type png)
 <use figures/Chapter2/inform.png>
 Package pdftex.def Info: figures/Chapter2/inform.png  used on input line 385.
@@ -1912,7 +1916,7 @@ Package pdftex.def Info: figures/Chapter2/inform.png  used on input line 385.
 
 
 [29 <./figures/Chapter2/job.png> <./figures/Chapter2/inform.png>]
-<figures/Chapter2/hyundai-diagram.png, id=451, 459.21562pt x 304.88907pt>
+<figures/Chapter2/hyundai-diagram.png, id=471, 459.21562pt x 304.88907pt>
 File: figures/Chapter2/hyundai-diagram.png Graphic file (type png)
 <use figures/Chapter2/hyundai-diagram.png>
 Package pdftex.def Info: figures/Chapter2/hyundai-diagram.png  used on input line 424.
@@ -1920,12 +1924,12 @@ Package pdftex.def Info: figures/Chapter2/hyundai-diagram.png  used on input lin
 
 
 [30 <./figures/Chapter2/hyundai-diagram.png>]
-<figures/Chapter2/HH7.png, id=458, 1276.77pt x 903.375pt>
+<figures/Chapter2/HH7.png, id=478, 1276.77pt x 903.375pt>
 File: figures/Chapter2/HH7.png Graphic file (type png)
 <use figures/Chapter2/HH7.png>
 Package pdftex.def Info: figures/Chapter2/HH7.png  used on input line 433.
 (pdftex.def)             Requested size: 341.43307pt x 241.57117pt.
-<figures/Chapter2/hi5a.jpg, id=459, 139.2402pt x 175.857pt>
+<figures/Chapter2/hi5a.jpg, id=479, 139.2402pt x 175.857pt>
 File: figures/Chapter2/hi5a.jpg Graphic file (type jpg)
 <use figures/Chapter2/hi5a.jpg>
 Package pdftex.def Info: figures/Chapter2/hi5a.jpg  used on input line 440.
@@ -1933,7 +1937,7 @@ Package pdftex.def Info: figures/Chapter2/hi5a.jpg  used on input line 440.
 
 
 [31 <./figures/Chapter2/HH7.png> <./figures/Chapter2/hi5a.jpg>]
-<figures/Chapter2/hyun4.png, id=466, 356.0803pt x 204.01219pt>
+<figures/Chapter2/hyun4.png, id=486, 356.0803pt x 204.01219pt>
 File: figures/Chapter2/hyun4.png Graphic file (type png)
 <use figures/Chapter2/hyun4.png>
 Package pdftex.def Info: figures/Chapter2/hyun4.png  used on input line 453.
@@ -1941,7 +1945,7 @@ Package pdftex.def Info: figures/Chapter2/hyun4.png  used on input line 453.
 
 
 [32 <./figures/Chapter2/hyun4.png>]
-<figures/Chapter2/command.png, id=474, 487.06969pt x 75.28125pt>
+<figures/Chapter2/command.png, id=494, 487.06969pt x 75.28125pt>
 File: figures/Chapter2/command.png Graphic file (type png)
 <use figures/Chapter2/command.png>
 Package pdftex.def Info: figures/Chapter2/command.png  used on input line 481.
@@ -1949,26 +1953,22 @@ Package pdftex.def Info: figures/Chapter2/command.png  used on input line 481.
 
 
 [33 <./figures/Chapter2/command.png>]
-<figures/Chapter01/performance-comparison.png, id=480, 3854.4pt x 1686.3pt>
+<figures/Chapter01/performance-comparison.png, id=500, 3854.4pt x 1686.3pt>
 File: figures/Chapter01/performance-comparison.png Graphic file (type png)
 <use figures/Chapter01/performance-comparison.png>
-Package pdftex.def Info: figures/Chapter01/performance-comparison.png  used on input line 507.
+Package pdftex.def Info: figures/Chapter01/performance-comparison.png  used on input line 515.
 (pdftex.def)             Requested size: 455.24411pt x 199.15665pt.
 
 
-[34 <./figures/Chapter01/performance-comparison.png>]
-<figures/Chapter01/yolotasks.png, id=486, 880.03781pt x 221.32687pt>
+[34]
+
+[35 <./figures/Chapter01/performance-comparison.png>]
+<figures/Chapter01/yolotasks.png, id=510, 880.03781pt x 221.32687pt>
 File: figures/Chapter01/yolotasks.png Graphic file (type png)
 <use figures/Chapter01/yolotasks.png>
-Package pdftex.def Info: figures/Chapter01/yolotasks.png  used on input line 553.
+Package pdftex.def Info: figures/Chapter01/yolotasks.png  used on input line 561.
 (pdftex.def)             Requested size: 455.24411pt x 114.49286pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[35]
 
 [36 <./figures/Chapter01/yolotasks.png>])
 
@@ -1977,15 +1977,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
  (./tex/chuong3.tex
 Chapter 3.
-<figures/Chapter3/structure.png, id=507, 932.73468pt x 744.53156pt>
+<figures/Chapter3/structure.png, id=527, 932.73468pt x 744.53156pt>
 File: figures/Chapter3/structure.png Graphic file (type png)
 <use figures/Chapter3/structure.png>
 Package pdftex.def Info: figures/Chapter3/structure.png  used on input line 9.
 (pdftex.def)             Requested size: 341.43307pt x 272.54132pt.
-<figures/Chapter3/newprj.png, id=509, 398.99063pt x 246.9225pt>
+<figures/Chapter3/newprj.png, id=529, 398.99063pt x 246.9225pt>
 File: figures/Chapter3/newprj.png Graphic file (type png)
 <use figures/Chapter3/newprj.png>
-Package pdftex.def Info: figures/Chapter3/newprj.png  used on input line 25.
+Package pdftex.def Info: figures/Chapter3/newprj.png  used on input line 26.
 (pdftex.def)             Requested size: 341.43307pt x 211.3093pt.
 
 
@@ -1995,87 +1995,157 @@ Package pdftex.def Info: figures/Chapter3/newprj.png  used on input line 25.
 
 
  <./figures/Chapter3/structure.png>]
-<figures/Chapter3/phancung.png, id=519, 2569.6pt x 1927.2pt>
+<figures/Chapter3/phancung.png, id=538, 2569.6pt x 1927.2pt>
 File: figures/Chapter3/phancung.png Graphic file (type png)
 <use figures/Chapter3/phancung.png>
-Package pdftex.def Info: figures/Chapter3/phancung.png  used on input line 42.
+Package pdftex.def Info: figures/Chapter3/phancung.png  used on input line 37.
 (pdftex.def)             Requested size: 341.43307pt x 256.07324pt.
-<figures/Chapter3/io.png, id=520, 799.48688pt x 673.76718pt>
-File: figures/Chapter3/io.png Graphic file (type png)
-<use figures/Chapter3/io.png>
-Package pdftex.def Info: figures/Chapter3/io.png  used on input line 48.
-(pdftex.def)             Requested size: 341.43307pt x 287.74031pt.
-<figures/Chapter3/ethernet.png, id=521, 1472.50125pt x 915.42pt>
-File: figures/Chapter3/ethernet.png Graphic file (type png)
-<use figures/Chapter3/ethernet.png>
-Package pdftex.def Info: figures/Chapter3/ethernet.png  used on input line 55.
-(pdftex.def)             Requested size: 341.43307pt x 212.26025pt.
 
 
 [39 <./figures/Chapter3/newprj.png>]
+<figures/Chapter3/io.png, id=545, 799.48688pt x 673.76718pt>
+File: figures/Chapter3/io.png Graphic file (type png)
+<use figures/Chapter3/io.png>
+Package pdftex.def Info: figures/Chapter3/io.png  used on input line 45.
+(pdftex.def)             Requested size: 341.43307pt x 287.74031pt.
+<figures/Chapter3/ethernet.png, id=547, 1472.50125pt x 915.42pt>
+File: figures/Chapter3/ethernet.png Graphic file (type png)
+<use figures/Chapter3/ethernet.png>
+Package pdftex.def Info: figures/Chapter3/ethernet.png  used on input line 53.
+(pdftex.def)             Requested size: 341.43307pt x 212.26025pt.
+
 
 [40 <./figures/Chapter3/phancung.png (PNG copy)> <./figures/Chapter3/io.png>]
-<figures/Chapter3/yas1.png, id=535, 703.87968pt x 499.8675pt>
-File: figures/Chapter3/yas1.png Graphic file (type png)
-<use figures/Chapter3/yas1.png>
-Package pdftex.def Info: figures/Chapter3/yas1.png  used on input line 70.
-(pdftex.def)             Requested size: 341.43307pt x 242.46594pt.
+<figures/Chapter3/remote-io.png, id=555, 478.03593pt x 271.76532pt>
+File: figures/Chapter3/remote-io.png Graphic file (type png)
+<use figures/Chapter3/remote-io.png>
+Package pdftex.def Info: figures/Chapter3/remote-io.png  used on input line 70.
+(pdftex.def)             Requested size: 341.43307pt x 194.10338pt.
 
 
 [41 <./figures/Chapter3/ethernet.png (PNG copy)>]
-<figures/Chapter3/cclink1.png, id=543, 844.65562pt x 754.31813pt>
-File: figures/Chapter3/cclink1.png Graphic file (type png)
-<use figures/Chapter3/cclink1.png>
-Package pdftex.def Info: figures/Chapter3/cclink1.png  used on input line 86.
-(pdftex.def)             Requested size: 341.43307pt x 304.92168pt.
+<figures/Chapter3/h-cc.png, id=562, 617.30624pt x 300.3722pt>
+File: figures/Chapter3/h-cc.png Graphic file (type png)
+<use figures/Chapter3/h-cc.png>
+Package pdftex.def Info: figures/Chapter3/h-cc.png  used on input line 79.
+(pdftex.def)             Requested size: 341.43307pt x 166.1402pt.
+<figures/Chapter3/h-cc2.jpg, id=564, 4047.12pt x 3035.34pt>
+File: figures/Chapter3/h-cc2.jpg Graphic file (type jpg)
+<use figures/Chapter3/h-cc2.jpg>
+Package pdftex.def Info: figures/Chapter3/h-cc2.jpg  used on input line 87.
+(pdftex.def)             Requested size: 341.43307pt x 256.03207pt.
 
 
-[42 <./figures/Chapter3/yas1.png>]
-<figures/Chapter3/kepwareprj.png, id=551, 448.074pt x 268.6035pt>
+[42 <./figures/Chapter3/remote-io.png> <./figures/Chapter3/h-cc.png>]
+<figures/Chapter3/yas1.png, id=573, 703.87968pt x 499.8675pt>
+File: figures/Chapter3/yas1.png Graphic file (type png)
+<use figures/Chapter3/yas1.png>
+Package pdftex.def Info: figures/Chapter3/yas1.png  used on input line 96.
+(pdftex.def)             Requested size: 227.62206pt x 161.6465pt.
+<figures/Chapter3/y-cc1.png, id=575, 244.66406pt x 271.0125pt>
+File: figures/Chapter3/y-cc1.png Graphic file (type png)
+<use figures/Chapter3/y-cc1.png>
+Package pdftex.def Info: figures/Chapter3/y-cc1.png  used on input line 104.
+(pdftex.def)             Requested size: 227.62206pt x 252.1424pt.
+
+
+[43 <./figures/Chapter3/h-cc2.jpg> <./figures/Chapter3/yas1.png>]
+<figures/Chapter3/y-cc2.png, id=583, 844.65562pt x 754.31813pt>
+File: figures/Chapter3/y-cc2.png Graphic file (type png)
+<use figures/Chapter3/y-cc2.png>
+Package pdftex.def Info: figures/Chapter3/y-cc2.png  used on input line 114.
+(pdftex.def)             Requested size: 227.62206pt x 203.27728pt.
+<figures/Chapter3/y-cc3.png, id=584, 764.10469pt x 565.36218pt>
+File: figures/Chapter3/y-cc3.png Graphic file (type png)
+<use figures/Chapter3/y-cc3.png>
+Package pdftex.def Info: figures/Chapter3/y-cc3.png  used on input line 121.
+(pdftex.def)             Requested size: 227.62206pt x 168.41946pt.
+
+
+[44 <./figures/Chapter3/y-cc1.png> <./figures/Chapter3/y-cc2.png>]
+
+LaTeX Font Warning: Font shape `TS1/cmtt/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 149.
+
+
+
+[45 <./figures/Chapter3/y-cc3.png>]
+<figures/Chapter3/yas4.png, id=601, 481.8pt x 402.75468pt>
+File: figures/Chapter3/yas4.png Graphic file (type png)
+<use figures/Chapter3/yas4.png>
+Package pdftex.def Info: figures/Chapter3/yas4.png  used on input line 162.
+(pdftex.def)             Requested size: 227.62206pt x 190.278pt.
+<figures/Chapter3/yas5.png, id=602, 728.7225pt x 268.75406pt>
+File: figures/Chapter3/yas5.png Graphic file (type png)
+<use figures/Chapter3/yas5.png>
+Package pdftex.def Info: figures/Chapter3/yas5.png  used on input line 168.
+(pdftex.def)             Requested size: 227.62206pt x 83.94443pt.
+<figures/Chapter3/plc-cc1.png, id=604, 844.65562pt x 592.46344pt>
+File: figures/Chapter3/plc-cc1.png Graphic file (type png)
+<use figures/Chapter3/plc-cc1.png>
+Package pdftex.def Info: figures/Chapter3/plc-cc1.png  used on input line 185.
+(pdftex.def)             Requested size: 227.62206pt x 159.6599pt.
+
+
+[46 <./figures/Chapter3/yas4.png> <./figures/Chapter3/yas5.png>]
+<figures/Chapter3/plc-cc2.png, id=611, 732.48656pt x 301.8778pt>
+File: figures/Chapter3/plc-cc2.png Graphic file (type png)
+<use figures/Chapter3/plc-cc2.png>
+Package pdftex.def Info: figures/Chapter3/plc-cc2.png  used on input line 191.
+(pdftex.def)             Requested size: 227.62206pt x 93.80685pt.
+<figures/Chapter3/plc-cc3.png, id=612, 678.28406pt x 521.69907pt>
+File: figures/Chapter3/plc-cc3.png Graphic file (type png)
+<use figures/Chapter3/plc-cc3.png>
+Package pdftex.def Info: figures/Chapter3/plc-cc3.png  used on input line 197.
+(pdftex.def)             Requested size: 227.62206pt x 175.06679pt.
+
+
+[47 <./figures/Chapter3/plc-cc1.png> <./figures/Chapter3/plc-cc2.png> <./figures/Chapter3/plc-cc3.png>]
+<figures/Chapter3/kepwareprj.png, id=619, 448.074pt x 268.6035pt>
 File: figures/Chapter3/kepwareprj.png Graphic file (type png)
 <use figures/Chapter3/kepwareprj.png>
-Package pdftex.def Info: figures/Chapter3/kepwareprj.png  used on input line 100.
+Package pdftex.def Info: figures/Chapter3/kepwareprj.png  used on input line 247.
 (pdftex.def)             Requested size: 341.43307pt x 204.67769pt.
 
 
-[43 <./figures/Chapter3/cclink1.png>]
-<figures/Chapter3/kepwarechannel.png, id=556, 936.49875pt x 268.6035pt>
+[48]
+<figures/Chapter3/kepwarechannel.png, id=624, 936.49875pt x 268.6035pt>
 File: figures/Chapter3/kepwarechannel.png Graphic file (type png)
 <use figures/Chapter3/kepwarechannel.png>
-Package pdftex.def Info: figures/Chapter3/kepwarechannel.png  used on input line 107.
+Package pdftex.def Info: figures/Chapter3/kepwarechannel.png  used on input line 254.
 (pdftex.def)             Requested size: 341.43307pt x 97.93085pt.
-<figures/Chapter3/kepwaredevice.png, id=557, 936.49875pt x 268.6035pt>
+<figures/Chapter3/kepwaredevice.png, id=625, 936.49875pt x 268.6035pt>
 File: figures/Chapter3/kepwaredevice.png Graphic file (type png)
 <use figures/Chapter3/kepwaredevice.png>
-Package pdftex.def Info: figures/Chapter3/kepwaredevice.png  used on input line 114.
+Package pdftex.def Info: figures/Chapter3/kepwaredevice.png  used on input line 261.
 (pdftex.def)             Requested size: 341.43307pt x 97.93085pt.
-<figures/Chapter3/baslerip.png, id=558, 751.00575pt x 340.8735pt>
+<figures/Chapter3/baslerip.png, id=626, 751.00575pt x 340.8735pt>
 File: figures/Chapter3/baslerip.png Graphic file (type png)
 <use figures/Chapter3/baslerip.png>
-Package pdftex.def Info: figures/Chapter3/baslerip.png  used on input line 125.
+Package pdftex.def Info: figures/Chapter3/baslerip.png  used on input line 272.
 (pdftex.def)             Requested size: 341.43307pt x 154.97284pt.
 
 
-[44 <./figures/Chapter3/kepwareprj.png> <./figures/Chapter3/kepwarechannel.png> <./figures/Chapter3/kepwaredevice.png>]
-<figures/Chapter3/baslerauto.png, id=565, 505.89pt x 330.033pt>
+[49 <./figures/Chapter3/kepwareprj.png> <./figures/Chapter3/kepwarechannel.png> <./figures/Chapter3/kepwaredevice.png>]
+<figures/Chapter3/baslerauto.png, id=631, 505.89pt x 330.033pt>
 File: figures/Chapter3/baslerauto.png Graphic file (type png)
 <use figures/Chapter3/baslerauto.png>
-Package pdftex.def Info: figures/Chapter3/baslerauto.png  used on input line 134.
+Package pdftex.def Info: figures/Chapter3/baslerauto.png  used on input line 281.
 (pdftex.def)             Requested size: 341.43307pt x 222.74754pt.
 
 
-[45 <./figures/Chapter3/baslerip.png> <./figures/Chapter3/baslerauto.png>]
+[50 <./figures/Chapter3/baslerip.png> <./figures/Chapter3/baslerauto.png>]
 
-[46])
+[51])
 
-[47]
+[52]
 \openout2 = `tex/chuong4.aux'.
 
  (./tex/chuong4.tex
 Chapter 4.
 )
 
-[48
+[53
 
 
 
@@ -2085,7 +2155,7 @@ Chapter 4.
 
  (./tex/05ketluan.tex)
 
-[49
+[54
 
 
 
@@ -2095,7 +2165,7 @@ Chapter 4.
 
  (./tex/06congbo.tex)
 
-[50
+[55
 
 
 
@@ -2112,7 +2182,7 @@ LaTeX Warning: Empty bibliography on input line 38.
 
 
 
-[51
+[56
 
 
 ]
@@ -2133,23 +2203,26 @@ L3 programming layer <2025-01-18>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43190 strings out of 473189
- 806624 string characters out of 5719957
- 1755384 words of memory out of 5000000
- 65431 multiletter control sequences out of 15000+600000
- 578325 words of font info for 75 fonts, out of 8000000 for 9000
+ 43294 strings out of 473189
+ 809350 string characters out of 5719957
+ 1755895 words of memory out of 5000000
+ 65515 multiletter control sequences out of 15000+600000
+ 579244 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  123i,17n,121p,1394b,2298s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vnbxti10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vnr7.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vnr9.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vnti12.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vntt10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (63 pages, 9669008 bytes).
+<d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vnbxti10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vnr7.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vnr9.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vnti12.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vntt10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on main.pdf (68 pages, 14980036 bytes).
 PDF statistics:
- 897 PDF objects out of 1000 (max. 8388607)
- 736 compressed objects within 8 object streams
- 216 named destinations out of 1000 (max. 500000)
- 661 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 974 PDF objects out of 1000 (max. 8388607)
+ 789 compressed objects within 8 object streams
+ 233 named destinations out of 1000 (max. 500000)
+ 711 words of extra memory for PDF output out of 10000 (max. 10000000)
 

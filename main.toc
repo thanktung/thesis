@@ -34,31 +34,30 @@
 \contentsline {subsubsection}{Viết chương trình điều khiển bằng Teach pendant}{32}{subsubsection*.40}%
 \contentsline {section}{\numberline {2.5}Thị giác máy tính và mô hình YOLO}{33}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Thị giác máy tính}{33}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Mạng YOLO - Lược sử phát triển}{34}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Ultralytics YOLOv11}{35}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.2}Mạng YOLO - Lược sử phát triển}{35}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Ultralytics YOLOv11}{36}{subsection.2.5.3}%
 \contentsline {chapter}{\numberline {3}Xây dựng hệ thống và chương trình điều khiển}{38}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Sơ đồ khối hệ thống}{38}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Thuật toán điều khiển}{38}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Cấu hình hệ thống}{39}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Cấu hình hệ thống PLC và module}{39}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Cấu hình CC-Link giao tiếp giữa PLC và Station}{41}{subsection.3.3.2}%
-\contentsline {subsubsection}{Cấu hình Robot Yaskawa làm Slave trong mạng CC-Link}{42}{subsubsection*.51}%
-\contentsline {subsection}{\numberline {3.3.3}Cấu hình KepserverEX làm server OPC UA}{43}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Cấu hình GigE Camera Basler ac2500}{44}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Pipeline xử lý ảnh AVI}{45}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Thu nhận hình ảnh}{46}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Xử lý và tiền xử lý hình ảnh}{46}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Phân tích ảnh và nhận diện lỗi}{46}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Ra quyết định}{47}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Phản hồi và lưu trữ dữ liệu}{47}{subsection.3.4.5}%
-\contentsline {chapter}{\numberline {4}Thực nghiệm và đánh giá}{48}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Giao diện hệ thống (nếu có)}{48}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Kết quả nhận diện và phân loại sản phẩm}{48}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Đánh giá hiệu suất: tốc độ, độ chính xác, độ ổn định}{48}{section.4.3}%
-\contentsline {section}{\numberline {4.4}So sánh với phương pháp thủ công}{48}{section.4.4}%
-\contentsline {chapter}{{\bf KẾT LUẬN}\rm }{49}{chapter*.58}%
-\contentsline {chapter}{{\bf CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ }\rm }{50}{chapter*.59}%
-\contentsline {chapter}{{\bf TÀI LIỆU THAM KHẢO}}{51}{chapter*.60}%
+\contentsline {subsection}{\numberline {3.3.3}Cấu hình KepserverEX làm server OPC UA}{48}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Cấu hình GigE Camera Basler ac2500}{49}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Pipeline xử lý ảnh AVI}{50}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Thu nhận hình ảnh}{51}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Xử lý và tiền xử lý hình ảnh}{51}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Phân tích ảnh và nhận diện lỗi}{51}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Ra quyết định}{52}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Phản hồi và lưu trữ dữ liệu}{52}{subsection.3.4.5}%
+\contentsline {chapter}{\numberline {4}Thực nghiệm và đánh giá}{53}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Giao diện hệ thống (nếu có)}{53}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Kết quả nhận diện và phân loại sản phẩm}{53}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Đánh giá hiệu suất: tốc độ, độ chính xác, độ ổn định}{53}{section.4.3}%
+\contentsline {section}{\numberline {4.4}So sánh với phương pháp thủ công}{53}{section.4.4}%
+\contentsline {chapter}{{\bf KẾT LUẬN}\rm }{54}{chapter*.67}%
+\contentsline {chapter}{{\bf CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ }\rm }{55}{chapter*.68}%
+\contentsline {chapter}{{\bf TÀI LIỆU THAM KHẢO}}{56}{chapter*.69}%
 \renewcommand {\cftchappresnum }{PHỤ LỤC\nobreakspace }
 \contentsline {chapter}{\numberline {A}}{P1}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Mã nguồn thực hiện phép phân tích nhóm}{P1}{section.A.1}%

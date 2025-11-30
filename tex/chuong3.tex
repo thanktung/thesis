@@ -15,8 +15,9 @@ Sơ đồ khối hệ thống như Hình \ref{c3:struc}:
 
 Giải thích chi tiết cách điều khiển của hệ thống.
 
-
+%***********************************************************************************************************
 \section{Cấu hình hệ thống}
+%====================================================================================
 \subsection{Cấu hình hệ thống PLC và module}
 Công cụ lập trình dùng cho PLC Mitsubishi Q Series là phần mềm GX Works 2.
 Khi khởi tạo project cần chọn dòng PLC (Q mode); loại CPU (Q13UDV); loại project (Simple Project) và ngôn ngữ lập trình sử dụng trong project (Ladder). Cấu hình như Hình \ref{c3:newprj}.
@@ -31,67 +32,213 @@ Sau khi đã tạo thành công project mới, cần cấu hình hệ thống PL
 \begin{enumerate}
     \item Cấu hình base unit và các module giống với thiết lập phần cứng như Hình \ref{c3:hardware}. 
     Thiết lập thông tin của base unit và vị trí module trong GX Works2 như Hình \ref{c3:io} tại \textit{Parameter} $\rightarrow$ \textit{PLC Parameter} $\rightarrow$ \textit{I/O Assignment}.
-    
-    \item Cấu hình giao tiếp/kết nối giữa PLC với GX Works2 như Hình \ref{c3:ethernet}. Bao gồm thiết lập IP cho PLC, giao thức MC Protocol.
-    
-\end{enumerate}
-
-Sau khi kết thúc thiết lập, bấm End để lưu thiết lập.
-\begin{figure}
+    \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{figures/Chapter3/phancung.png}
     \caption{Thiết lập phần cứng}
     \label{c3:hardware}
-\end{figure}
-\begin{figure}
-    \centering
-    \includegraphics[width=0.75\linewidth]{figures/Chapter3/io.png}
-    \caption{IO Assignment}
-    \label{c3:io}
-\end{figure}
-    
-\begin{figure}
-    \centering
-    \includegraphics[width=0.75\linewidth]{figures/Chapter3/ethernet.png}
-    \caption{Thiết lập kết nối Ethernet}
-    \label{c3:ethernet}
-\end{figure}    
+    \end{figure}
 
-\subsection{Cấu hình CC-Link giao tiếp giữa PLC và Station}
-Để có thể kết nối các Stations với PLC qua CC-Link cần thiết lập cả phần cứng và phần mềm. 
-\begin{enumerate}
-    \item Trạm I/O:
-    Cấu hình các trạm IO là Remote IO Station. 
-    \item Robot Hyundai:
-    Cấu hình robot là Remote Device Station.
-    \item Robot Yaskawa: Để có thể kết nối Robot với PLC qua CC-Link giúp truyền nhận tín hiệu In/Out và Register, cần phải lắp đặt phần cứng là CCS-PCIE Board vào bộ điều khiển của Robot (YRC1000micro), kết nối dây theo tiêu chuẩn của CC-Link và cấu hình Robot như một Remote Device Station. Minh họa như Hình \ref{c3:yas1}
+    
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.75\linewidth]{figures/Chapter3/yas1.png}
+        \includegraphics[width=0.75\linewidth]{figures/Chapter3/io.png}
+        \caption{IO Assignment}
+        \label{c3:io}
+    \end{figure}
+
+    \item Cấu hình giao tiếp/kết nối giữa PLC với GX Works2 (PC Side) như Hình \ref{c3:ethernet}. Bao gồm thiết lập IP cho PLC, giao thức MC Protocol.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{figures/Chapter3/ethernet.png}
+        \caption{Thiết lập kết nối Ethernet}
+        \label{c3:ethernet}
+    \end{figure}  
+\end{enumerate}
+Sau khi kết thúc thiết lập, bấm End để lưu thiết lập.
+
+%-----=======================================================================================
+\subsection{Cấu hình CC-Link giao tiếp giữa PLC và Station}
+Để có thể kết nối các Stations với PLC qua CC-Link cần thiết lập cả phần cứng và phần mềm.
+Cần cấu hình hai thông số quan trọng là phiên bản CC-Link (Ver 2 hoặc Ver 1), tốc độ truyền (khoảng cách càng gần thì tốc độ càng cao), số thứ tự Station cho từng trạm (cả Remote IO và Remote Device).
+\begin{enumerate}
+    \item Trạm I/O: Cấu hình các trạm IO là Remote IO Station. 
+    Hình minh họa phần cứng của Remote IO giống như Hình\ref{c3:remoteio}. Có hai thành phần quan trọng là công tắc định địa chỉ Station (3) và công tắc định tốc độ giao tiếp (2). Cần phải điều khiển sao cho tốc độ đúng với tốc độ hệ thống và địa chỉ phù hợp, không bị trùng với các trạm khác.
+        
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{figures/Chapter3/remote-io.png}
+        \caption{Phần cứng Remote IO}
+        \label{c3:remoteio}
+    \end{figure}  
+
+    \item Robot Hyundai: Cấu hình robot là Remote Device Station.
+    Để có thể giao tiếp với mạng CC-Link, cần gắn thêm board giao tiếp CC-Link BD570 vào bộ điều khiển, minh họa như Hình\ref{c3:cc1}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{figures/Chapter3/h-cc.png}
+        \caption{Board CC-Link}
+        \label{c3:cc1}
+    \end{figure}
+    Gắn board CC-Link vào bộ điều khiển, sau đó thiết lập vị trí trạm và tốc độ truyền bằng các switch có trên board.
+    Sau khi bật nguồn bộ điều khiển, thông tin về giao tiếp CC-Link được hiển thị bằng Teach pendant (Hình\ref{c3:cc2}).
+     \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{figures/Chapter3/h-cc2.jpg}
+        \caption{Thông tin thiết lập CC-Link}
+        \label{c3:cc2}
+    \end{figure}
+
+    \item Robot Yaskawa: Cấu hình robot là Remote Device Station 
+    Để có thể kết nối Robot với PLC qua CC-Link giúp truyền nhận tín hiệu In/Out và Register, cần phải lắp đặt phần cứng là CCS-PCIE Board vào bộ điều khiển của Robot (YRC1000micro), kết nối dây theo tiêu chuẩn của CC-Link và cấu hình Robot như một Remote Device Station. Minh họa như Hình \ref{c3:yas1}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{figures/Chapter3/yas1.png}
         \caption{Kết nối CC-Link giữa Robot Yaskawa và PLC}
         \label{c3:yas1}
     \end{figure}
-    \item Cấu hình PLC là Master:
-    Sau khi đã cấu hình xong các trạm Remote I/O và Remote Device Station, tiếp đến là cấu hình giao tiếp CC-Link tại trạm Master (module QJ16BT11N).  
+
+    Board CCS-PCIE (Hình \ref{c3:yas2})
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{figures/Chapter3/y-cc1.png}
+        \caption{Board CCS-PCIE}
+        \label{c3:yas2}
+    \end{figure}
+
+    Thiết lập giao tiếp CC-Link cần vào Maintenance Mode: Nhấn [MAIN MENU] trong khi bật nguồn YRC1000micro. Sau khi vào được Maintenance mode cần vào thiết lập thông tin cho Board CCS-PCIE:
+    [MAIN MENU] -> SYSTEM -> SETUP -> OPTION BOARD -> CCS-PCIE.
+    Thiết lập thông số cho board CCS-PCIE như dưới:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{figures/Chapter3/y-cc2.png}
+        \caption{Thiết lập CC-Link}
+        \label{c3:yas3}
+    \end{figure}
+    Ấn [ENTER], cho đến màn hình EXTERNAL IO SETUP. Đây là phần thiết lập dữ liệu gửi và nhận (Rx, Ry) trên mạng CC-Link được đưa vào External Input và External Output.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{figures/Chapter3/y-cc3.png}
+        \caption{Controller Information}
+        \label{c3:yas4}
+    \end{figure}
+
+    Hệ thống có ba loại dữ liệu vào/ra như sau:
+
+\begin{enumerate}
+    \item \textbf{Dữ liệu từ board ASF30} (board I/O của bộ điều khiển, gồm 8-bit input và 8-bit output):
+    \begin{itemize}
+        \item 8-bit input: \#20010~--~\#20017
+        \item 8-bit output: \#30010~--~\#30017
+    \end{itemize}
+
+    \item \textbf{Dữ liệu trạng thái từ board CCS-PCIE} (chiếm 8-bit input và 8-bit output):
+    \begin{itemize}
+        \item 8-bit input: \#20020~--~\#20027
+        \item 8-bit output: \#30020~--~\#30027
+    \end{itemize}
+
+    \item \textbf{Dữ liệu truyền qua mạng CC-Link} (112-bit input và 112-bit output):
+    \begin{itemize}
+        \item 14-byte input: \#20030~--~\#20167
+        \item 14-byte output: \#30030~--~\#30167
+    \end{itemize}
 \end{enumerate}
 
-\subsubsection{Cấu hình Robot Yaskawa làm Slave trong mạng CC-Link}
-Để có thể giao tiếp cần có CCS-PCIE board, gắn vào phần Optional Slot của bộ điều khiển YRC1000micro. 
-Để thiết lập cần vào Maintenance Mode: Nhấn [MAIN MENU] trong khi bật nguồn YRC1000micro.
-[MAIN MENU] -> SYSTEM -> SETUP -> OPTION BOARD -> CCS-PCIE.
-Thiết lập thông số cho board CCS-PCIE như dưới:
+    Sau khi thiết lập dữ liệu được gửi từ CC-Link sang Robot, có thể kiểm tra trạng thái các bit truyền/nhận tại:
+    \texttt{[MAIN MENU] → IN/OUT → EXTERNAL INPUT/OUTPUT}
 
-\begin{figure} [H]
+    Giá trị của các bit \texttt{Rx} và \texttt{Ry} có thể xem trong \textit{External Input/Output}.  
+    Tuy nhiên, các bit được sử dụng trong \textit{Job} là các bit thuộc \textit{General Purpose Input/Output}.  
+    Do đó, cần chuyển các bit từ \textit{External Input/Output} sang \textit{General Purpose Input/Output} thông qua \textbf{Ladder Program}.
+
+    Để chỉnh sửa \textit{User Ladder Program}, vào:
+    \texttt{[MAIN MENU] → IN/OUT → LADDER PROGRAM}
+    Chọn:
+    \texttt{Display → User Program}
+    để thực hiện chỉnh sửa Ladder (Hình\ref{c3:yas5}).
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/Chapter3/cclink1.png}
-    \caption{Kiểm tra Maintenance Mode}
-    \label{fig:cc1}
+    \includegraphics[width=0.5\linewidth]{figures/Chapter3/yas4.png}
+    \caption{Ladder Program}
+    \label{c3:yas5}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/Chapter3/yas5.png}
+    \caption{Convert Data}
+    \label{c3:yas6}
 \end{figure}
 
-Ấn [ENTER], cho đến màn hình EXTERNAL IO SETUP. Đây là phần thiết lập dữ liệu gửi và nhận (Rx, Ry) trên mạng CC-Link được đưa vào External Input và External Output.
+    Ví dụ: tại dòng 98--99, tương ứng với \texttt{Step 0026}, ý nghĩa là chuyển \textbf{1-byte} dữ liệu từ 
+    \texttt{\#20030~--~\#20037} của \textit{External Input} vào 
+    \texttt{\#00030~--~\#00037} của \textit{General Purpose Input}. 
+
+    Điều này tương đương với: Điều này tương đương với: \(\texttt{IN\#0017} \rightarrow \texttt{IN\#0024}\).
+
+    \item Cấu hình PLC là Master:
+    Sau khi đã cấu hình xong các trạm Remote I/O và Remote Device Station, tiếp đến là cấu hình giao tiếp CC-Link tại trạm Master (module QJ16BT11N). 
+    Dữ liệu truyền qua CC-Link có 4 dạng là: Rx (tín hiệu đầu vào), Ry (tín hiệu đầu ra), RWw (ghi word 16-bit ), RWr (đọc word 16-bit).
+    Trong Tab Parameter / Network parameter / CC-Link của Project trong GX-Works2, cấu hình như Hình\ref{c3:plc1}:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/Chapter3/plc-cc1.png}
+    \caption{Master Station}
+    \label{c3:plc1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/Chapter3/plc-cc2.png}
+    \caption{Master Station Setup}
+    \label{c3:plc2}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/Chapter3/plc-cc3.png}
+    \caption{CC-Link Speed}
+    \label{c3:plc1}
+\end{figure}
 
 
 
+
+\end{enumerate}
+
+Sau khi thiết lập xong Master, thu được kết quả như sau:
+
+\begin{itemize}
+    \item \textbf{Station \#1:} Module Input \texttt{AJ65SBTB1-32D}
+    \item \textbf{Station \#2:} Module Output \texttt{AJ65SBTB1-32T1}
+    \item \textbf{Station \#3:} Robot Yaskawa (chiếm 4 trạm)
+    \item \textbf{Station \#4:} Robot Hyundai (chiếm 4 trạm)
+    \item \textbf{Station \#5:} \texttt{AJ65SBT1-16DT1}
+\end{itemize}
+
+Mỗi trạm 32~bit chiếm:
+\begin{itemize}
+    \item \textbf{32 bit} tại \texttt{Rx}, \texttt{Ry}
+    \item \textbf{4 Word} tại \texttt{RWr}, \texttt{RWw}
+\end{itemize}
+
+Bộ nhớ tại trạm Master được phân bổ cho từng Slave như sau:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Station} & \textbf{Rx} & \textbf{Ry} & \textbf{RWr} & \textbf{RWw} \\ \hline
+
+\#1 & X500--X51F & Y4E0--Y4FF & D40--D43   & D100--D103 \\ \hline
+\#2 & X520--X53F & Y500--Y51F & D44--D47   & D104--D107 \\ \hline
+\#3 & X540--X5BF & Y520--Y59F & D48--D63   & D108--D123 \\ \hline
+\#4 & X5C0--X63F & Y5A0--Y61F & D64--D79   & D124--D139 \\ \hline
+\#5 & X640--X65F & Y620--Y63F & D80--D83   & D140--D143 \\ \hline
+
+\end{tabular}
+\end{center}
+
+
+
+%=------------------------------------------------------------------------------
 \subsection{Cấu hình KepserverEX làm server OPC UA}
 Kết nối KepserverEX với PLC qua card mạng của máy tính. Giao thức được chọn và sử dụng trong phần mềm GX-Works2 và phần mềm KepserverEX phải giống nhau để đảm bảo giao tiếp giữa OPC UA Server với PLC.
 

@@ -494,12 +494,20 @@ Một trong những ứng dụng phổ biến nhất của thị giác máy tín
 
 Ngoài kiểm tra chất lượng, thị giác máy còn được ứng dụng trong các nhiệm vụ như:
 \begin{itemize}
-  \item \textbf{Dẫn đường robot:} Nhận diện vị trí đối tượng hoặc xác định tọa độ để robot thực hiện thao tác.
-  \item \textbf{Đọc mã vạch, OCR:} Tự động đọc nhãn sản phẩm, mã QR, số serial...
-  \item \textbf{Giám sát an toàn:} Theo dõi khu vực nguy hiểm, phát hiện người xâm nhập vùng cấm.
+    \item \textbf{Nhận dạng ký tự quang học (OCR):} đọc mã bưu chính viết tay trên thư và nhận dạng biển số xe tự động.
+    \item \textbf{Kiểm tra máy (Machine inspection):} kiểm tra nhanh các chi tiết để đảm bảo chất lượng bằng stereo vision với hệ thống chiếu sáng chuyên dụng để đo sai số dung sai trên cánh máy bay hoặc thân xe ôtô, hoặc phát hiện lỗi trong khuôn đúc thép bằng ảnh X-ray.
+    \item \textbf{Bán lẻ:} nhận dạng vật thể cho các quầy thanh toán tự động và cửa hàng hoàn toàn tự động.
+    \item \textbf{Logistics kho:} giao hàng tự động, robot chở pallet và robot gắp hàng bằng tay máy trong kho.
+    \item \textbf{Ảnh y tế:} ghép ảnh trước và trong phẫu thuật hoặc nghiên cứu dài hạn về sự thay đổi hình thái não khi con người già đi.
+    \item \textbf{Xe tự lái:} di chuyển tự động giữa các thành phố và cả bay tự động.
+    \item \textbf{Dựng mô hình 3D (photogrammetry):} xây dựng mô hình 3D hoàn toàn tự động từ ảnh chụp trên không và ảnh drone.
+    \item \textbf{Match move:} kết hợp hình ảnh CGI với cảnh quay thực bằng cách theo dõi điểm đặc trưng trong video nguồn để ước tính chuyển động camera 3D và hình dạng môi trường. Kỹ thuật này được sử dụng rộng rãi ở Hollywood, ví dụ như trong phim \textit{Jurassic Park}; ngoài ra còn yêu cầu kỹ thuật tách nền chính xác để chèn đối tượng giữa tiền cảnh và hậu cảnh.
+    \item \textbf{Ghi chuyển động (Motion capture – mocap):} sử dụng các marker phản quang từ nhiều camera hoặc kỹ thuật thị giác máy tính khác để thu chuyển động diễn viên cho hoạt hình.
+    \item \textbf{Giám sát:} phát hiện người xâm nhập, phân tích giao thông đường cao tốc và giám sát hồ bơi để phát hiện người đuối nước.
 \end{itemize}
 
-Trong sản xuất điện tử SMT, thị giác máy đặc biệt quan trọng ở khâu kiểm tra AOI/AVI. Các mô hình học sâu hiện đại như CNN, YOLO giúp hệ thống phân loại và phát hiện linh kiện nhanh, chính xác hơn, giảm đáng kể tỷ lệ lỗi do con người.
+
+Trong sản xuất điện tử, thị giác máy đặc biệt quan trọng ở khâu kiểm tra AOI/AVI. Các mô hình học sâu hiện đại như CNN, YOLO giúp hệ thống phân loại và phát hiện linh kiện nhanh, chính xác hơn, giảm đáng kể tỷ lệ lỗi do con người.
 %===========================================================================
 \subsection{Mạng YOLO - Lược sử phát triển}
 \begin{figure}

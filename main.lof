@@ -26,7 +26,7 @@
 \contentsline {figure}{\numberline {2.23}{\ignorespaces Bộ điều khiển Hi5a}}{31}{figure.caption.39}%
 \contentsline {figure}{\numberline {2.24}{\ignorespaces Chọn chương trình}}{32}{figure.caption.41}%
 \contentsline {figure}{\numberline {2.25}{\ignorespaces Basic Command}}{33}{figure.caption.42}%
-\contentsline {figure}{\numberline {2.26}{\ignorespaces YOLO Performance.}}{34}{figure.caption.43}%
+\contentsline {figure}{\numberline {2.26}{\ignorespaces YOLO Performance.}}{35}{figure.caption.43}%
 \contentsline {figure}{\numberline {2.27}{\ignorespaces YOLOv11 Tasks}}{36}{figure.caption.44}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Sơ đồ khối hệ thống}}{38}{figure.caption.45}%
@@ -34,12 +34,22 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Thiết lập phần cứng}}{40}{figure.caption.47}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces IO Assignment}}{40}{figure.caption.48}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Thiết lập kết nối Ethernet}}{41}{figure.caption.49}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Kết nối CC-Link giữa Robot Yaskawa và PLC}}{42}{figure.caption.50}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Kiểm tra Maintenance Mode}}{43}{figure.caption.52}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Cấu hình Project Kepware}}{44}{figure.caption.53}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Cấu hình Channel}}{44}{figure.caption.54}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Cấu hình Device}}{44}{figure.caption.55}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Cấu hình IP camera}}{45}{figure.caption.56}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Cấu hình ảnh chụp}}{45}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Phần cứng Remote IO}}{42}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Board CC-Link}}{42}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Thông tin thiết lập CC-Link}}{43}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Kết nối CC-Link giữa Robot Yaskawa và PLC}}{43}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Board CCS-PCIE}}{44}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Thiết lập CC-Link}}{44}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Controller Information}}{45}{figure.caption.56}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Ladder Program}}{46}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Convert Data}}{46}{figure.caption.58}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Master Station}}{47}{figure.caption.59}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Master Station Setup}}{47}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces CC-Link Speed}}{47}{figure.caption.61}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Cấu hình Project Kepware}}{49}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Cấu hình Channel}}{49}{figure.caption.63}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Cấu hình Device}}{49}{figure.caption.64}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Cấu hình IP camera}}{50}{figure.caption.65}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Cấu hình ảnh chụp}}{50}{figure.caption.66}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
