@@ -876,6 +876,16 @@ INPUT ./figures/Chapter3/baslerauto.png
 INPUT ./figures/Chapter3/baslerauto.png
 INPUT ./figures/Chapter3/baslerauto.png
 INPUT ./figures/Chapter3/baslerauto.png
+INPUT ./figures/Chapter3/image11.png
+INPUT ./figures/Chapter3/image11.png
+INPUT ./figures/Chapter3/image11.png
+INPUT ./figures/Chapter3/image11.png
+INPUT ./figures/Chapter3/image11.png
+INPUT ./figures/Chapter3/image12.png
+INPUT ./figures/Chapter3/image12.png
+INPUT ./figures/Chapter3/image12.png
+INPUT ./figures/Chapter3/image12.png
+INPUT ./figures/Chapter3/image12.png
 INPUT ./tex/chuong4.tex
 INPUT ./tex/chuong4.tex
 OUTPUT tex/chuong4.aux

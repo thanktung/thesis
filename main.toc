@@ -44,20 +44,25 @@
 \contentsline {subsection}{\numberline {3.3.2}Cấu hình CC-Link giao tiếp giữa PLC và Station}{41}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Cấu hình KepserverEX làm server OPC UA}{48}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Cấu hình GigE Camera Basler ac2500}{49}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Pipeline xử lý ảnh AVI}{50}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Thu nhận hình ảnh}{51}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Xử lý và tiền xử lý hình ảnh}{51}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Phân tích ảnh và nhận diện lỗi}{51}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Ra quyết định}{52}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Phản hồi và lưu trữ dữ liệu}{52}{subsection.3.4.5}%
-\contentsline {chapter}{\numberline {4}Thực nghiệm và đánh giá}{53}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Giao diện hệ thống (nếu có)}{53}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Kết quả nhận diện và phân loại sản phẩm}{53}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Đánh giá hiệu suất: tốc độ, độ chính xác, độ ổn định}{53}{section.4.3}%
-\contentsline {section}{\numberline {4.4}So sánh với phương pháp thủ công}{53}{section.4.4}%
-\contentsline {chapter}{{\bf KẾT LUẬN}\rm }{54}{chapter*.67}%
-\contentsline {chapter}{{\bf CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ }\rm }{55}{chapter*.68}%
-\contentsline {chapter}{{\bf TÀI LIỆU THAM KHẢO}}{56}{chapter*.69}%
+\contentsline {section}{\numberline {3.4}Xây dựng hệ thống xử lý ảnh}{50}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Pipeline xử lý ảnh}{50}{subsection.3.4.1}%
+\contentsline {subsubsection}{Thu nhận hình ảnh}{51}{subsubsection*.67}%
+\contentsline {subsubsection}{Xử lý và tiền xử lý hình ảnh}{51}{subsubsection*.68}%
+\contentsline {subsubsection}{Phân tích ảnh và nhận diện lỗi}{51}{subsubsection*.69}%
+\contentsline {subsubsection}{Ra quyết định}{52}{subsubsection*.70}%
+\contentsline {subsubsection}{Phản hồi và lưu trữ dữ liệu}{52}{subsubsection*.71}%
+\contentsline {subsection}{\numberline {3.4.2}Train mô hình YOLO detect linh kiện SMD}{52}{subsection.3.4.2}%
+\contentsline {subsubsection}{Thu thập dữ liệu}{52}{subsubsection*.72}%
+\contentsline {subsubsection}{Gán nhãn dữ liệu (Labeling)}{53}{subsubsection*.74}%
+\contentsline {subsubsection}{Huấn luyện mô hình (Train model)}{54}{subsubsection*.76}%
+\contentsline {chapter}{\numberline {4}Thực nghiệm và đánh giá}{55}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Giao diện hệ thống (nếu có)}{55}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Kết quả nhận diện và phân loại sản phẩm}{55}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Đánh giá hiệu suất: tốc độ, độ chính xác, độ ổn định}{55}{section.4.3}%
+\contentsline {section}{\numberline {4.4}So sánh với phương pháp thủ công}{55}{section.4.4}%
+\contentsline {chapter}{{\bf KẾT LUẬN}\rm }{56}{chapter*.77}%
+\contentsline {chapter}{{\bf CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ }\rm }{57}{chapter*.78}%
+\contentsline {chapter}{{\bf TÀI LIỆU THAM KHẢO}}{58}{chapter*.79}%
 \renewcommand {\cftchappresnum }{PHỤ LỤC\nobreakspace }
 \contentsline {chapter}{\numberline {A}}{P1}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Mã nguồn thực hiện phép phân tích nhóm}{P1}{section.A.1}%
