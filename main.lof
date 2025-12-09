@@ -13,23 +13,23 @@
 \contentsline {figure}{\numberline {1.11}{\ignorespaces Thiết lập phần cứng}}{11}{figure.caption.19}%
 \contentsline {figure}{\numberline {1.12}{\ignorespaces IO Assignment}}{11}{figure.caption.20}%
 \contentsline {figure}{\numberline {1.13}{\ignorespaces Thiết lập kết nối Ethernet}}{12}{figure.caption.21}%
-\contentsline {figure}{\numberline {1.14}{\ignorespaces Master Station}}{12}{figure.caption.22}%
-\contentsline {figure}{\numberline {1.15}{\ignorespaces Master Station Setup}}{13}{figure.caption.23}%
-\contentsline {figure}{\numberline {1.16}{\ignorespaces CC-Link Speed}}{13}{figure.caption.24}%
-\contentsline {figure}{\numberline {1.17}{\ignorespaces Cấu hình Project Kepware}}{14}{figure.caption.25}%
-\contentsline {figure}{\numberline {1.18}{\ignorespaces Cấu hình Channel}}{14}{figure.caption.26}%
-\contentsline {figure}{\numberline {1.19}{\ignorespaces Cấu hình Device}}{15}{figure.caption.27}%
-\contentsline {figure}{\numberline {1.20}{\ignorespaces Cấu hình IP camera}}{15}{figure.caption.28}%
-\contentsline {figure}{\numberline {1.21}{\ignorespaces Cấu hình ảnh chụp}}{16}{figure.caption.29}%
-\contentsline {figure}{\numberline {1.22}{\ignorespaces Phần cứng Remote IO}}{17}{figure.caption.32}%
-\contentsline {figure}{\numberline {1.23}{\ignorespaces Board CC-Link}}{18}{figure.caption.33}%
-\contentsline {figure}{\numberline {1.24}{\ignorespaces Thông tin thiết lập CC-Link}}{18}{figure.caption.34}%
-\contentsline {figure}{\numberline {1.25}{\ignorespaces Kết nối CC-Link giữa Robot Yaskawa và PLC}}{19}{figure.caption.35}%
-\contentsline {figure}{\numberline {1.26}{\ignorespaces Board CCS-PCIE}}{19}{figure.caption.36}%
-\contentsline {figure}{\numberline {1.27}{\ignorespaces Thiết lập CC-Link}}{20}{figure.caption.37}%
-\contentsline {figure}{\numberline {1.28}{\ignorespaces Controller Information}}{20}{figure.caption.38}%
-\contentsline {figure}{\numberline {1.29}{\ignorespaces Ladder Program}}{22}{figure.caption.39}%
-\contentsline {figure}{\numberline {1.30}{\ignorespaces Convert Data}}{22}{figure.caption.40}%
-\contentsline {figure}{\numberline {1.31}{\ignorespaces Thu thập ảnh}}{24}{figure.caption.45}%
-\contentsline {figure}{\numberline {1.32}{\ignorespaces Label ảnh bằng Roboflow}}{25}{figure.caption.47}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Phần cứng Remote IO}}{13}{figure.caption.22}%
+\contentsline {figure}{\numberline {1.15}{\ignorespaces Board CC-Link}}{13}{figure.caption.23}%
+\contentsline {figure}{\numberline {1.16}{\ignorespaces Thông tin thiết lập CC-Link}}{14}{figure.caption.24}%
+\contentsline {figure}{\numberline {1.17}{\ignorespaces Kết nối CC-Link giữa Robot Yaskawa và PLC}}{14}{figure.caption.25}%
+\contentsline {figure}{\numberline {1.18}{\ignorespaces Board CCS-PCIE}}{15}{figure.caption.26}%
+\contentsline {figure}{\numberline {1.19}{\ignorespaces Thiết lập CC-Link}}{15}{figure.caption.27}%
+\contentsline {figure}{\numberline {1.20}{\ignorespaces Controller Information}}{16}{figure.caption.28}%
+\contentsline {figure}{\numberline {1.21}{\ignorespaces Ladder Program}}{17}{figure.caption.29}%
+\contentsline {figure}{\numberline {1.22}{\ignorespaces Convert Data}}{17}{figure.caption.30}%
+\contentsline {figure}{\numberline {1.23}{\ignorespaces Master Station}}{18}{figure.caption.31}%
+\contentsline {figure}{\numberline {1.24}{\ignorespaces Master Station Setup}}{18}{figure.caption.32}%
+\contentsline {figure}{\numberline {1.25}{\ignorespaces CC-Link Speed}}{18}{figure.caption.33}%
+\contentsline {figure}{\numberline {1.26}{\ignorespaces Cấu hình Project Kepware}}{19}{figure.caption.34}%
+\contentsline {figure}{\numberline {1.27}{\ignorespaces Cấu hình Channel}}{20}{figure.caption.35}%
+\contentsline {figure}{\numberline {1.28}{\ignorespaces Cấu hình Device}}{20}{figure.caption.36}%
+\contentsline {figure}{\numberline {1.29}{\ignorespaces Cấu hình IP camera}}{20}{figure.caption.37}%
+\contentsline {figure}{\numberline {1.30}{\ignorespaces Cấu hình ảnh chụp}}{21}{figure.caption.38}%
+\contentsline {figure}{\numberline {1.31}{\ignorespaces Thu thập ảnh}}{23}{figure.caption.45}%
+\contentsline {figure}{\numberline {1.32}{\ignorespaces Label ảnh bằng Roboflow}}{24}{figure.caption.47}%
 \addvspace {10\p@ }

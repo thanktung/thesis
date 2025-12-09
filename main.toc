@@ -9,20 +9,20 @@
 \contentsline {subsection}{\numberline {1.2.5}Quá trình 5: Đưa sản phẩm từ băng tải xuất đến Buffer Out}{9}{subsection.1.2.5}%
 \contentsline {section}{\numberline {1.3}Cấu hình hệ thống}{10}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}Cấu hình hệ thống PLC và module}{10}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Cấu hình KepserverEX làm server OPC UA}{14}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Cấu hình GigE Camera Basler ac2500}{15}{subsection.1.3.3}%
-\contentsline {section}{\numberline {1.4}Xây dựng hệ thống xử lý ảnh}{16}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Pipeline xử lý ảnh}{16}{subsection.1.4.1}%
-\contentsline {subsubsection}{Thu nhận hình ảnh}{16}{subsubsection*.30}%
-\contentsline {subsubsection}{Xử lý và tiền xử lý hình ảnh}{17}{subsubsection*.31}%
-\contentsline {subsection}{\numberline {1.4.2}Cấu hình CC-Link giao tiếp giữa PLC và các CC-Link Station}{17}{subsection.1.4.2}%
-\contentsline {subsubsection}{Phân tích ảnh và nhận diện lỗi}{23}{subsubsection*.41}%
-\contentsline {subsubsection}{Ra quyết định}{23}{subsubsection*.42}%
+\contentsline {subsection}{\numberline {1.3.2}Cấu hình CC-Link giao tiếp giữa PLC và các CC-Link Station}{12}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Cấu hình KepserverEX làm server OPC UA}{19}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Cấu hình GigE Camera Basler ac2500}{20}{subsection.1.3.4}%
+\contentsline {section}{\numberline {1.4}Xây dựng hệ thống xử lý ảnh}{21}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Pipeline xử lý ảnh}{21}{subsection.1.4.1}%
+\contentsline {subsubsection}{Thu nhận hình ảnh}{21}{subsubsection*.39}%
+\contentsline {subsubsection}{Xử lý và tiền xử lý hình ảnh}{22}{subsubsection*.40}%
+\contentsline {subsubsection}{Phân tích ảnh và nhận diện lỗi}{22}{subsubsection*.41}%
+\contentsline {subsubsection}{Ra quyết định}{22}{subsubsection*.42}%
 \contentsline {subsubsection}{Phản hồi và lưu trữ dữ liệu}{23}{subsubsection*.43}%
-\contentsline {subsection}{\numberline {1.4.3}Train mô hình YOLO detect linh kiện SMD}{24}{subsection.1.4.3}%
-\contentsline {subsubsection}{Thu thập dữ liệu}{24}{subsubsection*.44}%
+\contentsline {subsection}{\numberline {1.4.2}Train mô hình YOLO detect linh kiện SMD}{23}{subsection.1.4.2}%
+\contentsline {subsubsection}{Thu thập dữ liệu}{23}{subsubsection*.44}%
 \contentsline {subsubsection}{Gán nhãn dữ liệu (Labeling)}{24}{subsubsection*.46}%
-\contentsline {subsubsection}{Huấn luyện mô hình (Train model)}{25}{subsubsection*.48}%
+\contentsline {subsubsection}{Huấn luyện mô hình (Train model)}{24}{subsubsection*.48}%
 \contentsline {chapter}{{\bf KẾT LUẬN}\rm }{26}{chapter*.49}%
 \contentsline {chapter}{{\bf CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ }\rm }{27}{chapter*.50}%
 \contentsline {chapter}{{\bf TÀI LIỆU THAM KHẢO}}{28}{chapter*.51}%
