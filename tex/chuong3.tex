@@ -1,45 +1,140 @@
-\chapter{Xây dựng hệ thống và chương trình điều khiển}
+\chapter{Xây dựng hệ thống }
 % =======================
 % PHẦN 1: SƠ ĐỒ KHỐI
 % =======================
+% =======================
 \section{Sơ đồ khối hệ thống}
-Thành phần hệ thống bao gồm một bộ PLC bao gồm nguồn, CPU, Module QJ61BT11N, Module QD77MS16; một màn hình HMI; các remote IO và các trạm Robot; các động cơ servo cùng bộ khuếch đại; cuối cùng là một máy tính sử dụng để triển khai hệ thống thị giác máy tính.
-Sơ đồ khối hệ thống như Hình \ref{c3:struc}:
+
+Hệ thống tổng quát chia ra hai thành phần chính: PC Side và PLC Side.  
+Hai bên giao tiếp với nhau thông qua giao thức OPC UA.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.75\textwidth]{figures/Chapter3/structure.png}
-    \caption{Sơ đồ khối hệ thống}
-    \label{c3:struc}
+    \includegraphics[width=1\textwidth]{figures/Chapter3/image1.png}
+    \caption{Cấu trúc tổng quát hệ thống}
 \end{figure}
+
+\begin{enumerate}
+    \item \textbf{PC Side:} 
+    Máy tính đóng vai trò xử lý thị giác máy tính, chạy thuật toán phát hiện lỗi, phân loại NG/OK và trả kết quả về PLC thông qua OPC UA. Hệ thống bao gồm camera công nghiệp, phần mềm xử lý ảnh và module giao tiếp OPC UA Client. Cấu trúc hệ thống như Hình~\ref{c3:pcside}. 
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\textwidth]{figures/Chapter3/pcside.png}
+        \caption{PC Side}
+        \label{c3:pcside}
+    \end{figure}
+
+    \item \textbf{PLC Side:}  
+    Hệ thống PLC bao gồm nguồn, CPU, module giao tiếp CC-Link (QJ61BT11N), module điều khiển chuyển động QD77MS16, màn hình HMI, các remote I/O, các trạm Robot, hệ thống servo và bộ khuếch đại.  
+    Sơ đồ khối PLC Side được thể hiện trong Hình~\ref{c3:plcside}.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1\textwidth]{figures/Chapter3/image2.png}
+        \caption{PLC Side}
+        \label{c3:plcside}
+    \end{figure}
+
+    \item \textbf{OPC UA:}  
+    OPC UA (OPC Unified Architecture) được dùng để giao tiếp giữa PLC Side và PLC Side. 
+\end{enumerate}
+
 
 % =======================
 % PHẦN 2: THUẬT TOÁN ĐIỀU KHIỂN
 % =======================
 \section{Thuật toán điều khiển}
 
-Chưa làm/////
+Hệ thống tự động dựa trên luồng di chuyển của sản phẩm được chia thành năm quá trình chính như Hình~\ref{c3:workflow}:
 
-Giải thích chi tiết cách điều khiển của hệ thống.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.68\textwidth]{figures/Chapter3/workflow.png}
+    \caption{Quy trình tổng quát}
+    \label{c3:workflow}
+\end{figure}
+
+\begin{enumerate}
+    \item Đưa sản phẩm từ vị trí Buffer In vào đầu băng tải nhập bằng robot Hyundai.
+    \item Di chuyển băng tải nhập đưa sản phẩm từ đầu băng tải đến vị trí chụp ảnh; sau khi chụp ảnh, băng tải tiếp tục di chuyển sản phẩm đến cuối băng tải.
+    \item Đưa sản phẩm từ cuối băng tải nhập đến đầu băng tải xuất bằng robot Yaskawa.
+    \item Di chuyển băng tải xuất từ đầu băng tải đến cuối băng tải.
+    \item Đưa sản phẩm từ cuối băng tải xuất đến vị trí Buffer Out bằng robot Hyundai.
+\end{enumerate}
+
+Việc phân tách hệ thống thành các quá trình riêng biệt giúp dễ dàng xây dựng lưu trình điều khiển chi tiết, đồng thời đơn giản hóa quá trình lập trình và kiểm soát hoạt động của toàn hệ thống.
+%=================================
+\newpage
+\subsection{Quá trình 1: Đưa sản phẩm từ Buffer In vào đầu băng tải nhập}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/Chapter3/workflow1.png}
+    \caption{Quá trình 1.}
+    \label{c3:workflow1}
+\end{figure}
+%=================================================
+\newpage
+\subsection{Quá trình 2: Di chuyển băng tải nhập}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/Chapter3/workflow2.png}
+    \caption{Quá trình 2.}
+    \label{c3:workflow2}
+\end{figure}
+%=================================================
+\newpage
+\subsection{Quá trình 3: Đưa sản phẩm từ băng tải nhập vào băng tải xuất}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Chapter3/workflow3.png}
+    \caption{Quá trình 3.}
+    \label{c3:workflow3}
+\end{figure}
+%=================================================
+\newpage
+\subsection{Quá trình 4: Di chuyển băng tải xuất}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Chapter3/workflow4.png}
+    \caption{Quá trình 4.}
+    \label{c3:workflow4}
+\end{figure}
+%======================================================
+\newpage
+\subsection{Quá trình 5: Đưa sản phẩm từ băng tải xuất đến Buffer Out}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Chapter3/workflow5.png}
+    \caption{Quá trình 5.}
+    \label{c3:workflow5}
+\end{figure}
 
 
 % =======================
 % PHẦN 3: CẤU HÌNH HỆ THỐNG
 % =======================
+\newpage
 \section{Cấu hình hệ thống}
 %====================================================================================
 
 \subsection{Cấu hình hệ thống PLC và module}
-Công cụ lập trình dùng cho PLC Mitsubishi Q Series là phần mềm GX Works 2.
+Công cụ lập trình dùng cho PLC Mitsubishi Q Series là phần mềm GX Works2.
 Khi khởi tạo project cần chọn dòng PLC (Q mode); loại CPU (Q13UDV); loại project (Simple Project) và ngôn ngữ lập trình sử dụng trong project (Ladder). Cấu hình như Hình \ref{c3:newprj}.
+
+Sau khi đã tạo thành công project mới, cần cấu hình hệ thống PLC tương ứng với phần cứng sử dụng. 
 \begin{figure} [h]
     \centering
     \includegraphics[width=0.75\linewidth]{figures/Chapter3/newprj.png}
     \caption{Cấu hình New Project}
     \label{c3:newprj}
 \end{figure}
-
-Sau khi đã tạo thành công project mới, cần cấu hình hệ thống PLC tương ứng với phần cứng sử dụng. 
+%\newpage
 \begin{enumerate}
     \item Cấu hình base unit và các module giống với thiết lập phần cứng như Hình \ref{c3:hardware}. 
     Thiết lập thông tin của base unit và vị trí module trong GX Works2 như Hình \ref{c3:io} tại \textit{Parameter} $\rightarrow$ \textit{PLC Parameter} $\rightarrow$ \textit{I/O Assignment}.
@@ -68,13 +163,132 @@ Sau khi đã tạo thành công project mới, cần cấu hình hệ thống PL
 \end{enumerate}
 Sau khi kết thúc thiết lập, bấm End để lưu thiết lập.
 
-%-----=======================================================================================
-\subsection{Cấu hình CC-Link giao tiếp giữa PLC và Station}
-Để có thể kết nối các Stations với PLC qua CC-Link cần thiết lập cả phần cứng và phần mềm.
+ các trạm Remote I/O và Remote Device Station, tiếp đến là cấu hình giao tiếp CC-Link tại trạm Master (module QJ16BT11N). 
+    Dữ liệu truyền qua CC-Link có 4 dạng là: Rx (tín hiệu đầu vào), Ry (tín hiệu đầu ra), RWw (ghi word 16-bit ), RWr (đọc word 16-bit).
+    Trong Tab Parameter / Network parameter / CC-Link của Project trong GX-Works2, cấu hình như Hình\ref{c3:plc1}:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/Chapter3/plc-cc1.png}
+    \caption{Master Station}
+    \label{c3:plc1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/Chapter3/plc-cc2.png}
+    \caption{Master Station Setup}
+    \label{c3:plc2}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/Chapter3/plc-cc3.png}
+    \caption{CC-Link Speed}
+    \label{c3:plc3}
+\end{figure}
+
+
+
+Sau khi thiết lập xong Master, thu được kết quả như sau:
+
+\begin{itemize}
+    \item \textbf{Station \#1:} Module Input \texttt{AJ65SBTB1-32D}
+    \item \textbf{Station \#2:} Module Output \texttt{AJ65SBTB1-32T1}
+    \item \textbf{Station \#3:} Robot Yaskawa (chiếm 4 trạm)
+    \item \textbf{Station \#4:} Robot Hyundai (chiếm 4 trạm)
+    \item \textbf{Station \#5:} \texttt{AJ65SBT1-16DT1}
+\end{itemize}
+
+Mỗi trạm 32~bit chiếm:
+\begin{itemize}
+    \item \textbf{32 bit} tại \texttt{Rx}, \texttt{Ry}
+    \item \textbf{4 Word} tại \texttt{RWr}, \texttt{RWw}
+\end{itemize}
+
+Bộ nhớ tại trạm Master được phân bổ cho từng Slave như sau:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Station} & \textbf{Rx} & \textbf{Ry} & \textbf{RWr} & \textbf{RWw} \\ \hline
+
+\#1 & X500--X51F & Y4E0--Y4FF & D40--D43   & D100--D103 \\ \hline
+\#2 & X520--X53F & Y500--Y51F & D44--D47   & D104--D107 \\ \hline
+\#3 & X540--X5BF & Y520--Y59F & D48--D63   & D108--D123 \\ \hline
+\#4 & X5C0--X63F & Y5A0--Y61F & D64--D79   & D124--D139 \\ \hline
+\#5 & X640--X65F & Y620--Y63F & D80--D83   & D140--D143 \\ \hline
+
+\end{tabular}
+\end{center}
+
+
+
+%=------------------------------------------------------------------------------
+\subsection{Cấu hình KepserverEX làm server OPC UA}
+Kết nối KepserverEX với PLC qua card mạng của máy tính. Giao thức được chọn và sử dụng trong phần mềm GX-Works2 và phần mềm KepserverEX phải giống nhau để đảm bảo giao tiếp giữa OPC UA Server với PLC.
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{figures/Chapter3/kepwareprj.png}
+        \caption{Cấu hình Project Kepware}
+        \label{c3:kepwareprj}
+ \end{figure}
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{figures/Chapter3/kepwarechannel.png}
+        \caption{Cấu hình Channel}
+        \label{c3:kepwarechannel}
+ \end{figure}
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{figures/Chapter3/kepwaredevice.png}
+        \caption{Cấu hình Device}
+        \label{c3:kepwaredevice}
+ \end{figure}
+
+
+\subsection{Cấu hình GigE Camera Basler ac2500}
+Kết nối Camera với máy tính qua cổng mạng IP, cần cấu hình IP của camera với IP của máy tính trong cùng lớp mạng.
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{figures/Chapter3/baslerip.png}
+        \caption{Cấu hình IP camera}
+        \label{c3:cameraip}
+ \end{figure}
+
+Tiếp theo là cấu hình thông số ảnh chụp như Gain, Gamma, Exposure time. Có thể sử dụng chức năng Automatic Image Adjustment.
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{figures/Chapter3/baslerauto.png}
+        \caption{Cấu hình ảnh chụp}
+        \label{c3:image}
+ \end{figure}
+\end{enumerate}
+
+% =======================
+% PHẦN 3: XỬ LÝ ẢNH
+% ======================= 
+
+\section{Xây dựng hệ thống xử lý ảnh}
+
+\subsection{Pipeline xử lý ảnh}
+Hệ thống kiểm tra ngoại quan tự động (Automated Visual Inspection – AVI) vận hành thông qua một chuỗi các bước xử lý ảnh được tổ chức theo dạng pipeline nhằm đảm bảo quá trình kiểm tra diễn ra chính xác, ổn định và nhất quán. Pipeline xử lý ảnh của hệ thống có thể được mô tả qua các giai đoạn chính như sau:
+
+\subsubsection{Thu nhận hình ảnh}
+Ở giai đoạn đầu tiên, camera độ phân giải cao hoặc thiết bị ghi hình chuyên dụng được sử dụng để thu nhận ảnh hoặc video của sản phẩm. Chất lượng ảnh đầu vào phụ thuộc vào loại camera, ống kính, khoảng cách chụp và cấu hình hệ thống chiếu sáng. Đây là nguồn dữ liệu cơ bản phục vụ toàn bộ quá trình xử lý phía sau.
+
+\subsubsection{Xử lý và tiền xử lý hình ảnh}
+Sau khi thu nhận, hình ảnh được đưa vào các thuật toán xử lý nhằm tăng cường chất lượng, làm nổi bật đặc trưng quan trọng và giảm nhiễu. Các bước thường bao gồm:
+\begin{itemize}
+    \item Cân bằng sáng, tăng %-----=======================================================================================
+\subsection{Cấu hình CC-Link giao tiếp giữa PLC và các CC-Link Station}
+Để có thể kết nối các trạm với PLC qua CC-Link cần thiết lập cả phần cứng và phần mềm.
 Cần cấu hình hai thông số quan trọng là phiên bản CC-Link (Ver 2 hoặc Ver 1), tốc độ truyền (khoảng cách càng gần thì tốc độ càng cao), số thứ tự Station cho từng trạm (cả Remote IO và Remote Device).
 \begin{enumerate}
-    \item Trạm I/O: Cấu hình các trạm IO là Remote IO Station. 
-    Hình minh họa phần cứng của Remote IO giống như Hình\ref{c3:remoteio}. Có hai thành phần quan trọng là công tắc định địa chỉ Station (3) và công tắc định tốc độ giao tiếp (2). Cần phải điều khiển sao cho tốc độ đúng với tốc độ hệ thống và địa chỉ phù hợp, không bị trùng với các trạm khác.
+    \item \textbf{Trạm I/O}: Cấu hình các trạm IO là Remote IO Station. 
+    Hình minh họa phần cứng của Remote IO giống như Hình \ref{c3:remoteio}. Có hai thành phần quan trọng là công tắc định địa chỉ Station (3) và công tắc định tốc độ giao tiếp (2). Cần phải điều khiển sao cho tốc độ đúng với tốc độ hệ thống và địa chỉ phù hợp, không bị trùng với các trạm khác.
         
     \begin{figure}[H]
         \centering
@@ -188,126 +402,7 @@ Cần cấu hình hai thông số quan trọng là phiên bản CC-Link (Ver 2 h
     Điều này tương đương với: Điều này tương đương với: \(\texttt{IN\#0017} \rightarrow \texttt{IN\#0024}\).
 
     \item Cấu hình PLC là Master:
-    Sau khi đã cấu hình xong các trạm Remote I/O và Remote Device Station, tiếp đến là cấu hình giao tiếp CC-Link tại trạm Master (module QJ16BT11N). 
-    Dữ liệu truyền qua CC-Link có 4 dạng là: Rx (tín hiệu đầu vào), Ry (tín hiệu đầu ra), RWw (ghi word 16-bit ), RWr (đọc word 16-bit).
-    Trong Tab Parameter / Network parameter / CC-Link của Project trong GX-Works2, cấu hình như Hình\ref{c3:plc1}:
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\linewidth]{figures/Chapter3/plc-cc1.png}
-    \caption{Master Station}
-    \label{c3:plc1}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\linewidth]{figures/Chapter3/plc-cc2.png}
-    \caption{Master Station Setup}
-    \label{c3:plc2}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\linewidth]{figures/Chapter3/plc-cc3.png}
-    \caption{CC-Link Speed}
-    \label{c3:plc3}
-\end{figure}
-
-\end{enumerate}
-
-Sau khi thiết lập xong Master, thu được kết quả như sau:
-
-\begin{itemize}
-    \item \textbf{Station \#1:} Module Input \texttt{AJ65SBTB1-32D}
-    \item \textbf{Station \#2:} Module Output \texttt{AJ65SBTB1-32T1}
-    \item \textbf{Station \#3:} Robot Yaskawa (chiếm 4 trạm)
-    \item \textbf{Station \#4:} Robot Hyundai (chiếm 4 trạm)
-    \item \textbf{Station \#5:} \texttt{AJ65SBT1-16DT1}
-\end{itemize}
-
-Mỗi trạm 32~bit chiếm:
-\begin{itemize}
-    \item \textbf{32 bit} tại \texttt{Rx}, \texttt{Ry}
-    \item \textbf{4 Word} tại \texttt{RWr}, \texttt{RWw}
-\end{itemize}
-
-Bộ nhớ tại trạm Master được phân bổ cho từng Slave như sau:
-
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\textbf{Station} & \textbf{Rx} & \textbf{Ry} & \textbf{RWr} & \textbf{RWw} \\ \hline
-
-\#1 & X500--X51F & Y4E0--Y4FF & D40--D43   & D100--D103 \\ \hline
-\#2 & X520--X53F & Y500--Y51F & D44--D47   & D104--D107 \\ \hline
-\#3 & X540--X5BF & Y520--Y59F & D48--D63   & D108--D123 \\ \hline
-\#4 & X5C0--X63F & Y5A0--Y61F & D64--D79   & D124--D139 \\ \hline
-\#5 & X640--X65F & Y620--Y63F & D80--D83   & D140--D143 \\ \hline
-
-\end{tabular}
-\end{center}
-
-
-
-%=------------------------------------------------------------------------------
-\subsection{Cấu hình KepserverEX làm server OPC UA}
-Kết nối KepserverEX với PLC qua card mạng của máy tính. Giao thức được chọn và sử dụng trong phần mềm GX-Works2 và phần mềm KepserverEX phải giống nhau để đảm bảo giao tiếp giữa OPC UA Server với PLC.
-
-\begin{figure}[H]
-        \centering
-        \includegraphics[width=0.75\linewidth]{figures/Chapter3/kepwareprj.png}
-        \caption{Cấu hình Project Kepware}
-        \label{c3:kepwareprj}
- \end{figure}
-
-\begin{figure}[H]
-        \centering
-        \includegraphics[width=0.75\linewidth]{figures/Chapter3/kepwarechannel.png}
-        \caption{Cấu hình Channel}
-        \label{c3:kepwarechannel}
- \end{figure}
-
-\begin{figure}[H]
-        \centering
-        \includegraphics[width=0.75\linewidth]{figures/Chapter3/kepwaredevice.png}
-        \caption{Cấu hình Device}
-        \label{c3:kepwaredevice}
- \end{figure}
-
-
-\subsection{Cấu hình GigE Camera Basler ac2500}
-Kết nối Camera với máy tính qua cổng mạng IP, cần cấu hình IP của camera với IP của máy tính trong cùng lớp mạng.
-
-\begin{figure}[H]
-        \centering
-        \includegraphics[width=0.75\linewidth]{figures/Chapter3/baslerip.png}
-        \caption{Cấu hình IP camera}
-        \label{c3:cameraip}
- \end{figure}
-
-Tiếp theo là cấu hình thông số ảnh chụp như Gain, Gamma, Exposure time. Có thể sử dụng chức năng Automatic Image Adjustment.
-
-\begin{figure}[H]
-        \centering
-        \includegraphics[width=0.75\linewidth]{figures/Chapter3/baslerauto.png}
-        \caption{Cấu hình ảnh chụp}
-        \label{c3:image}
- \end{figure}
-
-
-% =======================
-% PHẦN 3: XỬ LÝ ẢNH
-% ======================= 
-
-\section{Xây dựng hệ thống xử lý ảnh}
-
-\subsection{Pipeline xử lý ảnh}
-Hệ thống kiểm tra ngoại quan tự động (Automated Visual Inspection – AVI) vận hành thông qua một chuỗi các bước xử lý ảnh được tổ chức theo dạng pipeline nhằm đảm bảo quá trình kiểm tra diễn ra chính xác, ổn định và nhất quán. Pipeline xử lý ảnh của hệ thống có thể được mô tả qua các giai đoạn chính như sau:
-
-\subsubsection{Thu nhận hình ảnh}
-Ở giai đoạn đầu tiên, camera độ phân giải cao hoặc thiết bị ghi hình chuyên dụng được sử dụng để thu nhận ảnh hoặc video của sản phẩm. Chất lượng ảnh đầu vào phụ thuộc vào loại camera, ống kính, khoảng cách chụp và cấu hình hệ thống chiếu sáng. Đây là nguồn dữ liệu cơ bản phục vụ toàn bộ quá trình xử lý phía sau.
-
-\subsubsection{Xử lý và tiền xử lý hình ảnh}
-Sau khi thu nhận, hình ảnh được đưa vào các thuật toán xử lý nhằm tăng cường chất lượng, làm nổi bật đặc trưng quan trọng và giảm nhiễu. Các bước thường bao gồm:
-\begin{itemize}
-    \item Cân bằng sáng, tăng tương phản hoặc hiệu chỉnh màu.
+    Sau khi đã cấu hình xongtương phản hoặc hiệu chỉnh màu.
     \item Lọc nhiễu và cải thiện độ nét.
     \item Chuẩn hóa kích thước, góc xoay hoặc cắt vùng quan tâm (ROI).
 \end{itemize}
