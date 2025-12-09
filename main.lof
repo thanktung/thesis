@@ -1,35 +1,23 @@
 \babel@toc {english}{}\relax 
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Cấu trúc tổng quát hệ thống}}{1}{figure.caption.9}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces PC Side}}{1}{figure.caption.10}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces PLC Side}}{2}{figure.caption.11}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Quy trình tổng quát}}{3}{figure.caption.12}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Quá trình 1.}}{5}{figure.caption.13}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Quá trình 2.}}{6}{figure.caption.14}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Quá trình 3.}}{7}{figure.caption.15}%
-\contentsline {figure}{\numberline {1.8}{\ignorespaces Quá trình 4.}}{8}{figure.caption.16}%
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Quá trình 5.}}{9}{figure.caption.17}%
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Cấu hình New Project}}{10}{figure.caption.18}%
-\contentsline {figure}{\numberline {1.11}{\ignorespaces Thiết lập phần cứng}}{11}{figure.caption.19}%
-\contentsline {figure}{\numberline {1.12}{\ignorespaces IO Assignment}}{11}{figure.caption.20}%
-\contentsline {figure}{\numberline {1.13}{\ignorespaces Thiết lập kết nối Ethernet}}{12}{figure.caption.21}%
-\contentsline {figure}{\numberline {1.14}{\ignorespaces Phần cứng Remote IO}}{13}{figure.caption.22}%
-\contentsline {figure}{\numberline {1.15}{\ignorespaces Board CC-Link}}{13}{figure.caption.23}%
-\contentsline {figure}{\numberline {1.16}{\ignorespaces Thông tin thiết lập CC-Link}}{14}{figure.caption.24}%
-\contentsline {figure}{\numberline {1.17}{\ignorespaces Kết nối CC-Link giữa Robot Yaskawa và PLC}}{14}{figure.caption.25}%
-\contentsline {figure}{\numberline {1.18}{\ignorespaces Board CCS-PCIE}}{15}{figure.caption.26}%
-\contentsline {figure}{\numberline {1.19}{\ignorespaces Thiết lập CC-Link}}{15}{figure.caption.27}%
-\contentsline {figure}{\numberline {1.20}{\ignorespaces Controller Information}}{16}{figure.caption.28}%
-\contentsline {figure}{\numberline {1.21}{\ignorespaces Ladder Program}}{17}{figure.caption.29}%
-\contentsline {figure}{\numberline {1.22}{\ignorespaces Convert Data}}{17}{figure.caption.30}%
-\contentsline {figure}{\numberline {1.23}{\ignorespaces Master Station}}{18}{figure.caption.31}%
-\contentsline {figure}{\numberline {1.24}{\ignorespaces Master Station Setup}}{18}{figure.caption.32}%
-\contentsline {figure}{\numberline {1.25}{\ignorespaces CC-Link Speed}}{18}{figure.caption.33}%
-\contentsline {figure}{\numberline {1.26}{\ignorespaces Cấu hình Project Kepware}}{19}{figure.caption.34}%
-\contentsline {figure}{\numberline {1.27}{\ignorespaces Cấu hình Channel}}{20}{figure.caption.35}%
-\contentsline {figure}{\numberline {1.28}{\ignorespaces Cấu hình Device}}{20}{figure.caption.36}%
-\contentsline {figure}{\numberline {1.29}{\ignorespaces Cấu hình IP camera}}{20}{figure.caption.37}%
-\contentsline {figure}{\numberline {1.30}{\ignorespaces Cấu hình ảnh chụp}}{21}{figure.caption.38}%
-\contentsline {figure}{\numberline {1.31}{\ignorespaces Thu thập ảnh}}{23}{figure.caption.45}%
-\contentsline {figure}{\numberline {1.32}{\ignorespaces Label ảnh bằng Roboflow}}{24}{figure.caption.47}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Cấu hình New Project}}{1}{figure.caption.9}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Thiết lập phần cứng}}{2}{figure.caption.10}%
+\contentsline {figure}{\numberline {3}{\ignorespaces IO Assignment}}{2}{figure.caption.11}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Thiết lập kết nối Ethernet}}{3}{figure.caption.12}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Phần cứng Remote IO}}{4}{figure.caption.13}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Board CC-Link}}{4}{figure.caption.14}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Thiết lập CC-Link Robot Hyundai}}{5}{figure.caption.15}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Kết nối CC-Link giữa Robot Yaskawa và PLC}}{6}{figure.caption.16}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Board CCS-PCIE}}{6}{figure.caption.17}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Thiết lập CC-Link Robot Yaskawa}}{7}{figure.caption.18}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Controller Information}}{8}{figure.caption.19}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Ladder Program}}{9}{figure.caption.20}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Dữ liệu chuyển vào GP INPUT/OUTPUT}}{10}{figure.caption.21}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Master Station}}{10}{figure.caption.22}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Master Station Setup}}{11}{figure.caption.23}%
+\contentsline {figure}{\numberline {16}{\ignorespaces CC-Link Speed}}{11}{figure.caption.24}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Cấu hình Project Kepware}}{12}{figure.caption.25}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Cấu hình Channel}}{12}{figure.caption.26}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Cấu hình Device}}{13}{figure.caption.27}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Cấu hình IP camera}}{13}{figure.caption.28}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Cấu hình ảnh chụp}}{14}{figure.caption.29}%
 \addvspace {10\p@ }

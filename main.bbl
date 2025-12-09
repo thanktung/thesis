@@ -16,5 +16,68 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nyvt/global//global/global/global}
+    \entry{YaskawaYRC1000microOperatorManual}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=0ff76181f55dd28b53ae5ac3cfaf53fe}{%
+           family={{Yaskawa Electric Corporation}},
+           familyi={Y\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Kitakyushu, Japan}%
+      }
+      \list{organization}{1}{%
+        {Yaskawa}%
+      }
+      \strng{namehash}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \strng{fullhash}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \strng{fullhashraw}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \strng{bibnamehash}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \strng{authorbibnamehash}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \strng{authornamehash}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \strng{authorfullhash}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \strng{authorfullhashraw}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \field{extraname}{1}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Part Number: 181291-1CD, Revision: 0}
+      \field{title}{YRC1000micro Operator's Manual: For Ladder Editor}
+      \field{year}{2020}
+    \endentry
+    \entry{YaskawaYRC1000microConcurrentIO}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=0ff76181f55dd28b53ae5ac3cfaf53fe}{%
+           family={{Yaskawa Electric Corporation}},
+           familyi={Y\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Kitakyushu, Japan}%
+      }
+      \list{organization}{1}{%
+        {Yaskawa}%
+      }
+      \strng{namehash}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \strng{fullhash}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \strng{fullhashraw}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \strng{bibnamehash}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \strng{authorbibnamehash}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \strng{authornamehash}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \strng{authorfullhash}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \strng{authorfullhashraw}{0ff76181f55dd28b53ae5ac3cfaf53fe}
+      \field{extraname}{2}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{YRC1000micro Concurrent I/O Instruction Manual}
+      \field{title}{YRC1000micro Options Instructions: Concurrent I/O}
+      \field{year}{2020}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

@@ -1,0 +1,39 @@
+\section{Thực nghiệm và đánh giá}
+
+\subsection{Giao diện hệ thống}
+
+Hệ thống AVI được triển khai với hai giao diện chính: giao diện ứng dụng AVI trên máy tính (Hình \ref{c4:application}) được viết bằng PyQt5 và giao diện HMI trên dây chuyền (Hình \ref{c4:hmi}). Giao diện AOI cho phép hiển thị kết quả quá trình xử lý ảnh, là ảnh sau khi đã xử lý xong các bước align, crop và YOLO detect, các hộp bao từ mô hình YOLO cũng như kết quả đánh giá OK/NG của từng linh kiện. Người vận hành có thể phóng to, thu nhỏ, xem log xử lý theo thời gian thực và lưu toàn bộ ảnh phục vụ mục đích truy vết. Bên cạnh đó, giao diện HMI được thiết kế đơn giản hơn, phục vụ công nhân sản xuất, hiển thị trạng thái các thành phần trong hệ thống như trạng thái băng tải, trạng thái robot, tín hiệu cảm biến, số lượng sản phẩm OK/NG và các nút điều khiển như Start, Stop và Reset. Hai giao diện kết hợp giúp việc vận hành và giám sát hệ thống trở nên trực quan và thuận tiện.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/Chapter4/image1.png}
+    \caption{Giao diện phần mềm AVI}
+    \label{c4:application}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/Chapter4/image2.png}
+    \caption{Giao diện HMI}
+    \label{c4:hmi}
+\end{figure}
+
+\subsection{Kết quả nhận diện và phân loại sản phẩm}
+
+Các thí nghiệm được thực hiện trên nhiều mẫu PCB bao gồm sản phẩm tốt và sản phẩm lỗi. Mô hình YOLO cho thấy khả năng nhận diện linh kiện SMD với độ chính xác cao, xác định đúng vị trí và loại linh kiện. Thuật toán kiểm tra độ lệch dựa trên đối sánh đặc trưng cho phép tính toán chính xác độ lệch vị trí và góc xoay của từng linh kiện so với mẫu chuẩn. Hệ thống phát hiện tốt các dạng lỗi phổ biến như thiếu linh kiện, lệch vị trí, xoay sai hướng và linh kiện sai loại. Các ảnh kết quả minh họa rõ vùng lỗi và hỗ trợ quá trình đánh giá sản phẩm.
+Minh họa kết quả xử lý ảnh:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/Chapter4/image3.png}
+    \caption{Kết quả xử lý ảnh}
+    \label{c4:image3}
+\end{figure}
+
+
+\subsection{Đánh giá hiệu suất: tốc độ, độ chính xác, độ ổn định}
+
+Tốc độ xử lý trung bình của hệ thống đạt khoảng 250--350\,ms cho mỗi PCB, đáp ứng tốt yêu cầu của dây chuyền sản xuất tốc độ cao. Độ chính xác nhận diện của mô hình YOLO đạt từ 95\% đến 98\%, trong khi các lỗi thiếu linh kiện được phát hiện với tỷ lệ 100\%. Việc đo độ lệch vị trí và góc xoay cho thấy sai số nhỏ và gần như không thay đổi giữa các lần kiểm tra lặp lại. Trong quá trình chạy liên tục nhiều giờ, hệ thống cho thấy tính ổn định cao, không phát sinh lỗi kết nối camera hoặc OPC UA.
+
+\subsection{So sánh với phương pháp thủ công}
+
+So với phương pháp kiểm tra thủ công bằng mắt thường, hệ thống AVI thể hiện ưu thế rõ rệt về tốc độ, độ chính xác và tính ổn định. Việc kiểm tra tự động giúp loại bỏ các sai sót chủ quan của người vận hành và phát hiện được những lỗi rất nhỏ mà mắt thường khó quan sát, đặc biệt đối với các linh kiện SMD kích thước nhỏ. Ngoài ra, hệ thống còn lưu trữ toàn bộ dữ liệu kiểm tra, hỗ trợ truy vết trong quá trình sản xuất. Do đó, phương pháp thủ công chỉ phù hợp cho kiểm tra mẫu hoặc sản lượng thấp, trong khi AVI là giải pháp tối ưu cho sản xuất hàng loạt.

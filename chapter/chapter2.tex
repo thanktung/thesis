@@ -127,8 +127,8 @@ Các tính năng chính của hệ thống CC-Link:
     \item \textbf{Truyền thông dữ liệu chu kỳ và truyền thông tức thời}  
     Master/Local Modules có thể trao đổi dữ liệu theo hai phương thức:
     \begin{itemize}
-        \item \textit{Cyclic Transmission}: truyền liên tục theo chu kỳ quét của PLC (Hình \ref{fig:cclink_cyclic}).
-        \item \textit{Transient Transmission}: chỉ truyền khi có yêu cầu (Hình \ref{fig:cclink_transient}).
+        \item \textit{Cyclic Transmission}: truyền liên tục theo chu kỳ quét của PLC.
+        \item \textit{Transient Transmission}: chỉ truyền khi có yêu cầu.
     \end{itemize}
 
  \begin{figure}[h]
@@ -143,7 +143,7 @@ Các tính năng chính của hệ thống CC-Link:
     % ------------------- 2 -------------------
     \item \textbf{Thiết lập tham số và chẩn đoán hệ thống}  
     Các tham số của module có thể được thiết lập bằng phần mềm GX Works2 hoặc bằng chính chương trình PLC. Khi thiết lập tham số từ chương trình PLC, có thể thay đổi cấu hình mà không cần reset CPU (Hình \ref{fig:cclink_config}).  
-    Trạng thái hệ thống, vị trí lỗi và nguyên nhân lỗi có thể được quan sát trực tiếp trên phần mềm lập trình (Hình \ref{fig:cclink_diagnostics}).
+    Trạng thái hệ thống, vị trí lỗi và nguyên nhân lỗi có thể được quan sát trực tiếp trên phần mềm lập trình (Hình \ref{fig:cclink_config}).
 
     \begin{figure}[h]
         \centering
@@ -187,6 +187,7 @@ Các tính năng chính của hệ thống CC-Link:
 
 Module QJ61BT11N là module Master/Local CC-Link dành cho PLC MELSEC-Q Series \cite{mitsubishi_qj61bt11n_manual}. Hình dạng mặt trước của module được minh họa trong Hình \ref{fig:qj61bt11n}.
 
+
 \begin{figure}
     \centering
     \includegraphics[width=0.5\linewidth]{figures/Chapter01/qj61bt11n.png}
@@ -202,6 +203,8 @@ Các thành phần chính ở mặt trước module gồm:
     \item (4) Cổng kết nối cáp CC-Link,
     \item (5) Mã số Serial Number của module.
 \end{itemize}
+
+Để cấu hình module CC-Link giao tiếp cần cấu hình địa chỉ của trạm (0 nếu là trạm Master) và Mode (tốc độ truyền nhận). 
 
 % =======================
 % PHẦN 3: HỆ CHUYỂN ĐỘNG SERVO
@@ -230,6 +233,8 @@ Trong hệ thống này, động cơ sử dụng là \textbf{HG-KR32} kết hợ
     \label{fig:servo_system}
 \end{figure}
 % ----------------------------------------------------------
+
+Cấu hình của Driver điều khiển cần đúng với thông số của động cơ Servo.
 
 %===========================================================================================
 \subsection{Module QD77MS16}
