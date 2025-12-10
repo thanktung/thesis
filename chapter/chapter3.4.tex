@@ -2,36 +2,149 @@
 \section{Xây dựng hệ thống xử lý ảnh}
 
 \subsection{Pipeline xử lý ảnh}
-Hệ thống kiểm tra ngoại quan tự động (Automated Visual Inspection – AVI) vận hành thông qua một chuỗi các bước xử lý ảnh được tổ chức theo dạng pipeline nhằm đảm bảo quá trình kiểm tra diễn ra chính xác, ổn định và nhất quán. Pipeline xử lý ảnh của hệ thống có thể được mô tả qua các giai đoạn chính như sau:
+Hệ thống kiểm tra ngoại quan tự động AVI vận hành thông qua một chuỗi các bước xử lý ảnh được tổ chức theo dạng pipeline nhằm đảm bảo quá trình kiểm tra diễn ra chính xác, ổn định và nhất quán. Pipeline xử lý ảnh của hệ thống có thể được mô tả qua các giai đoạn chính như sau:
 
-\subsubsection{Thu nhận hình ảnh}
-Ở giai đoạn đầu tiên, camera độ phân giải cao hoặc thiết bị ghi hình chuyên dụng được sử dụng để thu nhận ảnh hoặc video của sản phẩm. Chất lượng ảnh đầu vào phụ thuộc vào loại camera, ống kính, khoảng cách chụp và cấu hình hệ thống chiếu sáng. Đây là nguồn dữ liệu cơ bản phục vụ toàn bộ quá trình xử lý phía sau.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    node distance=2.4cm,
+    box/.style={
+        rectangle,
+        draw,
+        minimum width=3.5cm,
+        minimum height=1.3cm,
+        rounded corners=2pt,
+        font=\small
+    },
+    arrow/.style={->, thick}
+]
 
-\subsubsection{Xử lý và tiền xử lý hình ảnh}
-Sau khi thu nhận, hình ảnh được đưa vào các thuật toán xử lý nhằm tăng cường chất lượng, làm nổi bật đặc trưng quan trọng và giảm nhiễu. Các bước thường bao gồm:
-\begin{itemize}
-    \item Cân bằng sáng, tăng tương phản hoặc hiệu chỉnh màu.
-    \item Lọc nhiễu và cải thiện độ nét.
-    \item Chuẩn hóa kích thước, góc xoay hoặc cắt vùng quan tâm (ROI).
-\end{itemize}
-Giai đoạn này đảm bảo rằng hình ảnh đầu vào luôn đạt chất lượng ổn định để phục vụ nhận diện lỗi.
+\node[box] (cap) {Capture};
+\node[box, right=of cap] (pre) {Preprocessing};
+\node[box, right=of pre] (align) {Alignment};
 
-\subsubsection{Phân tích ảnh và nhận diện lỗi}
-Ở bước này, hệ thống áp dụng các thuật toán xử lý ảnh nâng cao và mô hình học máy để:
-\begin{itemize}
-    \item Trích xuất đặc trưng của sản phẩm.
-    \item Phát hiện các bất thường hoặc khuyết tật như vết nứt, thiếu linh kiện, sai lệch vị trí, biến dạng hình học.
-    \item So sánh với hình mẫu hoặc tiêu chuẩn kỹ thuật đã thiết lập.
-\end{itemize}
-Thuật toán AI và machine learning giúp hệ thống thích nghi với biến động trong môi trường sản xuất, từ đó cải thiện độ chính xác theo thời gian.
+\node[box, below=2cm of align] (ana) {Analyzing};
+\node[box, left=of ana] (dec) {Decision};
+\node[box, left=of dec] (store) {Store / Log};
 
-\subsubsection{Ra quyết định}
-Dựa trên các tiêu chí chất lượng đã định nghĩa trước, hệ thống phân loại sản phẩm thành hai nhóm: đạt yêu cầu (OK) hoặc không đạt (NG). Việc ra quyết định được tự động hóa và đảm bảo tính khách quan, loại bỏ hoàn toàn yếu tố chủ quan của con người.
+\draw[arrow] (cap) -- (pre);
+\draw[arrow] (pre) -- (align);
+\draw[arrow] (align) -- (ana);
+\draw[arrow] (ana) -- (dec);
+\draw[arrow] (dec) -- (store);
 
-\subsubsection{Phản hồi và lưu trữ dữ liệu}
-Kết quả kiểm tra được ghi nhận và phản hồi trực tiếp đến hệ thống sản xuất để thực hiện các hành động kịp thời như loại bỏ sản phẩm lỗi hoặc điều chỉnh quy trình. Đồng thời, dữ liệu hình ảnh, log lỗi và thống kê được lưu trữ trên cơ sở dữ liệu cục bộ hoặc đám mây để phục vụ phân tích chất lượng, tối ưu hoá dây chuyền và truy vết trong sản xuất.
+\end{tikzpicture}
+\caption{Pipeline xử lý ảnh trong hệ thống AVI}
+\label{fig:pipeline}
+\end{figure}
 
-Pipeline trên giúp hệ thống AVI hoạt động mạch lạc, hiệu quả và có khả năng mở rộng theo yêu cầu thực tế của từng dây chuyền sản xuất.
+
+
+
+\begin{enumerate}
+    \item \textbf{Thu nhận hình ảnh (Capture)}  
+    Ở giai đoạn đầu tiên, camera công nghiệp Basler acA2500 được sử dụng để thu nhận ảnh của PCB với độ phân giải cao.  
+    Chất lượng ảnh đầu vào phụ thuộc vào:
+    \begin{itemize}
+        \item loại camera và ống kính,
+        \item tốc độ màn trập, thời gian phơi sáng (Exposure),
+        \item độ khuếch đại tín hiệu (Gain),
+        \item cấu hình ánh sáng và góc chiếu.
+    \end{itemize}
+
+Mã nguồn Python thu ảnh từ Basler (pypylon) - Phụ lục \ref{sec:capture}.
+
+Ảnh gốc từ camera:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.55\linewidth]{figures/Chapter4/i3.png}
+        \caption{Ảnh PCB thu nhận từ camera}
+    \end{figure}
+
+% -------------------------------------------------------------
+
+    \item \textbf{Xử lý và tiền xử lý hình ảnh (Preprocessing)}  
+    Mục tiêu của bước này là cải thiện chất lượng ảnh để phục vụ cho xử lý phía sau.  
+    Kỹ thuật áp dụng: CLAHE (Contrast Limited Adaptive Histogram Equalization)
+
+    Mã nguồn Python cho code CLAHE - Phụ lục \ref{sec:clahe}.
+
+    Kết quả sau khi xử lý bằng CLAHE như hình dưới:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{figures/Chapter4/i1.png}
+        \caption{Ảnh sau khi xử lý bằng CLAHE}
+    \end{figure}
+
+% -------------------------------------------------------------
+
+    \item \textbf{Alignment – Căn chỉnh ảnh so với ảnh mẫu (Golden Image)}  
+    Đây là bước quan trọng nhằm đảm bảo sự trùng khớp giữa ảnh thực tế và ảnh chuẩn.
+
+    Quá trình alignment gồm hai thành phần chính:
+
+    \begin{itemize}
+        \item \textbf{Trích xuất đặc trưng bằng ORB} (Oriented FAST and Rotated BRIEF)
+        \item \textbf{Tìm ma trận biến đổi Homography} đưa ảnh input về đúng vị trí so với ảnh golden
+        \item \textbf{Cắt ROI dựa trên toạ độ quy định trước}
+    \end{itemize}
+
+
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/Chapter4/i4.png}
+        \includegraphics[width=0.8\linewidth]{figures/Chapter4/i5.png}
+        \caption{Ảnh sau căn chỉnh bằng thuật toán ORB + Homography}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/Chapter4/i6.png}
+        \caption{Ảnh sau khi cắt theo ảnh Golden}
+    \end{figure}
+% -------------------------------------------------------------
+
+    \item \textbf{Analyzing – Phân tích ảnh}  
+    Đây là bước cốt lõi của hệ thống, gồm hai quy trình:
+
+    \begin{itemize}
+        \item \textbf{Phát hiện linh kiện SMD bằng YOLO}  
+        Mô hình YOLO được huấn luyện để nhận diện linh kiện (OK, Missing, Shifted, Wrong\_Orientation).
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/Chapter4/i8.png}
+        \caption{Kết quả detect bằng YOLO}
+        \end{figure}
+
+    \end{itemize}
+
+
+% -------------------------------------------------------------
+
+    \item \textbf{Decision – Ra quyết định OK / NG}  
+    Hệ thống dựa trên các tiêu chí:
+
+    \begin{itemize}
+        \item có đủ linh kiện hay không,
+        \item vị trí có sai không,
+    \end{itemize}
+
+
+% -------------------------------------------------------------
+
+    \item \textbf{Store / Log – Lưu trữ kết quả}
+    Gồm các thành phần:
+    \begin{itemize}
+        \item lưu ảnh gốc,
+        \item lưu ảnh đã vẽ bounding box,
+    \end{itemize}
+
+    
+\end{enumerate}
+
+Pipeline này giúp hệ thống AVI hoạt động mạch lạc, chính xác và có khả năng mở rộng theo yêu cầu sản xuất.
 
 \subsection{Train mô hình YOLO detect linh kiện SMD}
 

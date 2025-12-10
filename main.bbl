@@ -19,6 +19,149 @@
 
 \refsection{0}
   \datalist[entry]{nyvt/global//global/global/global}
+    \entry{mitsubishi_qj61bt11n_manual}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=1ca6cf9a3b23b367d4a9ab640de734c5}{%
+           family={{Mitsubishi Electric Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Mitsubishi Electric}%
+      }
+      \strng{namehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{fullhash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{fullhashraw}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{bibnamehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authorbibnamehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authornamehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authorfullhash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authorfullhashraw}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{User's Manual for CC-Link Master/Local Module QJ61BT11N}
+      \field{series}{MELSEC-Q Series}
+      \field{title}{CC-Link System Master/Local Module User's Manual}
+      \field{year}{2024}
+    \endentry
+    \entry{gxworks2_simpleproject_manual}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=1ca6cf9a3b23b367d4a9ab640de734c5}{%
+           family={{Mitsubishi Electric Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Mitsubishi Electric}%
+      }
+      \strng{namehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{fullhash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{fullhashraw}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{bibnamehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authorbibnamehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authornamehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authorfullhash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authorfullhashraw}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Operating Manual for GX Works2 -- Simple Project Mode}
+      \field{title}{GX Works2 Version 1: Operating Manual (Simple Project)}
+      \field{year}{2024}
+    \endentry
+    \entry{mitsubishi_qd77ms_manual}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=1ca6cf9a3b23b367d4a9ab640de734c5}{%
+           family={{Mitsubishi Electric Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Mitsubishi Electric}%
+      }
+      \strng{namehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{fullhash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{fullhashraw}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{bibnamehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authorbibnamehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authornamehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authorfullhash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authorfullhashraw}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \field{extraname}{3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Covers models QD77MS2, QD77MS4, QD77MS16}
+      \field{series}{MELSEC-Q Series}
+      \field{title}{MELSEC-Q QD77MS Simple Motion Module: User's Manual (Positioning Control)}
+      \field{year}{2024}
+    \endentry
+    \entry{mitsubishi_plc_ladder_manual}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=1ca6cf9a3b23b367d4a9ab640de734c5}{%
+           family={{Mitsubishi Electric Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Mitsubishi Electric}%
+      }
+      \strng{namehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{fullhash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{fullhashraw}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{bibnamehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authorbibnamehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authornamehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authorfullhash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authorfullhashraw}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \field{extraname}{4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Programming Manual for MELSEC PLC Series}
+      \field{title}{PLC Programming Manual: Ladder Section with MELSEC Tool}
+      \field{year}{2024}
+    \endentry
+    \entry{mitsubishi_q13udvcpu}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=1ca6cf9a3b23b367d4a9ab640de734c5}{%
+           family={{Mitsubishi Electric Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{fullhash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{fullhashraw}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{bibnamehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authorbibnamehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authornamehash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authorfullhash}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \strng{authorfullhashraw}{1ca6cf9a3b23b367d4a9ab640de734c5}
+      \field{extraname}{5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-12-08}
+      \field{title}{Q13UDVCPU - CPU Module, MELSEC-Q Series}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://mitsubishi-electric-eshop.mee.com/mee/FA_IA/en/EUR/Catalogue/PLC/PLC-Modular/CPU-Module/Q13UDVCPU/p/000000000000266164
+      \endverb
+      \verb{url}
+      \verb https://mitsubishi-electric-eshop.mee.com/mee/FA_IA/en/EUR/Catalogue/PLC/PLC-Modular/CPU-Module/Q13UDVCPU/p/000000000000266164
+      \endverb
+    \endentry
+    \entry{easyodm_AVI2025}{misc}{}{}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://easyodm.tech/what-is-automated-visual-inspection-systems/}}
+      \field{note}{Truy cập ngày 2025-12-08}
+      \field{title}{What Is Automated Visual Inspection Systems?}
+    \endentry
     \entry{YaskawaYRC1000microOperatorManual}{manual}{}{}
       \name{author}{1}{}{%
         {{hash=0ff76181f55dd28b53ae5ac3cfaf53fe}{%
