@@ -86,11 +86,6 @@ Cần cấu hình hai thông số quan trọng là phiên bản CC-Link (Ver 2 h
         \bottomrule
     \end{tabular}
 
- Sau khi cấu hình xong, dữ liệu từ CC-Link được hiển thị tại 
-\texttt{F1:Service} $\rightarrow$ 
-\texttt{1:Monitoring} $\rightarrow$ 
-\texttt{3:Field bus signal} $\rightarrow$ 
-\texttt{9/10:FB5 Field bus input/output}.
 
 
 
@@ -183,31 +178,29 @@ Cần cấu hình hai thông số quan trọng là phiên bản CC-Link (Ver 2 h
         \label{c3:yas6}
     \end{figure}
 
-    Ví dụ: tại dòng 98–99, \texttt{\#20030 – \#20037} của \texttt{External Input} được chuyển vào \texttt{\#00030–\#00037} của \texttt{General Purpose Input}.
+    Ví dụ: tại dòng 98 và 99, \texttt{\#20030–\#20037} của \texttt{External Input} được chuyển vào \texttt{\#00030–\#00037} của \texttt{General Purpose Input}.
 
     \item \textbf{Cấu hình PLC là Master}
 
     Trong mục thiết lập tham số CC-Link của GX-Works2, cấu hình như sau:
 
-    Thiết lập thông tin trạm Master (Hình \ref{c3:plc1} và Hình \ref{c3:plc2})
-
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.9\linewidth]{figures/Chapter3/plc-cc1.png}
+        \includegraphics[width=1\linewidth]{figures/Chapter3/plc-cc1.png}
         \caption{Master Station}
         \label{c3:plc1}
     \end{figure}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=1\linewidth]{figures/Chapter3/plc-cc2.png}
+        \includegraphics[width=0.5\linewidth]{figures/Chapter3/plc-cc2.png}
         \caption{Master Station Setup}
         \label{c3:plc2}
     \end{figure}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=1\linewidth]{figures/Chapter3/plc-cc3.png}
+        \includegraphics[width=0.5\linewidth]{figures/Chapter3/plc-cc3.png}
         \caption{CC-Link Speed}
         \label{c3:plc3}
     \end{figure}
@@ -228,21 +221,17 @@ Cần cấu hình hai thông số quan trọng là phiên bản CC-Link (Ver 2 h
         \item 4 word tại RWr, RWw
     \end{itemize}
 
-    \begin{table}[h]
-    \centering
+    \begin{center}
     \begin{tabularx}{\textwidth}{|c|X|X|X|X|}
     \hline
     \textbf{Station} & \textbf{Rx} & \textbf{Ry} & \textbf{RWr} & \textbf{RWw} \\ \hline
-    \#1 & X500--X51F & Y4E0--Y4FF & D40--D43 & D100--D103 \\ \hline
-    \#2 & X520--X53F & Y500--Y51F & D44--D47 & D104--D107 \\ \hline
-    \#3 & X540--X5BF & Y520--Y59F & D48--D63 & D108--D123 \\ \hline
-    \#4 & X5C0--X63F & Y5A0--Y61F & D64--D79 & D124--D139 \\ \hline
-    \#5 & X640--X65F & Y620--Y63F & D80--D83 & D140--D143 \\ \hline
+    \#1 & X500–X51F & Y4E0–Y4FF & D40–D43 & D100–D103 \\ \hline
+    \#2 & X520–X53F & Y500–Y51F & D44–D47 & D104–D107 \\ \hline
+    \#3 & X540–X5BF & Y520–Y59F & D48–D63 & D108–D123 \\ \hline
+    \#4 & X5C0–X63F & Y5A0–Y61F & D64–D79 & D124–D139 \\ \hline
+    \#5 & X640–X65F & Y620–Y63F & D80–D83 & D140–D143 \\ \hline
     \end{tabularx}
-    \caption{Bảng phân phối bit/word CC-Link}
-    \label{tab:cclink}
-    \end{table}
-
+    \end{center}
 
 \end{enumerate}
 %=------------------------------------------------------------------------------
@@ -251,50 +240,41 @@ Kết nối KepserverEX với PLC qua card mạng của máy tính. Giao thức 
 
 \begin{figure}[H]
         \centering
-        \includegraphics[width=1\linewidth]{figures/Chapter3/kepwareprj.png}
+        \includegraphics[width=0.75\linewidth]{figures/Chapter3/kepwareprj.png}
         \caption{Cấu hình Project Kepware}
         \label{c3:kepwareprj}
  \end{figure}
 
-Cấu hình Project của Kepware như Hình \ref{c3:kepwareprj}, lưu ý bật cho phép truy cập ẩn danh.
-
-
 \begin{figure}[H]
         \centering
-        \includegraphics[width=1\linewidth]{figures/Chapter3/kepwarechannel.png}
+        \includegraphics[width=0.75\linewidth]{figures/Chapter3/kepwarechannel.png}
         \caption{Cấu hình Channel}
         \label{c3:kepwarechannel}
  \end{figure}
 
-Cấu hình Channel của Kepware project, lưu ý đúng với cổng mạng đang dùng của máy tính.
-
 \begin{figure}[H]
         \centering
-        \includegraphics[width=1\linewidth]{figures/Chapter3/kepwaredevice.png}
+        \includegraphics[width=0.75\linewidth]{figures/Chapter3/kepwaredevice.png}
         \caption{Cấu hình Device}
         \label{c3:kepwaredevice}
  \end{figure}
 
-Cấu hình Device của Channel, lưu ý đúng với IP của PLC.
-
-Tiếp theo cần tạo các Tag muốn sử dụng, tương ứng với địa chỉ các bit/word trong PLC
-
 
 \subsection{Cấu hình GigE Camera Basler ac2500}
-Kết nối Camera với máy tính qua cổng mạng IP, cần cấu hình IP của camera với IP của máy tính trong cùng lớp mạng (Hình \ref{c3:cameraip}).
+Kết nối Camera với máy tính qua cổng mạng IP, cần cấu hình IP của camera với IP của máy tính trong cùng lớp mạng.
 
 \begin{figure}[H]
         \centering
-        \includegraphics[width=1\linewidth]{figures/Chapter3/baslerip.png}
+        \includegraphics[width=0.75\linewidth]{figures/Chapter3/baslerip.png}
         \caption{Cấu hình IP camera}
         \label{c3:cameraip}
  \end{figure}
 
-Tiếp theo là cấu hình thông số ảnh chụp như Gain, Gamma, Exposure time. Có thể sử dụng chức năng Automatic Image Adjustment (Hình \ref{c3:image}).
+Tiếp theo là cấu hình thông số ảnh chụp như Gain, Gamma, Exposure time. Có thể sử dụng chức năng Automatic Image Adjustment.
 
 \begin{figure}[H]
         \centering
-        \includegraphics[width=1\linewidth]{figures/Chapter3/baslerauto.png}
+        \includegraphics[width=0.75\linewidth]{figures/Chapter3/baslerauto.png}
         \caption{Cấu hình ảnh chụp}
         \label{c3:image}
  \end{figure}

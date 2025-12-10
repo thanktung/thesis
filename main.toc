@@ -1,60 +1,12 @@
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{{\bf MỞ ĐẦU}}{1}{chapter*.9}%
-\contentsline {chapter}{\numberline {1}Giới thiệu chung}{4}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Tổng quan về hệ thống AVI trong công nghiệp}{4}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Kiến trúc và thành phần của hệ thống AVI}{5}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Ứng dụng, lợi ích, thách thức và xu hướng phát triển}{6}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Cơ sở lý thuyết}{9}{chapter.2}%
-\contentsline {section}{\numberline {2.1}PLC Mitsubishi và HMI PFXGP4501TAA}{9}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}PLC Mitsubishi Q13UDVCPU}{9}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Giao diện người–máy HMI PFXGP4501TAA}{11}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Mạng CC-Link và Module CC-Link QJ61BT11N}{12}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}CC-Link}{12}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Master/Local Modules}{13}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Module QJ61BT11N}{15}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Servo motor và Module QD77MS16}{16}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Servo và Servo Amplifier}{16}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Module QD77MS16}{17}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Robot công nghiệp}{19}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Hệ thống Robot Yaskawa}{19}{subsection.2.4.1}%
-\contentsline {subsubsection}{Tay máy GP7}{20}{subsubsection*.23}%
-\contentsline {subsubsection}{Bộ điều khiển YRC1000micro}{21}{subsubsection*.26}%
-\contentsline {subsubsection}{Giao diện Teaching Pendant}{22}{subsubsection*.28}%
-\contentsline {subsection}{\numberline {2.4.2}Hệ thống robot Hyundai}{25}{subsection.2.4.2}%
-\contentsline {subsubsection}{Viết chương trình điều khiển bằng pendant}{26}{subsubsection*.35}%
-\contentsline {section}{\numberline {2.5}Thị giác máy tính và mô hình YOLO}{27}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Thị giác máy tính}{27}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Thư viện OpenCV}{29}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Mạng YOLO - Lược sử phát triển}{30}{subsection.2.5.3}%
-\contentsline {subsection}{\numberline {2.5.4}Ultralytics YOLOv11}{32}{subsection.2.5.4}%
-\contentsline {section}{\numberline {2.6}Tổng quan về giao thức OPC UA}{33}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Xây dựng hệ thống }{35}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Sơ đồ khối hệ thống}{35}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Thuật toán điều khiển}{37}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Quá trình 1: Đưa sản phẩm từ Buffer In vào đầu băng tải nhập}{39}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Quá trình 2: Di chuyển băng tải nhập}{40}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Quá trình 3: Đưa sản phẩm từ băng tải nhập vào băng tải xuất}{41}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Quá trình 4: Di chuyển băng tải xuất}{42}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Quá trình 5: Đưa sản phẩm từ băng tải xuất đến Buffer Out}{43}{subsection.3.2.5}%
-\contentsline {section}{\numberline {3.3}Cấu hình hệ thống}{44}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Cấu hình hệ thống PLC và module}{44}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Cấu hình CC-Link giao tiếp giữa PLC và các CC-Link Station}{46}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Cấu hình KepserverEX làm server OPC UA}{55}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Cấu hình GigE Camera Basler ac2500}{56}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Xây dựng hệ thống xử lý ảnh}{58}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Pipeline xử lý ảnh}{58}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Train mô hình YOLO detect linh kiện SMD}{63}{subsection.3.4.2}%
-\contentsline {subsubsection}{Thu thập dữ liệu}{63}{subsubsection*.78}%
-\contentsline {subsubsection}{Gán nhãn dữ liệu (Labeling)}{63}{subsubsection*.80}%
-\contentsline {subsubsection}{Huấn luyện mô hình (Train model)}{64}{subsubsection*.82}%
-\contentsline {section}{\numberline {3.5}Thực nghiệm và đánh giá}{65}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Giao diện hệ thống}{65}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Kết quả nhận diện và phân loại sản phẩm}{66}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Đánh giá hiệu suất: tốc độ, độ chính xác, độ ổn định}{67}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}So sánh với phương pháp thủ công}{67}{subsection.3.5.4}%
-\contentsline {chapter}{{\bf KẾT LUẬN}\rm }{68}{chapter*.86}%
-\contentsline {chapter}{{\bf CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ }\rm }{69}{chapter*.87}%
-\contentsline {chapter}{{\bf TÀI LIỆU THAM KHẢO}}{70}{chapter*.88}%
+\contentsline {section}{\numberline {0.1}Thực nghiệm và đánh giá}{1}{section.0.1}%
+\contentsline {subsection}{\numberline {0.1.1}Giao diện hệ thống}{1}{subsection.0.1.1}%
+\contentsline {subsection}{\numberline {0.1.2}Kết quả nhận diện và phân loại sản phẩm}{2}{subsection.0.1.2}%
+\contentsline {subsection}{\numberline {0.1.3}Đánh giá hiệu suất: tốc độ, độ chính xác, độ ổn định}{3}{subsection.0.1.3}%
+\contentsline {subsection}{\numberline {0.1.4}So sánh với phương pháp thủ công}{3}{subsection.0.1.4}%
+\contentsline {chapter}{{\bf KẾT LUẬN}}{4}{chapter*.12}%
+\contentsline {chapter}{{\bf CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ }\rm }{6}{chapter*.13}%
+\contentsline {chapter}{{\bf TÀI LIỆU THAM KHẢO}}{7}{chapter*.14}%
 \renewcommand {\cftchappresnum }{PHỤ LỤC\nobreakspace }
 \contentsline {chapter}{\numberline {A}}{P1}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Mã nguồn chụp ảnh bằng Camera Basler}{P1}{section.A.1}%

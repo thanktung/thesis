@@ -101,7 +101,7 @@ Mã nguồn Python thu ảnh từ Basler (pypylon) - Phụ lục \ref{sec:captur
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\linewidth]{figures/Chapter4/i6.png}
+        \fbox{\includegraphics[width=0.8\linewidth]{figures/Chapter4/i6.png}}
         \caption{Ảnh sau khi cắt theo ảnh Golden}
     \end{figure}
 % -------------------------------------------------------------
@@ -114,9 +114,14 @@ Mã nguồn Python thu ảnh từ Basler (pypylon) - Phụ lục \ref{sec:captur
         Mô hình YOLO được huấn luyện để nhận diện linh kiện (OK, Missing, Shifted, Wrong\_Orientation).
         \begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\linewidth]{figures/Chapter4/i8.png}
+        \begin{tikzpicture}
+        \node[draw=black, line width=0.7pt] {
+            \includegraphics[width=0.8\linewidth]{figures/Chapter4/i8.png}
+        };
+        \end{tikzpicture}
         \caption{Kết quả detect bằng YOLO}
         \end{figure}
+
 
     \end{itemize}
 
@@ -127,9 +132,15 @@ Mã nguồn Python thu ảnh từ Basler (pypylon) - Phụ lục \ref{sec:captur
     Hệ thống dựa trên các tiêu chí:
 
     \begin{itemize}
-        \item có đủ linh kiện hay không,
+        \item có đủ linh kiện hay không, ảnh ví dụ:
         \item vị trí có sai không,
     \end{itemize}
+    \begin{figure}[h]
+        \fbox{\includegraphics[width=0.48\linewidth]{figures/Chapter4/i9.png}
+        \includegraphics[width=0.48\linewidth]{figures/Chapter4/i10.png}}
+        \caption{Lỗi thiếu linh kiện và sai vị trí linh kiện}
+            
+    \end{figure}
 
 
 % -------------------------------------------------------------
@@ -139,6 +150,7 @@ Mã nguồn Python thu ảnh từ Basler (pypylon) - Phụ lục \ref{sec:captur
     \begin{itemize}
         \item lưu ảnh gốc,
         \item lưu ảnh đã vẽ bounding box,
+        \item lưu ảnh kết quả
     \end{itemize}
 
     
@@ -153,7 +165,7 @@ Pipeline này giúp hệ thống AVI hoạt động mạch lạc, chính xác v�
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/Chapter3/image11.png}
+    \includegraphics[width=1\linewidth]{figures/Chapter3/image11.png}
     \caption{Thu thập ảnh}
     \label{c3:acquistion}
 \end{figure}
@@ -164,7 +176,7 @@ Sau khi thu thập, toàn bộ ảnh được đưa vào nền tảng Roboflow �
 Roboflow hỗ trợ việc chuẩn hoá kích thước ảnh, tăng cường dữ liệu (augmentation) như xoay, thay đổi độ sáng, cắt, lật ảnh, giúp tăng độ đa dạng cho tập huấn luyện. Sau khi hoàn tất, bộ dữ liệu được export theo định dạng YOLO và sẵn sàng cho quá trình huấn luyện.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\linewidth]{figures/Chapter3/image12.png}
+    \includegraphics[width=1\linewidth]{figures/Chapter3/image12.png}
     \caption{Label ảnh bằng Roboflow}
     \label{c3:labeling}
 \end{figure}

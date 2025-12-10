@@ -1,10 +1,15 @@
+\chapter*{KẾT LUẬN}
+\addcontentsline{toc}{chapter}{{\bf KẾT LUẬN}}
 
-%-[Phần mở đầu chương
-\chapter*{KẾT LUẬN}%
-\addcontentsline{toc}{chapter}{{\bf KẾT LUẬN}\rm}
-%\minitoc %
-%\setcounter{baitap}{0}
-%\thispagestyle{empty}
-%\vspace*{1cm}
-%]-
+Trong luận văn này, một hệ thống kiểm tra ngoại quan tự động (AVI) dựa trên thị giác máy tính đã được xây dựng và triển khai nhằm thay thế phương pháp kiểm tra thủ công trên dây chuyền sản xuất PCB. Hệ thống tích hợp đồng thời các thành phần phần cứng (camera công nghiệp, PLC Mitsubishi, robot Yaskawa và Hyundai, băng tải) và phần mềm (xử lý ảnh, mô hình học sâu YOLO, giao tiếp OPC UA), đáp ứng yêu cầu thực tế của quá trình sản xuất.
+
+Về mặt thuật toán, luận văn đã đề xuất chuỗi xử lý ảnh theo dạng pipeline bao gồm các bước: thu nhận ảnh, tiền xử lý bằng CLAHE, căn chỉnh ảnh sử dụng đặc trưng ORB, cắt ROI dựa trên tọa độ chuẩn, phát hiện lỗi bằng mô hình YOLO và đánh giá sai lệch vị trí – góc xoay của linh kiện. Kết quả thực nghiệm cho thấy pipeline hoạt động ổn định, có khả năng mở rộng và phù hợp với môi trường sản xuất thực tế.
+
+Về hiệu quả nhận diện, mô hình YOLO sau khi huấn luyện đã đạt độ chính xác từ 95\% đến 98\% tuỳ loại linh kiện và dạng lỗi. Thuật toán kiểm tra sai lệch dựa trên đối sánh đặc trưng cho phép xác định sai số vị trí và góc xoay với độ ổn định cao. Hệ thống phát hiện tốt các lỗi phổ biến như thiếu linh kiện, lệch vị trí, xoay sai hướng và sai loại, đáp ứng các tiêu chí chất lượng sản phẩm trong công nghiệp điện tử.
+
+Về hiệu suất, thời gian xử lý trung bình đạt 800-1000\,ms cho mỗi PCB, phù hợp với dây chuyền tốc độ cao. Thử nghiệm chạy liên tục cho thấy hệ thống hoạt động ổn định, không xuất hiện lỗi kết nối camera, OPC UA hay robot, đảm bảo yêu cầu về độ tin cậy và vận hành lâu dài.
+
+Kết quả so sánh với phương pháp kiểm tra thủ công cho thấy hệ thống AVI mang lại nhiều ưu điểm vượt trội: tốc độ nhanh hơn, loại bỏ sai sót do con người, phát hiện được lỗi tinh vi, đồng thời hỗ trợ lưu trữ và truy vết dữ liệu. Điều này khẳng định tính cần thiết và khả năng ứng dụng thực tiễn của hệ thống trong các dây chuyền sản xuất điện tử hiện đại.
+
+Tóm lại, luận văn đã hoàn thành mục tiêu đề ra: xây dựng một hệ thống kiểm tra ngoại quan tự động dựa trên thị giác máy tính, ứng dụng mô hình học sâu và các thuật toán xử lý ảnh hiện đại, đồng thời tích hợp thành công với hệ thống điều khiển công nghiệp thực tế.
 
