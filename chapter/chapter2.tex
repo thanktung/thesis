@@ -545,7 +545,7 @@ Trong sản xuất điện tử, thị giác máy đặc biệt quan trọng ở
 %===========================================================================
 \subsection{Thư viện OpenCV}
 
-OpenCV (Open Source Computer Vision Library) là thư viện mã nguồn mở được sử dụng rộng rãi trong các hệ thống thị giác máy tính và xử lý ảnh thời gian thực. Thư viện hỗ trợ hàng trăm thuật toán cốt lõi, bao gồm xử lý ảnh cơ bản, phát hiện biên, nhận dạng đối tượng, theo dõi chuyển động, hiệu chỉnh camera và nhiều chức năng nâng cao phục vụ cho tự động hóa công nghiệp. Với ưu điểm tốc độ cao, dễ tích hợp và hoạt động tốt trên nhiều nền tảng (C++, Python, CUDA), OpenCV là lựa chọn phổ biến cho các hệ thống AOI, robot, và các ứng dụng thị giác máy tính hiện đại.
+OpenCV (Open Source Computer Vision Library) là thư viện mã nguồn mở được sử dụng rộng rãi trong các hệ thống thị giác máy tính và xử lý ảnh thời gian thực. Thư viện hỗ trợ hàng trăm thuật toán cốt lõi, bao gồm xử lý ảnh cơ bản, phát hiện biên, nhận dạng đối tượng, theo dõi chuyển động, hiệu chỉnh camera và nhiều chức năng nâng cao phục vụ cho tự động hóa công nghiệp. Với ưu điểm tốc độ cao, dễ tích hợp và hoạt động tốt trên nhiều nền tảng (C++, Python, CUDA), OpenCV là lựa chọn phổ biến cho các hệ thống thị giác máy tính, robot, và các ứng dụng thị giác máy tính hiện đại \cite{opencv_python_tutorial}.
 
 \subsubsection*{Các nhóm chức năng chính của OpenCV}
 
@@ -554,7 +554,7 @@ OpenCV (Open Source Computer Vision Library) là thư viện mã nguồn mở đ
     Bao gồm chuyển đổi không gian màu (RGB, HSV, LAB), lọc nhiễu (\texttt{GaussianBlur}, \texttt{medianBlur}), cân bằng histogram, trích xuất kênh màu và chuẩn hoá dữ liệu ảnh. Các bước này giúp ổn định chất lượng ảnh đầu vào trước khi gửi vào các thuật toán phát hiện.
 
     \item \textbf{Biến đổi hình học (Geometric Transformations):}  
-    Các phép quay, tịnh tiến, co giãn, cắt (crop), warp affine và warp perspective. Đặc biệt quan trọng trong bài toán căn chỉnh ảnh (image alignment) giữa ảnh chụp thực tế và ảnh mẫu (golden template).
+    Các phép quay, tịnh tiến, co giãn, cắt, biến đổi tuyến tính \+ tịnh tiến (warp affine) và biến đổi phối cảnh (warp perspective). Đặc biệt quan trọng trong bài toán căn chỉnh ảnh (image alignment) giữa ảnh chụp thực tế và ảnh mẫu (golden template).
 
     \item \textbf{Phát hiện biên và đặc trưng (Feature Detection \& Description):}  
     OpenCV hỗ trợ nhiều thuật toán như SIFT, ORB, FAST, BRIEF dùng để trích xuất đặc trưng và mô tả ảnh. Các đặc trưng này được sử dụng trong việc căn chỉnh ảnh, ghép ảnh hoặc theo dõi vật thể.
@@ -629,25 +629,29 @@ Ra mắt vào năm 2015, YOLO nhanh chóng được ưa chuộng nhờ tốc đ�
 
 \end{itemize}
 %====================================================================
-\subsection{Ultralytics YOLOv11}
+\subsection{Ultralytics YOLOv8}
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\textwidth]{figures/Chapter01/yolotasks.png}
-    \caption{YOLOv11 Tasks}
-    \label{fig:yolov11}
+    \caption{Các tác vụ được hỗ trợ bởi YOLOv8}
+    \label{fig:yolov8}
 \end{figure}
-Ultralytics YOLO11 là một khung AI linh hoạt, hỗ trợ nhiều tác vụ thị giác máy tính khác nhau. Khung này có thể được sử dụng để thực hiện phát hiện đối tượng (detection), phân đoạn ảnh (segmentation), OBB (Oriented Bounding Box), phân loại (classification), và ước lượng tư thế (pose estimation). Mỗi tác vụ có mục tiêu và ứng dụng riêng, cho phép giải quyết nhiều thách thức trong thị giác máy tính chỉ với một framework duy nhất (Hình \ref{fig:yolov11}).
+
+Ultralytics YOLOv8 là một nền tảng thị giác máy tính hiện đại, được thiết kế để hỗ trợ đa dạng các tác vụ như phát hiện đối tượng (detection), phân đoạn ảnh (segmentation), phân loại ảnh (classification), và ước lượng tư thế (pose estimation). Với kiến trúc mô-đun, tốc độ xử lý cao và khả năng triển khai linh hoạt, YOLOv8 là một lựa chọn phổ biến trong cả môi trường nghiên cứu và ứng dụng thực tiễn (Hình~\ref{fig:yolov8}).
 
 \begin{enumerate}
-    \item \textbf{Detection (Phát hiện đối tượng)}: Phát hiện là tác vụ chính được hỗ trợ bởi YOLO11. Nó bao gồm việc xác định các đối tượng trong ảnh hoặc video và vẽ hộp bao quanh (bounding box) chúng. Các đối tượng được phân loại dựa trên đặc trưng. YOLO11 có thể phát hiện nhiều đối tượng trong một ảnh với độ chính xác và tốc độ cao, phù hợp cho các ứng dụng thời gian thực như giám sát an ninh và xe tự hành.
-    \item \textbf{Segmentation (Phân đoạn ảnh)}: Phân đoạn chia ảnh thành nhiều vùng dựa trên nội dung, với độ chính xác đến từng pixel. Ứng dụng điển hình gồm chẩn đoán y tế, phân tích nông nghiệp, và kiểm soát chất lượng. YOLO11 triển khai một biến thể của kiến trúc U-Net để đạt hiệu quả cao.
-    \item \textbf{Classification (Phân loại ảnh)}: Phân loại gán nhãn cho toàn bộ ảnh dựa trên nội dung. YOLO11 sử dụng biến thể của EfficientNet để đạt hiệu năng cao. Tác vụ này quan trọng trong thương mại điện tử, kiểm duyệt nội dung, và theo dõi động vật hoang dã.
-    \item \textbf{Pose Estimation (Ước lượng tư thế)}: Ước lượng tư thế phát hiện các điểm mốc (keypoints) trong ảnh hoặc video để theo dõi chuyển động hoặc ước lượng dáng điệu. Các điểm mốc có thể là khớp cơ thể, đặc điểm khuôn mặt, hoặc các điểm quan trọng khác. YOLO11 cho độ chính xác cao, ứng dụng trong thể dục, phân tích thể thao, và tương tác người–máy.
-    \item \textbf{OBB (Oriented Bounding Box – Hộp bao định hướng)}: OBB mở rộng phát hiện đối tượng bằng cách thêm thông tin góc xoay, giúp định vị chính xác các vật thể bị nghiêng hoặc xoay. Điều này đặc biệt hữu ích trong phân tích ảnh hàng không, xử lý tài liệu, và các ứng dụng công nghiệp. YOLO11 hỗ trợ OBB với tốc độ và độ chính xác cao.
+    \item \textbf{Detection (Phát hiện đối tượng)}: Đây là tác vụ cốt lõi của YOLOv8, cho phép nhận diện và xác định vị trí các đối tượng trong ảnh thông qua các hộp bao (bounding boxes). Mô hình có thể phát hiện nhiều loại đối tượng cùng lúc, với tốc độ và độ chính xác cao, thích hợp cho các hệ thống thời gian thực như giám sát an ninh, xe tự hành, và kiểm tra chất lượng sản phẩm.
+
+    \item \textbf{Segmentation (Phân đoạn ảnh)}: YOLOv8 hỗ trợ phân đoạn ảnh thông qua phương pháp phân đoạn thể hiện (instance segmentation), trong đó mỗi đối tượng được nhận diện không chỉ bởi hộp bao mà còn bởi vùng bao phủ chính xác theo pixel. Tính năng này rất hữu ích trong các lĩnh vực như y tế, nông nghiệp chính xác, và robot công nghiệp.
+
+    \item \textbf{Classification (Phân loại ảnh)}: Trong tác vụ phân loại, mô hình đưa ra nhãn cho toàn bộ ảnh đầu vào, xác định xem ảnh thuộc loại đối tượng nào. YOLOv8 cho phép huấn luyện và triển khai các mô hình phân loại nhẹ, phù hợp với các bài toán như lọc ảnh, kiểm duyệt nội dung, hoặc chẩn đoán sơ bộ từ ảnh.
+
+    \item \textbf{Pose Estimation (Ước lượng tư thế)}: YOLOv8 cung cấp khả năng ước lượng các điểm mốc (keypoints) trên cơ thể người hoặc các vật thể khác, từ đó phân tích tư thế, chuyển động hoặc hành vi. Ứng dụng phổ biến của tính năng này bao gồm theo dõi vận động viên, giám sát công nhân trong nhà máy, và hỗ trợ tương tác người–máy.
 \end{enumerate}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Tổng quan về giao thức OPC UA}
+\section{Giao thức OPC UA}
 
 OPC UA (OPC Unified Architecture, IEC 62541) là tiêu chuẩn truyền thông mở được sử dụng rộng rãi trong lĩnh vực tự động hoá công nghiệp. Giao thức cung cấp khả năng trao đổi dữ liệu an toàn, độc lập nền tảng và đáng tin cậy giữa các thiết bị, PLC, robot và các hệ thống phần mềm. OPC UA hỗ trợ cả hai mô hình giao tiếp: client–server và publish/subscribe (PubSub), cho phép triển khai linh hoạt trong nhiều kiến trúc mạng công nghiệp và mạng doanh nghiệp.
 

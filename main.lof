@@ -1,5 +1,75 @@
 \babel@toc {english}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Giao diện phần mềm AVI}}{1}{figure.caption.9}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Giao diện HMI}}{2}{figure.caption.10}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Kết quả xử lý ảnh}}{3}{figure.caption.11}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces CPU Mitsubishi Q13UDVCPU}}{9}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Hệ thống PLC Mitsubishi Q Series}}{10}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Màn hình HMI Pro-face PFXGP4501TAA}}{12}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Cấu trúc mạng CC-Link}}{13}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Cyclic Transmission và Transient Transmission trong CC-Link}}{14}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Thiết lập tham số module CC-Link}}{14}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces So sánh khả năng mở rộng giữa CC-Link Ver.1 và Ver.2}}{15}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Module QJ61BT11N (Master/Local CC-Link)}}{16}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Bộ truyền động servo sử dụng trong hệ thống}}{17}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Module điều khiển chuyển động QD77MS16}}{18}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Sơ đồ tổng quát hệ thống robot công nghiệp}}{20}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Tay máy GP7}}{20}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Bộ điều khiển YRC1000micro}}{21}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Giao diện Teach pendant}}{22}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Tạo chương trình mới bằng pendant}}{23}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Màn hình tạo Job}}{24}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Hệ thống robot Hyundai cơ bản}}{25}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Tay máy HH7 và Bộ điều khiển Hi5a}}{26}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Chọn chương trình trên pendant Hi5a}}{26}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Ví dụ một lệnh cơ bản}}{27}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.21}{\ignorespaces YOLO Performance.}}{31}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Các tác vụ được hỗ trợ bởi YOLOv8}}{32}{figure.caption.39}%
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Tổng quan OPC UA}}{34}{figure.caption.40}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Cấu trúc tổng quát hệ thống}}{35}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces PC Side}}{35}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces PLC Side}}{36}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Quy trình tổng quát}}{38}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Quá trình 1.}}{39}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Quá trình 2.}}{40}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Quá trình 3.}}{41}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Quá trình 4.}}{42}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Quá trình 5.}}{43}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Cấu hình New Project}}{44}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Thiết lập phần cứng}}{45}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces IO Assignment}}{45}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Thiết lập kết nối Ethernet}}{46}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Phần cứng Remote IO}}{47}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Board CC-Link}}{47}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Thiết lập CC-Link Robot Hyundai}}{48}{figure.caption.56}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Kết nối CC-Link giữa Robot Yaskawa và PLC}}{49}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Board CCS-PCIE}}{49}{figure.caption.58}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Thiết lập CC-Link Robot Yaskawa}}{50}{figure.caption.59}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Controller Information}}{51}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Ladder Program}}{52}{figure.caption.61}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Dữ liệu chuyển vào GP INPUT/OUTPUT}}{53}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Master Station}}{53}{figure.caption.63}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Master Station Setup}}{54}{figure.caption.64}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces CC-Link Speed}}{54}{figure.caption.65}%
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Cấu hình Project Kepware}}{55}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Cấu hình Channel}}{56}{figure.caption.67}%
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Cấu hình Device}}{56}{figure.caption.68}%
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Cấu hình IP camera}}{56}{figure.caption.69}%
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Cấu hình ảnh chụp}}{57}{figure.caption.70}%
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Pipeline xử lý ảnh trong hệ thống AVI}}{58}{figure.caption.71}%
+\contentsline {figure}{\numberline {3.32}{\ignorespaces Ảnh PCB thu nhận từ camera}}{59}{figure.caption.72}%
+\contentsline {figure}{\numberline {3.33}{\ignorespaces Ảnh sau khi xử lý bằng CLAHE}}{59}{figure.caption.73}%
+\contentsline {figure}{\numberline {3.34}{\ignorespaces Ảnh sau căn chỉnh bằng thuật toán ORB + Homography}}{61}{figure.caption.74}%
+\contentsline {figure}{\numberline {3.35}{\ignorespaces Ảnh sau khi cắt theo ảnh Golden}}{62}{figure.caption.75}%
+\contentsline {figure}{\numberline {3.36}{\ignorespaces Kết quả detect bằng YOLO}}{63}{figure.caption.76}%
+\contentsline {figure}{\numberline {3.37}{\ignorespaces Lỗi thiếu linh kiện và sai vị trí linh kiện}}{64}{figure.caption.77}%
+\contentsline {figure}{\numberline {3.38}{\ignorespaces Thu thập ảnh}}{65}{figure.caption.79}%
+\contentsline {figure}{\numberline {3.39}{\ignorespaces Label ảnh bằng Roboflow}}{66}{figure.caption.81}%
+\contentsline {figure}{\numberline {3.40}{\ignorespaces Kết quả train mô hình YOLO}}{67}{figure.caption.83}%
+\contentsline {figure}{\numberline {3.41}{\ignorespaces Giao diện phần mềm AVI}}{68}{figure.caption.84}%
+\contentsline {figure}{\numberline {3.42}{\ignorespaces Giao diện HMI}}{69}{figure.caption.85}%
+\contentsline {figure}{\numberline {3.43}{\ignorespaces Giao diện điều khiển Manual từng thành phần}}{69}{figure.caption.86}%
+\contentsline {figure}{\numberline {3.44}{\ignorespaces Input/Output của hệ thống}}{70}{figure.caption.87}%
+\contentsline {figure}{\numberline {3.45}{\ignorespaces Hệ thống thực tế}}{70}{figure.caption.88}%
+\contentsline {figure}{\numberline {3.46}{\ignorespaces Kết quả hiển thị trên ứng dụng}}{71}{figure.caption.89}%
+\contentsline {figure}{\numberline {3.47}{\ignorespaces Kết quả xử lý ảnh}}{72}{figure.caption.90}%
 \addvspace {10\p@ }

@@ -85,7 +85,7 @@ Mã nguồn Python thu ảnh từ Basler (pypylon) - Phụ lục \ref{sec:captur
     Quá trình alignment gồm hai thành phần chính:
 
     \begin{itemize}
-        \item \textbf{Trích xuất đặc trưng bằng ORB} (Oriented FAST and Rotated BRIEF)
+        \item \textbf{Trích xuất đặc trưng bằng ORB} (Oriented FAST and Rotated BRIEF) - Phụ lục \ref{sec:orb}
         \item \textbf{Tìm ma trận biến đổi Homography} đưa ảnh input về đúng vị trí so với ảnh golden
         \item \textbf{Cắt ROI dựa trên toạ độ quy định trước}
     \end{itemize}
@@ -132,7 +132,7 @@ Mã nguồn Python thu ảnh từ Basler (pypylon) - Phụ lục \ref{sec:captur
     Hệ thống dựa trên các tiêu chí:
 
     \begin{itemize}
-        \item có đủ linh kiện hay không, ảnh ví dụ:
+        \item có đủ linh kiện hay không,
         \item vị trí có sai không,
     \end{itemize}
     \begin{figure}[h]
@@ -171,7 +171,7 @@ Pipeline này giúp hệ thống AVI hoạt động mạch lạc, chính xác v�
 \end{figure}
 
 \subsubsection{Gán nhãn dữ liệu (Labeling)}
-Sau khi thu thập, toàn bộ ảnh được đưa vào nền tảng Roboflow để thực hiện gán nhãn. Mỗi linh kiện SMD hoặc vùng lỗi trên PCB được bao quanh bằng bounding box và gán class tương ứng, chẳng hạn như \texttt{OK}, \texttt{Missing}, \texttt{Shifted}, \texttt{Wrong\_Orientation}, \ldots{} Việc gán nhãn được thực hiện thủ công nhằm đảm bảo độ chính xác, vì chất lượng nhãn có ảnh hưởng trực tiếp đến khả năng học của mô hình YOLO.
+Sau khi thu thập, toàn bộ ảnh được đưa vào nền tảng Roboflow để thực hiện gán nhãn. Mỗi linh kiện SMD trên PCB được bao quanh bằng bounding box và gán class tương ứng, chẳng hạn như \texttt{resistor}, \texttt{capacitor}, \texttt{NE555}, \ldots{} Việc gán nhãn được thực hiện thủ công nhằm đảm bảo độ chính xác, vì chất lượng nhãn có ảnh hưởng trực tiếp đến khả năng học của mô hình YOLO.
 
 Roboflow hỗ trợ việc chuẩn hoá kích thước ảnh, tăng cường dữ liệu (augmentation) như xoay, thay đổi độ sáng, cắt, lật ảnh, giúp tăng độ đa dạng cho tập huấn luyện. Sau khi hoàn tất, bộ dữ liệu được export theo định dạng YOLO và sẵn sàng cho quá trình huấn luyện.
 \begin{figure}[H]
@@ -189,8 +189,19 @@ Quy trình huấn luyện gồm các bước:
     \item Upload bộ dữ liệu từ Roboflow vào Colab bằng API.
     \item Cấu hình file huấn luyện: đường dẫn dữ liệu, số lớp (classes), độ phân giải ảnh, batch size, và số epochs.
     \item Tiến hành huấn luyện và theo dõi các chỉ số: loss, precision, recall, mAP.
-    \item Lưu lại \texttt{best.pt} sau khi huấn luyện, sử dụng cho giai đoạn suy luận (inference) trong hệ thống AVI.
+    \item Lưu lại \texttt{best.pt} và \texttt{last.pt} sau khi huấn luyện, sử dụng cho giai đoạn suy luận (inference) trong hệ thống hệ thống xử lý ảnh cũng như mục đích mở rộng hệ thống trong tương lai.
 \end{itemize}
+
+Kết quả khi train mô hình \texttt{yolov8m.pt} với epochs=60, imgsz=1024, batch=4:
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/Chapter4/results.png}
+    \caption{Kết quả train mô hình YOLO}
+    \label{c3:yolo}
+\end{figure}
+Kết quả huấn luyện cho thấy mô hình \texttt{yolov8m.pt} đã hội tụ tốt sau khoảng 30--35 epoch đầu tiên. Các chỉ số đánh giá như \textit{precision}, \textit{recall}, và \textit{mAP} đạt giá trị cao, lần lượt ổn định quanh mức 0.94, 1.00 và 0.82 ở cuối quá trình huấn luyện. Đồng thời, các hàm mất mát (\textit{loss}) trên tập huấn luyện giảm đều, trong khi hàm mất mát trên tập kiểm thử bắt đầu tăng nhẹ sau epoch thứ 35, cho thấy dấu hiệu quá khớp nhẹ (\textit{overfitting}).
+
+Tổng quan, mô hình đạt hiệu năng cao trong việc phát hiện và phân loại các đối tượng, với khả năng nhận diện gần như đầy đủ (recall xấp xỉ 100\%) và độ chính xác dự đoán tốt. Epoch thứ 30–35 có thể được xem là thời điểm tối ưu để trích xuất mô hình nhằm tránh hiện tượng quá khớp, đồng thời đảm bảo hiệu suất nhận diện cao trên dữ liệu thực tế.
 
 Mô hình sau khi huấn luyện được tải xuống và đưa vào pipeline xử lý ảnh để thực hiện phát hiện linh kiện SMD trong thời gian gần thực.
 
